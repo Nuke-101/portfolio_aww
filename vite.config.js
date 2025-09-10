@@ -5,5 +5,6 @@ import { gsap } from "gsap";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/portfolio_aww/",
   plugins: [vue(), tailwindcss()],
 });

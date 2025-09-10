@@ -1,9 +1,19 @@
 <script setup>
-import LoadingScreen from "./components/LoadingScreen.vue";
+import { ref } from "vue";
+import PreLoaderPage from "./components/PreLoaderPage.vue";
 import HomePage from "./components/HomePage.vue";
+
+const isLoaded = ref(false);
+
+const handleAnimationComplete = () => {
+  isLoaded.value = true;
+};
 </script>
 
 <template>
-  <HomePage></HomePage>
-  <LoadingScreen></LoadingScreen>
+  <HomePage v-if="isLoaded"></HomePage>
+  <PreLoaderPage
+    v-if="!isLoaded"
+    @animation-complete="handleAnimationComplete"
+  ></PreLoaderPage>
 </template>

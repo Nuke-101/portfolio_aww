@@ -80,6 +80,14 @@
   transform: scaleX(0);
   transform-origin: left;
 }
+.blackline {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--rock);
+  top: 50%;
+  left: 0%;
+}
 
 .originline {
   position: absolute;

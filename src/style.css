@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: Satoshi;
+  src: url(./assets/fonts/Satoshi/Satoshi-Variable.woff);
+}
+
+@font-face {
+  font-family: Saans;
+  font-weight: 400;
+  src: url(./assets/fonts/Saans/Saans-Regular.woff2);
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #171717;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.major-mono-display {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@theme {
+  --pearl: #f7f7f7;
+  --rock: #171717;
+
+  --font-satoshi: Satoshi, "sans-serif";
+  --font-saansregular: Saans Regular, "sans-serif";
+
+  --font-saans: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-majormono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace; /* ... */
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--rock);
+  color: var(--pearl);
+  z-index: 1000;
+}
+
+.line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fafafa;
+  top: 50%;
+  left: 0%;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.wiper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pearl);
+  left: 0;
+  top: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.originline {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--rock);
+  top: 50%;
+  left: 0%;
+  transform: scaleX(1);
+  transform-origin: left;
+}

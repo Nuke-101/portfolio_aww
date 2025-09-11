@@ -1,5 +1,7 @@
 <script setup>
-import { onMounted, defineEmits } from "vue";
+import { onMounted } from "vue";
+import { useRouter } from "vue-router";
+
 import { gsap } from "gsap";
 import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 import { SplitText } from "gsap/SplitText";
@@ -7,13 +9,12 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(ScrambleTextPlugin, SplitText);
 
 const allchars = "ABCDEFGHIJKLNMOPQRSTUVWXYZ";
-const emits = defineEmits(["animation-complete"]);
+const router = useRouter();
 
 onMounted(() => {
   const tl = gsap.timeline({
     onComplete: () => {
-      // <-- This callback runs when all animations are finished
-      emits("animation-complete"); // <-- Emit the event to the parent
+      router.push("/home");
     },
   });
 
@@ -26,18 +27,18 @@ onMounted(() => {
   //Animate
   gsap.from(splitName.chars, {
     duration: 0.6,
-    yPercent: 100, // Start below the mask
+    yPercent: 100,
     scrambleText: {
-      text: "{original}", // Scramble to the original text
+      text: "{original}",
       chars: allchars,
       speed: 1,
       ease: "power4.out",
     },
-    stagger: 0.1, // Animate each line one after the other
+    stagger: 0.1,
   });
 
   tl.to(".line", {
-    scaleX: 1, // Animate the width from 0 to 1
+    scaleX: 1,
     duration: 1.5,
     delay: 1.4,
     ease: "power3.in",
@@ -54,22 +55,21 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="loading-container">
+  <div
+    class="loading-container fixed w-screen h-screen flex items-center justify-center top-0 left-0 z-1000"
+  >
     <div class="main-cont">
-      <div class="line" ref="lineElement"></div>
-      <h1
-        class="scramblename major-mono-display text-9xl text-center overflow-hidden"
-      >
+      <div
+        class="line absolute w-screen top-[50%] left-0"
+        ref="lineElement"
+      ></div>
+      <h1 class="scramblename major-mono-display text-center overflow-hidden">
         NIKHIL
       </h1>
-      <h1
-        class="scramblename major-mono-display text-9xl text-center overflow-hidden"
-      >
+      <h1 class="scramblename major-mono-display text-center overflow-hidden">
         SHINDE
       </h1>
-      <div class="wiper">
-        <div class="blackline"></div>
-      </div>
+      <div class="wiper absolute w-screen h-screen top-0 left-0"></div>
     </div>
   </div>
 </template>

@@ -1,6 +1,8 @@
-<script setup></script>
+<script setup>
+import HeroSection from "./HeroSection.vue";
+import Navbar from "./Navbar.vue";
+</script>
 <template>
-  <div class="homepage">
-    <h1 class="text-4xl text-center">Welcome to My Portfolio!</h1>
-  </div>
+  <Navbar></Navbar>
+  <HeroSection></HeroSection>
 </template>

@@ -2,14 +2,32 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: Satoshi;
-  src: url(./assets/fonts/Satoshi/Satoshi-Variable.woff);
+  font-family: "SatoshiVariable";
+  src: url(./assets/fonts/Satoshi/Satoshi-Variable.woff)
+    format(woff2-variations);
+  font-weight: 300 900;
 }
 
 @font-face {
-  font-family: Saans;
+  font-family: "Saans";
+  font-weight: 300;
+  src: url(./assets/fonts/Saans/Saans-Light.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Saans";
   font-weight: 400;
-  src: url(./assets/fonts/Saans/Saans-Regular.woff2);
+  src: url(./assets/fonts/Saans/Saans-Regular.woff2) format(woff2);
+}
+@font-face {
+  font-family: "Saans";
+  font-weight: 500;
+  src: url(./assets/fonts/Saans/Saans-Medium.woff2) format(woff2);
+}
+
+@font-face {
+  font-family: "Saans";
+  font-weight: 700;
+  src: url(./assets/fonts/Saans/Saans-Bold.woff2) format(woff2);
 }
 
 :root {
@@ -18,8 +36,8 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #171717;
+  color: var(--rock);
+  background-color: var(--pearl);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -37,65 +55,63 @@
   --pearl: #f7f7f7;
   --rock: #171717;
 
-  --font-satoshi: Satoshi, "sans-serif";
-  --font-saansregular: Saans Regular, "sans-serif";
-
-  --font-saans: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --font-majormono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace; /* ... */
+  --font-satoshi: "SatoshiVariable", sans-serif;
+  --font-saans: "Saans", sans-serif;
 }
 
 .loading-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--rock);
   color: var(--pearl);
-  z-index: 1000;
 }
 
 .line {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: #fafafa;
-  top: 50%;
-  left: 0%;
+  background-color: var(--pearl);
   transform: scaleX(0);
   transform-origin: left;
+  height: 2px;
 }
 
 .wiper {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   background-color: var(--pearl);
-  left: 0;
-  top: 0;
   transform: scaleX(0);
   transform-origin: left;
 }
-.blackline {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: var(--rock);
-  top: 50%;
-  left: 0%;
+
+.scramblename {
+  font-size: 4rem;
+  line-height: 100%;
 }
 
-.originline {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: var(--rock);
-  top: 50%;
-  left: 0%;
-  transform: scaleX(1);
-  transform-origin: left;
+.navbar {
+  background-color: var(--pearl);
+  color: var(--rock);
+  font-size: 1.625rem;
+}
+
+.logo-img {
+  width: 80px;
+  height: 72px;
+}
+.role-inverted {
+  /* This is the magic for the reflected, outlined text */
+  -webkit-text-stroke: 1px var(--rock);
+  -webkit-text-fill-color: transparent;
+  transform: rotateX(180deg);
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .scramblename {
+    font-size: 8rem;
+  }
+  .line {
+    height: 3px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .scramblename {
+    font-size: 10rem;
+  }
+  .line {
+    height: 4px;
+  }
 }

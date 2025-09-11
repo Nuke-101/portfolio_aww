@@ -3,11 +3,12 @@
 
 @font-face {
   font-family: "SatoshiVariable";
-  src: url(./assets/fonts/Satoshi/Satoshi-Variable.woff)
+    src: url(./assets/fonts/Satoshi/Satoshi-Variable.woff)
     format(woff2-variations);
   font-weight: 300 900;
 }
 
+/*noinspection ALL*/
 @font-face {
   font-family: "Saans";
   font-weight: 300;
@@ -35,9 +36,8 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: var(--rock);
-  background-color: var(--pearl);
+    background-color: var(--pearl);
+    color: var(--rock);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -51,6 +51,8 @@
   font-style: normal;
 }
 
+
+
 @theme {
   --pearl: #f7f7f7;
   --rock: #171717;
@@ -59,59 +61,30 @@
   --font-saans: "Saans", sans-serif;
 }
 
-.loading-container {
-  background-color: var(--rock);
-  color: var(--pearl);
-}
-
 .line {
-  background-color: var(--pearl);
   transform: scaleX(0);
   transform-origin: left;
   height: 2px;
 }
 
 .wiper {
-  background-color: var(--pearl);
   transform: scaleX(0);
   transform-origin: left;
 }
 
 .scramblename {
-  font-size: 4rem;
   line-height: 100%;
 }
 
-.navbar {
-  background-color: var(--pearl);
-  color: var(--rock);
-  font-size: 1.625rem;
+.role-inverted{
+    z-index: -10;
 }
 
-.logo-img {
-  width: 80px;
-  height: 72px;
-}
 .role-inverted {
   /* This is the magic for the reflected, outlined text */
   -webkit-text-stroke: 1px var(--rock);
   -webkit-text-fill-color: transparent;
   transform: rotateX(180deg);
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .scramblename {
-    font-size: 8rem;
-  }
-  .line {
-    height: 3px;
-  }
-}
 
-@media screen and (min-width: 1200px) {
-  .scramblename {
-    font-size: 10rem;
-  }
-  .line {
-    height: 4px;
-  }
-}
+

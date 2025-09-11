@@ -56,20 +56,17 @@ onMounted(() => {
 
 <template>
   <div
-    class="loading-container fixed w-screen h-screen flex items-center justify-center top-0 left-0 z-1000"
+    class="loading-container fixed w-screen h-screen flex items-center justify-center top-0 left-0 z-1000 text-[var(--pearl)] bg-[var(--rock)]"
   >
     <div class="main-cont">
-      <div
-        class="line absolute w-screen top-[50%] left-0"
-        ref="lineElement"
-      ></div>
-      <h1 class="scramblename major-mono-display text-center overflow-hidden">
+      <div class="line absolute w-screen top-[50%] left-0 bg-[var(--pearl)]"></div>
+      <h1 class="scramblename major-mono-display text-center overflow-hidden md:text-9xl text-5xl">
         NIKHIL
       </h1>
-      <h1 class="scramblename major-mono-display text-center overflow-hidden">
+      <h1 class="scramblename major-mono-display text-center overflow-hidden md:text-9xl text-5xl">
         SHINDE
       </h1>
-      <div class="wiper absolute w-screen h-screen top-0 left-0"></div>
+      <div class="wiper absolute w-screen h-screen top-0 left-0 bg-[var(--pearl)]"></div>
     </div>
   </div>
 </template>

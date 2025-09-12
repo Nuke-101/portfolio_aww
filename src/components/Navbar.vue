@@ -32,11 +32,11 @@ onMounted(() => {
       <img
         src="../assets/logos/Nikhil Logo PNG.png"
         alt="Site Logo"
-        class="logo-img aspect-[1.1/1] h-[50px] md:h-[80px] overflow-hidden md:"
+        class="logo-img aspect-[1.1/1] h-[50px] md:h-[70px] overflow-hidden md:"
       />
     </div>
 
-    <div class="flex space-x-10 md:space-x-30 text-2xl md:text-3xl">
+    <div class="flex space-x-10 md:space-x-20 text-2xl">
       <router-link
         to="/about"
         class="navlink font-saans font-normal overflow-hidden"

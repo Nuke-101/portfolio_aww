@@ -1,14 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 @import "tailwindcss";
 
+/*Satoshi Font*/
+
 @font-face {
-  font-family: "SatoshiVariable";
-    src: url(./assets/fonts/Satoshi/Satoshi-Variable.woff)
-    format(woff2-variations);
-  font-weight: 300 900;
+  font-family: "Satoshi";
+  src: url(./assets/fonts/Satoshi/Satoshi-Light.woff2) format(woff2);
+  font-weight: 300;
 }
 
-/*noinspection ALL*/
+@font-face {
+  font-family: "Satoshi";
+  src: url(./assets/fonts/Satoshi/Satoshi-Regular.woff2) format(woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(./assets/fonts/Satoshi/Satoshi-Medium.woff2) format(woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(./assets/fonts/Satoshi/Satoshi-Bold.woff2) format(woff2);
+  font-weight: 700;
+}
+
+/*Saans Font*/
 @font-face {
   font-family: "Saans";
   font-weight: 300;
@@ -32,12 +51,12 @@
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Satoshi", "Saans";
   line-height: 1.5;
   font-weight: 400;
 
-    background-color: var(--pearl);
-    color: var(--rock);
+  background-color: var(--pearl);
+  color: var(--rock);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -51,13 +70,15 @@
   font-style: normal;
 }
 
-
+.line-height-150 {
+  line-height: 150%;
+}
 
 @theme {
   --pearl: #f7f7f7;
   --rock: #171717;
 
-  --font-satoshi: "SatoshiVariable", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
   --font-saans: "Saans", sans-serif;
 }
 
@@ -76,8 +97,8 @@
   line-height: 100%;
 }
 
-.role-inverted{
-    z-index: -10;
+.role-inverted {
+  z-index: -10;
 }
 
 .role-inverted {
@@ -86,5 +107,3 @@
   -webkit-text-fill-color: transparent;
   transform: rotateX(180deg);
 }
-
-

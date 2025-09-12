@@ -9,26 +9,24 @@ onMounted(() => {
   const splitNav = new SplitText(".navlink", {
     type: "words",
     linesClass: "word-child",
-    // You may need to add a ref and an overflow hidden container for this to work
   });
 
-  gsap.from(splitNav.words, {
-    duration: 1,
+  const Navbartimeline = gsap.timeline();
+
+  Navbartimeline.from(".logo-img", {
+    duration: 0.5,
+    yPercent: 100,
+  }).from(splitNav.words, {
+    duration: 0.5,
     yPercent: 100,
     stagger: 0.3,
-  });
-
-  gsap.from(".logo-img", {
-    duration: 1,
-    yPercent: 100,
-    stagger: 0.1,
   });
 });
 </script>
 
 <template>
   <nav
-    class="navbar  w-full flex justify-between items-center px-[7vw] py-[60px] "
+    class="navbar w-full flex justify-between items-center px-[7vw] py-[60px]"
   >
     <div class="logo overflow-hidden">
       <img
@@ -38,7 +36,7 @@ onMounted(() => {
       />
     </div>
 
-    <div class="flex space-x-15 md:space-x-30 text-2xl md:text-3xl">
+    <div class="flex space-x-10 md:space-x-30 text-2xl md:text-3xl">
       <router-link
         to="/about"
         class="navlink font-saans font-normal overflow-hidden"

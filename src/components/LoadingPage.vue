@@ -12,20 +12,19 @@ const allchars = "ABCDEFGHIJKLNMOPQRSTUVWXYZ";
 const router = useRouter();
 
 onMounted(() => {
-  const tl = gsap.timeline({
+  const Loadingtimeline = gsap.timeline({
     onComplete: () => {
       router.push("/home");
     },
   });
-
-  //Split the name into characters
+  
   const splitName = new SplitText(".scramblename", {
     type: "chars",
     linesClass: "char-child",
   });
 
-  //Animate
-  gsap.from(splitName.chars, {
+
+  Loadingtimeline.from(splitName.chars, {
     duration: 0.6,
     yPercent: 100,
     scrambleText: {
@@ -35,22 +34,18 @@ onMounted(() => {
       ease: "power4.out",
     },
     stagger: 0.1,
-  });
-
-  tl.to(".line", {
+  }).to(".line", {
     scaleX: 1,
     duration: 1.5,
-    delay: 1.4,
+    delay: -.1,
     ease: "power3.in",
-  });
-
-  //Wiper
-  tl.to(".wiper", {
+  }).to(".wiper", {
     scaleX: 1,
     duration: 1,
     delay: 0,
     ease: "power3.out",
   });
+
 });
 </script>
 

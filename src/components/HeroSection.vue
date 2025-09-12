@@ -66,7 +66,7 @@ onMounted(() => {
       DESIGN ENGINEER
     </h1>
     <div
-      class="location text-left md:text-right text-[4vw] md:text-3xl mt-7 font-satoshi px-[7vw] overflow-hidden"
+      class="location text-right text-[4vw] md:text-3xl mt-7 font-satoshi font-normal px-[7vw] overflow-hidden"
     >
       BASED IN PUNE, INDIA
     </div>

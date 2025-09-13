@@ -52,8 +52,6 @@
 
 :root {
   font-family: "Satoshi", "Saans";
-  line-height: 1.5;
-  font-weight: 400;
 
   background-color: var(--pearl);
   color: var(--rock);
@@ -62,6 +60,47 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+html {
+  font-size: 14px; /* 1rem = 16px on mobile */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px; /* 1rem = 18px on tablets (md breakpoint) */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px; /* 1rem = 20px on desktops (lg breakpoint) */
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 20px; /* 1rem = 22px on large desktops (2xl) */
+  }
+}
+
+.h1 {
+  font-size: 6.875rem;
+}
+.h2 {
+  font-size: 4.25rem;
+}
+
+.title-1 {
+  font-size: 2.625rem;
+}
+.title-2 {
+  font-size: 1.625rem;
+}
+.body {
+  font-size: 1.125rem;
+}
+.caption {
+  font-size: 0.625rem;
 }
 
 .major-mono-display {

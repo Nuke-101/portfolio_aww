@@ -1,6 +1,9 @@
 <script setup></script>
 
 <template>
-  <RouterView></RouterView>
-  <div class="cursor"></div>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <RouterView></RouterView>
+    </div>
+  </div>
 </template>

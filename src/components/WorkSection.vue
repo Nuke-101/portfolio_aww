@@ -1,4 +1,32 @@
-<script></script>
+<script setup>
+import { onMounted, ref } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+const project1 = ref(null);
+const project2 = ref(null);
+const project3 = ref(null);
+
+onMounted(() => {
+  gsap.utils.toArray('.project-tile').forEach(tile => {
+    const image = tile.querySelector('img');
+    gsap.to(image, {
+      y: 150,
+      ease: 'none',
+      scrollTrigger: {
+
+        trigger: tile,
+        scrub: true,
+        start: 'top bottom',
+        end: 'bottom top',
+      },
+    });
+  });
+});
+
+</script>
 <template>
   <div
     class="work px-[7vw] mt-[100px] pt-[100px] pb-[100px] md:mt-[10vw] bg-[var(--rock)] text-[var(--pearl)]"
@@ -9,10 +37,9 @@
     <div
       class="parent grid grid-cols-1 md:grid-cols-2 md:grid-rows-5 gap-15 mt-25"
     >
-      <div class="project-tile relative row-span-2 row-start-1">
-        <div class="image-wrapper relative overflow-hidden">
+      <div ref="project1" class="project-tile relative row-span-2 row-start-1">
+        <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
           <img
-            data-speed="0.2"
             src="../assets/images/GravityDrive.png"
             alt=""
             class="cover-image"
@@ -29,10 +56,9 @@
           </p>
         </div>
       </div>
-      <div class="project-tile relative md:row-span-2 md:row-start-2">
-        <div class="image-wrapper relative overflow-hidden">
+      <div ref="project2" class="project-tile relative md:row-span-2 md:row-start-2">
+        <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
           <img
-            data-speed="-0.3"
             src="../assets/images/E-turn.png"
             alt=""
             class="cover-image"
@@ -49,10 +75,9 @@
           </p>
         </div>
       </div>
-      <div class="project-tile relative md:row-span-2 md:row-start-4">
-        <div class="image-wrapper relative overflow-hidden">
+      <div ref="project3" class="project-tile relative md:row-span-2 md:row-start-4">
+        <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
           <img
-            data-speed="0.5"
             src="../assets/images/Zentra.png"
             alt=""
             class="cover-image"

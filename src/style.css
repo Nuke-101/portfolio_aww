@@ -146,18 +146,3 @@ html {
   -webkit-text-fill-color: transparent;
   transform: rotateX(180deg);
 }
-
-.cover-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  will-change: transform;
-}
-#smooth-wrapper {
-  height: 100%;
-  overflow: hidden;
-}
-
-#smooth-content {
-  will-change: transform;
-}

@@ -52,10 +52,8 @@
 
 :root {
   font-family: "Satoshi", "Saans";
-
   background-color: var(--pearl);
   color: var(--rock);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -96,6 +94,10 @@ html {
 .title-2 {
   font-size: 1.625rem;
 }
+
+.title-3 {
+  font-size: 1.375rem;
+}
 .body {
   font-size: 1.125rem;
 }
@@ -116,6 +118,7 @@ html {
 @theme {
   --pearl: #f7f7f7;
   --rock: #171717;
+  --input-background: #dfdfdf;
 
   --font-satoshi: "Satoshi", sans-serif;
   --font-saans: "Saans", sans-serif;

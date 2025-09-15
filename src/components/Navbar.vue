@@ -12,7 +12,7 @@
       />
     </div>
 
-    <div class="flex space-x-10 md:space-x-20 title-2">
+    <div class="flex space-x-10 md:space-x-20 title-3">
       <router-link
         to="/about"
         class="navlink font-saans font-normal overflow-hidden"

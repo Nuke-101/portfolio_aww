@@ -1,28 +1,4 @@
-<script setup>
-import { onMounted } from "vue";
-import { SplitText } from "gsap/SplitText";
-import { gsap } from "gsap";
-
-gsap.registerPlugin(SplitText);
-
-onMounted(() => {
-  const splitNav = new SplitText(".navlink", {
-    type: "words",
-    linesClass: "word-child",
-  });
-
-  const Navbartimeline = gsap.timeline();
-
-  Navbartimeline.from(".logo-img", {
-    duration: 0.5,
-    yPercent: 100,
-  }).from(splitNav.words, {
-    duration: 0.5,
-    yPercent: 100,
-    stagger: 0.3,
-  });
-});
-</script>
+<script setup></script>
 
 <template>
   <nav

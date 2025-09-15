@@ -12,10 +12,10 @@
     </div>
     <a
       href="mailto:nikhilshinde0408@gmail.com"
-      class="inline-block mt-20 title-2 font-satoshi font-[500] no-underline"
-      >MAILTO: NIKHILSHINDE0408@GMAIL.COM</a
+      class="inline-block mt-20 body font-satoshi font-[400] no-underline"
+      >mailto: nikhilshinde0408@gmail.com</a
     >
-    <div class="email-input mt-8 flex space-x-5 justify-between">
+    <div class="email-input mt-6 flex space-x-5 justify-between">
       <input
         class="email-message bg-[var(--input-background)] w-[100%] h-15 rounded-full body px-5 outline-0"
         type="text"

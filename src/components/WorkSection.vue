@@ -1,32 +1,4 @@
-<script setup>
-import { onMounted, ref } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const project1 = ref(null);
-const project2 = ref(null);
-const project3 = ref(null);
-
-onMounted(() => {
-  gsap.utils.toArray('.project-tile').forEach(tile => {
-    const image = tile.querySelector('img');
-    gsap.to(image, {
-      y: 150,
-      ease: 'none',
-      scrollTrigger: {
-
-        trigger: tile,
-        scrub: true,
-        start: 'top bottom',
-        end: 'bottom top',
-      },
-    });
-  });
-});
-
-</script>
+<script setup></script>
 <template>
   <div
     class="work px-[7vw] mt-[100px] pt-[100px] pb-[100px] md:mt-[10vw] bg-[var(--rock)] text-[var(--pearl)]"
@@ -56,13 +28,12 @@ onMounted(() => {
           </p>
         </div>
       </div>
-      <div ref="project2" class="project-tile relative md:row-span-2 md:row-start-2">
+      <div
+        ref="project2"
+        class="project-tile relative md:row-span-2 md:row-start-2"
+      >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
-          <img
-            src="../assets/images/E-turn.png"
-            alt=""
-            class="cover-image"
-          />
+          <img src="../assets/images/E-turn.png" alt="" class="cover-image" />
         </div>
         <div class="project-info">
           <h3 class="project-company body font-light mt-7">IUPUI</h3>
@@ -75,13 +46,12 @@ onMounted(() => {
           </p>
         </div>
       </div>
-      <div ref="project3" class="project-tile relative md:row-span-2 md:row-start-4">
+      <div
+        ref="project3"
+        class="project-tile relative md:row-span-2 md:row-start-4"
+      >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
-          <img
-            src="../assets/images/Zentra.png"
-            alt=""
-            class="cover-image"
-          />
+          <img src="../assets/images/Zentra.png" alt="" class="cover-image" />
         </div>
         <div class="project-info">
           <h3 class="project-company body font-light mt-7">ZENTRA, ALLEGION</h3>

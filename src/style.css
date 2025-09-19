@@ -83,28 +83,47 @@ html {
 
 .h1 {
   font-size: 6.875rem;
+  font-family: "Saans";
+  line-height: 120%;
 }
 .h2 {
   font-size: 4.25rem;
+  font-family: "Saans";
+  line-height: 120%;
 }
 
 .title-1 {
   font-size: 2.625rem;
+  line-height: 140%;
+  font-family: "Satoshi";
 }
 .title-2 {
   font-size: 1.625rem;
+  line-height: 140%;
+  font-family: "Satoshi";
 }
 
 .title-3 {
   font-size: 1.375rem;
+  line-height: 140%;
+  font-family: "Satoshi";
 }
 .body {
   font-size: 1.125rem;
+  line-height: 150%;
+  font-family: "Satoshi";
 }
 .caption {
   font-size: 0.625rem;
+  line-height: 150%;
+  font-family: "Satoshi";
 }
 
+.project-detail {
+  font-size: 0.9rem;
+  line-height: 150%;
+  font-family: "Satoshi";
+}
 .major-mono-display {
   font-family: "Major Mono Display", monospace;
   font-weight: 400;
@@ -116,7 +135,7 @@ html {
 }
 
 @theme {
-  --pearl: #f7f7f7;
+  --pearl: #fffdf8;
   --rock: #171717;
   --input-background: #dfdfdf;
 

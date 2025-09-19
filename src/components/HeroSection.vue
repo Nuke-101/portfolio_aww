@@ -21,7 +21,7 @@
     </div>
     <div class="technologies-list">
       <ul
-        class="work-roles-ul font-saans font-[500] title-2 space-y-2 md:space-y-3 flex-col w-screen px-[7vw] mt-[15vh] md:mt-[20vh]"
+        class="work-roles-ul font-satoshi font-[500] title-2 space-y-2 md:space-y-2 flex-col w-screen px-[7vw] mt-[15vh] md:mt-[20vh]"
         ref="skillsList"
       >
         <li class="work-roles overflow-hidden">UX RESEARCH</li>

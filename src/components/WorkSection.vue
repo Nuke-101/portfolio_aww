@@ -1,15 +1,19 @@
 <script setup></script>
 <template>
   <div
-    class="work px-[7vw] mt-[100px] pt-[100px] pb-[100px] md:mt-[10vw] bg-[var(--rock)] text-[var(--pearl)]"
+    class="work relative px-[7vw] mt-[100px] pt-[100px] pb-[100px] md:mt-[10vw] bg-[var(--rock)] text-[var(--pearl)]"
   >
     <h2 class="text-[12vw] md:text-[6vw] font-saans font-bold leading-none">
       FEATURED <br />WORK
     </h2>
     <div
-      class="parent grid grid-cols-1 md:grid-cols-2 md:grid-rows-5 gap-15 mt-25"
+      class="parent relative grid grid-cols-1 md:grid-cols-2 md:grid-rows-5 gap-15 mt-25"
     >
-      <div ref="project1" class="project-tile relative row-span-2 row-start-1">
+      <router-link
+        to="/gravityDrive"
+        ref="project1"
+        class="project-tile relative row-span-2 row-start-1"
+      >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
           <img
             src="../assets/images/GravityDrive.png"
@@ -27,7 +31,7 @@
             for venues and corporations.
           </p>
         </div>
-      </div>
+      </router-link>
       <div
         ref="project2"
         class="project-tile relative md:row-span-2 md:row-start-2"
@@ -67,3 +71,5 @@
     </div>
   </div>
 </template>
+
+<style></style>

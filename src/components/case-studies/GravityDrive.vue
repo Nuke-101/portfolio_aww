@@ -16,13 +16,13 @@ import FooterSection from "../FooterSection.vue";
 -->
   <div class="project-intro mt-20 mb-40">
     <div
-      class="project-overwiew grid grid-cols-1 md:grid-cols-2 px-[7vw] mb-16 md:gap-15"
+      class="project-overwiew grid grid-cols-1 md:grid-cols-2 px-[7vw] mb-16"
     >
       <div class="project-title">
         <p class="company body font-bold mb-2">
           GRAVITY DRIVE • <span class="font-thin">B2B SAAS</span>
         </p>
-        <h2 class="project-name h2 font-normal mb-4">EVENT MANAGEMENT</h2>
+        <h2 class="project-name h2 font-normal mb-4">EVENTFLOW</h2>
         <p class="company body">3 minutes read</p>
       </div>
       <div class="project-overview mt-10 md:mt-0">
@@ -38,13 +38,13 @@ import FooterSection from "../FooterSection.vue";
     </div>
     <div class="project-banner col-span-2 bg-amber-500 mb-16">
       <img
-        src="/src/assets/images/GravityDrive.png"
+        src="/src/assets/images/gravity-drive/gravityDrive-Banner.png"
         alt=""
         class="banner-im w-full object-cover aspect-[2/1]"
       />
     </div>
     <div
-      class="project-details-container grid grid-cols-2 md:grid-cols-4 md:gap-15 px-[7vw] mb-16"
+      class="project-details-container grid grid-cols-2 md:grid-cols-4 px-[7vw] mb-16"
     >
       <div class="project-details">
         <div class="project-detail font-bold mb-2">project type</div>
@@ -70,9 +70,7 @@ import FooterSection from "../FooterSection.vue";
   </div>
 
   <div class="project-step mb-40">
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">challenge</h3>
       </div>
@@ -87,7 +85,7 @@ import FooterSection from "../FooterSection.vue";
       </div>
     </div>
     <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
-      <div class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15">
+      <div class="project-step-row">
         <div class="project-step-col-1">
           <h3 class="detail-name title-1 font-bold mb-8">solution</h3>
         </div>
@@ -126,9 +124,7 @@ import FooterSection from "../FooterSection.vue";
   </div>
 
   <div class="project-step mb-40">
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">o1. research</h3>
       </div>
@@ -143,9 +139,7 @@ import FooterSection from "../FooterSection.vue";
       </div>
     </div>
 
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-2 font-bold mb-8">
           o1.1 competitor analysis
@@ -157,13 +151,16 @@ import FooterSection from "../FooterSection.vue";
           space categorizing the features like event management, venue
           management, etc.
         </p>
-        <div class="desc-img w-full aspect-[2/1] bg-amber-200"></div>
+        <div class="desc-img w-full aspect-[2/1]">
+          <img
+            src="/src/assets/images/gravity-drive/competitor-analysis.png"
+            alt=""
+          />
+        </div>
       </div>
     </div>
 
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-10">
       <div class="project-step-col-1 flex flex-col justify-between items-start">
         <h3 class="title-2 font-bold mb-8">o1.2 site visits and interviews</h3>
       </div>
@@ -175,8 +172,33 @@ import FooterSection from "../FooterSection.vue";
         </p>
       </div>
     </div>
+    <div
+      class="project-step-row-gallery grid grid-cols-2 gap-1 site-visits px-[7vw] mb-20"
+    >
+      <div class="site-1 w-full mt-20">
+        <img
+          class="object-fit w-full"
+          src="/src/assets/images/gravity-drive/site-3.jpg"
+          alt=""
+        />
+      </div>
+      <div class="site-2 w-full">
+        <img
+          class="object-fit w-full"
+          src="/src/assets/images/gravity-drive/site-1.jpg"
+          alt=""
+        />
+      </div>
+      <div class="site-3 w-full col-start-2 -mt-20">
+        <img
+          class="object-fit w-full"
+          src="/src/assets/images/gravity-drive/site-2.jpg"
+          alt=""
+        />
+      </div>
+    </div>
     <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
-      <div class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15">
+      <div class="project-step-row">
         <div class="project-step-col-1">
           <h3 class="detail-name title-1 font-bold mb-8">o1.3 key insights</h3>
         </div>
@@ -216,25 +238,26 @@ import FooterSection from "../FooterSection.vue";
   </div>
 
   <div class="project-step mb-40">
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">o2. analysis</h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body">
+        <p class="desc body mb-8">
           Based on our research, we created personas for our target users: venue
           owners and managers. <br />
+          <br />
+        </p>
+        <img src="/src/assets/images/gravity-drive/persona.png" alt="" />
+        <p class="desc body">
+          <br />
           <br />Due to time constraints, we narrowed our initial list of
           features to focus on three core design goals:
         </p>
       </div>
     </div>
 
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-2 font-bold mb-8">o2.1 design goals</h3>
       </div>
@@ -264,10 +287,8 @@ import FooterSection from "../FooterSection.vue";
     </div>
   </div>
 
-  <div class="project-step mb-40">
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+  <div class="project-step mb-16">
+    <div class="project-step-row px-[7vw]">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">
           o3. ideation and design
@@ -282,11 +303,41 @@ import FooterSection from "../FooterSection.vue";
       </div>
     </div>
   </div>
+  <div
+    class="project-step-row-gallery grid grid-cols-2 md:grid-cols-4 gap-1 site-visits px-[7vw] mb-40"
+  >
+    <div class="site-1 w-full mt-20">
+      <img
+        class="object-fit w-full"
+        src="/src/assets/images/gravity-drive/idea-1.JPG"
+        alt=""
+      />
+    </div>
+    <div class="site-2 w-full">
+      <img
+        class="object-fit w-full"
+        src="/src/assets/images/gravity-drive/idea-2.png"
+        alt=""
+      />
+    </div>
+    <div class="site-3 w-full mt-20">
+      <img
+        class="object-fit w-full"
+        src="/src/assets/images/gravity-drive/idea-3.JPG"
+        alt=""
+      />
+    </div>
+    <div class="site-3 w-full">
+      <img
+        class="object-fit w-full"
+        src="/src/assets/images/gravity-drive/idea-4.png"
+        alt=""
+      />
+    </div>
+  </div>
 
   <div class="project-step mb-40">
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">
           o4. prototyping and testing
@@ -300,9 +351,7 @@ import FooterSection from "../FooterSection.vue";
       </div>
     </div>
 
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-2 font-bold mb-8">
           o4.1 testing scenario
@@ -323,9 +372,7 @@ import FooterSection from "../FooterSection.vue";
   </div>
 
   <div class="project-step mb-20">
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">o5. learnings</h3>
       </div>
@@ -337,9 +384,7 @@ import FooterSection from "../FooterSection.vue";
       </div>
     </div>
 
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw] mb-20"
-    >
+    <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-2 font-bold mb-8">o5.1 what we learned</h3>
       </div>
@@ -375,9 +420,7 @@ import FooterSection from "../FooterSection.vue";
         </div>
       </div>
     </div>
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 px-[7vw]"
-    >
+    <div class="project-step-row px-[7vw]">
       <div class="project-step-col-1">
         <h3 class="detail-name title-2 font-bold mb-8">
           o5.2 what users liked
@@ -415,9 +458,7 @@ import FooterSection from "../FooterSection.vue";
   <div
     class="case-footer black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20"
   >
-    <div
-      class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15 mb-20"
-    >
+    <div class="project-step-row mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">learning outcomes</h3>
       </div>
@@ -434,7 +475,7 @@ import FooterSection from "../FooterSection.vue";
       </div>
     </div>
     <div class="h-[4px] bg-white w-full rounded-xl mb-20"></div>
-    <div class="project-step-row grid grid-cols-1 md:grid-cols-2 md:gap-15">
+    <div class="project-step-row">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">upnext</h3>
       </div>

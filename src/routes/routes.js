@@ -1,4 +1,4 @@
-import { createMemoryHistory, createRouter } from "vue-router";
+import { createRouter, createMemoryHistory } from "vue-router";
 
 import HomePage from "../components/HomePage.vue";
 import LoadingPage from "../components/LoadingPage.vue";
@@ -16,4 +16,8 @@ const routes = [
 export const router = createRouter({
   history: createMemoryHistory(),
   routes,
+  scrollBehavior() {
+    // always scroll to top
+    return { top: 0 };
+  },
 });

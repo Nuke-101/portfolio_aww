@@ -4,13 +4,13 @@
   <nav
     class="navbar w-full flex justify-between items-center px-[7vw] py-[60px]"
   >
-    <div class="logo overflow-hidden">
+    <router-link to="/home" class="logo overflow-hidden">
       <img
         src="../assets/logos/Nikhil Logo PNG.png"
         alt="Site Logo"
         class="logo-img aspect-[1.1/1] h-[50px] md:h-[70px] overflow-hidden md:"
       />
-    </div>
+    </router-link>
 
     <div class="flex space-x-10 md:space-x-20 title-3">
       <router-link

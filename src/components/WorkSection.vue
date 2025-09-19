@@ -24,7 +24,7 @@
         <div class="project-info">
           <h3 class="project-company body font-light mt-7">GRAVITY DRIVE</h3>
           <h2 class="project-title title-2 font-bold mt-1 tracking-wide">
-            EVENT MANAGEMENT (SAAS)
+            EVENTFLOW (SAAS)
           </h2>
           <p class="project-desc body mt-4">
             An integrated platform that streamlines event planning and execution

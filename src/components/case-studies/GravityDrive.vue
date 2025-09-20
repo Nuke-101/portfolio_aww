@@ -1,6 +1,49 @@
 <script setup>
 import Navbar from "../Navbar.vue";
 import FooterSection from "../FooterSection.vue";
+import { onMounted } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+onMounted(() => {
+  // Select all the project rows that have a sticky header
+  const projectRows = gsap.utils.toArray(".project-step-row");
+
+  ScrollTrigger.matchMedia({
+    // A media query for screens larger than 768px
+    "(min-width: 768px)": function () {
+      projectRows.forEach((row, i) => {
+        const header = row.querySelector(".detail-name");
+
+        ScrollTrigger.create({
+          trigger: row,
+          start: "top 80px", // Pin the element 80px from the top of the viewport
+          end: "bottom 120px",
+          pin: row.querySelector(".project-step-col-1"),
+          pinSpacing: false,
+        });
+
+        const myVideo = document.querySelector("video");
+        if (myVideo) {
+          myVideo.addEventListener("loadeddata", () => {
+            ScrollTrigger.refresh();
+            console.log("ScrollTrigger refreshed due to video load!");
+          });
+        }
+
+        // A final refresh after a short delay to catch any last-minute layout changes
+        setTimeout(() => {
+          ScrollTrigger.refresh();
+        }, 600);
+      });
+    },
+
+    // A media query for smaller screens (optional)
+    "(max-width: 767px)": function () {
+      // You can add different behavior for mobile here, or just leave it empty to disable the effect.
+    },
+  });
+});
 </script>
 <template>
   <Navbar></Navbar>
@@ -162,7 +205,9 @@ import FooterSection from "../FooterSection.vue";
 
     <div class="project-step-row px-[7vw] mb-10">
       <div class="project-step-col-1 flex flex-col justify-between items-start">
-        <h3 class="title-2 font-bold mb-8">o1.2 site visits and interviews</h3>
+        <h3 class="detail-name title-2 font-bold mb-8">
+          o1.2 site visits and interviews
+        </h3>
       </div>
       <div class="project-step-col-2">
         <p class="desc body mb-8">
@@ -320,14 +365,14 @@ import FooterSection from "../FooterSection.vue";
         alt=""
       />
     </div>
-    <div class="site-3 w-full mt-20">
+    <div class="site-3 w-full md:mt-20">
       <img
         class="object-fit w-full"
         src="/src/assets/images/gravity-drive/idea-3.JPG"
         alt=""
       />
     </div>
-    <div class="site-3 w-full">
+    <div class="site-3 w-full -mt-20 md:mt-0">
       <img
         class="object-fit w-full"
         src="/src/assets/images/gravity-drive/idea-4.png"
@@ -344,10 +389,18 @@ import FooterSection from "../FooterSection.vue";
         </h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body">
+        <p class="desc body mb-8">
           We created a high-fidelity prototype and conducted five test sessions
           with venue owners and managers using a task-based scenario.
         </p>
+        <div class="video-container relative w-full aspect-[20/13]">
+          <video
+            class="w-full h-full object-cover video"
+            src="/src/assets/images/gravity-drive/prototype.mp4"
+            autoplay
+            loop
+          ></video>
+        </div>
       </div>
     </div>
 

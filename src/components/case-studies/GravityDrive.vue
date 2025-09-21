@@ -79,7 +79,7 @@ onMounted(() => {
         </p>
       </div>
     </div>
-    <div class="project-banner col-span-2 bg-amber-500 mb-16">
+    <div class="project-banner col-span-2 mb-16">
       <img
         src="/src/assets/images/gravity-drive/gravityDrive-Banner.png"
         alt=""
@@ -349,7 +349,7 @@ onMounted(() => {
     </div>
   </div>
   <div
-    class="project-step-row-gallery grid grid-cols-2 md:grid-cols-4 gap-1 site-visits px-[7vw] mb-40"
+    class="project-step-row-gallery grid grid-cols-2 md:grid-cols-4 gap-1 site-visits px-[7vw] mb-20"
   >
     <div class="site-1 w-full mt-20">
       <img
@@ -378,6 +378,26 @@ onMounted(() => {
         src="/src/assets/images/gravity-drive/idea-4.png"
         alt=""
       />
+    </div>
+  </div>
+  <div class="project-step mb-40">
+    <div class="project-step-row px-[7vw]">
+      <div class="project-step-col-1">
+        <h3 class="detail-name title-2 font-bold mb-8">
+          o3.1 information architecture
+        </h3>
+      </div>
+      <div class="project-step-col-2">
+        <p class="desc body mb-8">
+          The information architecture diagram visually represents the product's
+          structure and the relationships between its key pages. We used this to
+          organize our ideas and ensure the user flow was logical and intuitive.
+        </p>
+        <img
+          src="/src/assets/images/gravity-drive/information-arc.png"
+          alt=""
+        />
+      </div>
     </div>
   </div>
 

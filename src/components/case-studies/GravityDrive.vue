@@ -409,18 +409,10 @@ onMounted(() => {
         </h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body mb-8">
+        <p class="desc body">
           We created a high-fidelity prototype and conducted five test sessions
           with venue owners and managers using a task-based scenario.
         </p>
-        <div class="video-container relative w-full aspect-[20/13]">
-          <video
-            class="w-full h-full object-cover video"
-            src="/src/assets/images/gravity-drive/prototype.mp4"
-            autoplay
-            loop
-          ></video>
-        </div>
       </div>
     </div>
 
@@ -431,7 +423,7 @@ onMounted(() => {
         </h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body">
+        <p class="desc body mb-8">
           "You are Sam Reynolds, an event manager for the Holiday Event Center.
           Holiday Event Center has recently updated its venue management process
           to use a new event management application. <br /><br />The hope is
@@ -440,6 +432,14 @@ onMounted(() => {
           information to the new system and has asked you to test it out and
           familiarize yourself with how it functions."
         </p>
+        <div class="video-container relative w-full aspect-[20/13]">
+          <video
+            class="w-full h-full object-cover video"
+            src="/src/assets/images/gravity-drive/prototype.mp4"
+            autoplay
+            loop
+          ></video>
+        </div>
       </div>
     </div>
   </div>

@@ -32,7 +32,8 @@
           </p>
         </div>
       </router-link>
-      <div
+      <router-link
+        to="/eTurn"
         ref="project2"
         class="project-tile relative md:row-span-2 md:row-start-2"
       >
@@ -49,7 +50,7 @@
             users find local drop-off points and learn about proper disposal.
           </p>
         </div>
-      </div>
+      </router-link>
       <div
         ref="project3"
         class="project-tile relative md:row-span-2 md:row-start-4"

@@ -91,28 +91,40 @@ onMounted(() => {
     >
       <div class="project-details">
         <div class="project-detail font-bold mb-2">project type</div>
-        <div class="project-detail">HCI Capstone Project</div>
+        <div class="project-detail mt-6">HCI Capstone Project</div>
       </div>
       <div class="project-details">
         <div class="project-detail font-bold mb-2">role</div>
-        <div class="project-detail">UX Researcher and Designer</div>
+        <div class="project-detail mt-6">UX Researcher and Designer</div>
       </div>
       <div class="project-details">
         <div class="project-detail font-bold mb-2 mt-10 md:mt-0">duration</div>
-        <div class="project-detail">Sept 23 - Apr 24</div>
+        <div class="project-detail mt-6">Sept 23 - Apr 24</div>
       </div>
       <div class="project-details">
         <div class="project-desc font-bold mb-2 mt-10 md:mt-0">
           collaborators
         </div>
-        <div class="project-detail">
-          Austin Coon, Christopher Valdez, Daivik Chauhan
+        <div class="project-detail flex justify-start gap-2">
+          <img
+            class="w-12 h-12 rounded-[50%]"
+            src="/src/assets/images/gravity-drive/austin-profile.jpg"
+            alt=""
+          /><img
+            class="w-12 h-12 rounded-[50%]"
+            src="/src/assets/images/gravity-drive/chris-profile.jpg"
+            alt=""
+          /><img
+            class="w-12 h-12 rounded-[50%]"
+            src="/src/assets/images/gravity-drive/daivik-profile.jpg"
+            alt=""
+          />
         </div>
       </div>
     </div>
   </div>
 
-  <div class="project-step mb-40">
+  <div class="project-step mb-20">
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">challenge</h3>

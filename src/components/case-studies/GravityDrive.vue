@@ -1,48 +1,49 @@
 <script setup>
 import Navbar from "../Navbar.vue";
 import FooterSection from "../FooterSection.vue";
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 onMounted(() => {
-  // Select all the project rows that have a sticky header
   const projectRows = gsap.utils.toArray(".project-step-row");
 
-  ScrollTrigger.matchMedia({
-    // A media query for screens larger than 768px
-    "(min-width: 768px)": function () {
-      projectRows.forEach((row, i) => {
-        const header = row.querySelector(".detail-name");
+  // Save original styles so GSAP can restore them cleanly
+  ScrollTrigger.saveStyles(".project-step-col-1");
 
+  // Create triggers for desktop only
+  ScrollTrigger.matchMedia({
+    "(min-width: 768px)": () => {
+      projectRows.forEach((row) => {
         ScrollTrigger.create({
           trigger: row,
-          start: "top 80px", // Pin the element 80px from the top of the viewport
+          start: "top 80px",
           end: "bottom 120px",
           pin: row.querySelector(".project-step-col-1"),
           pinSpacing: false,
         });
-
-        const myVideo = document.querySelector("video");
-        if (myVideo) {
-          myVideo.addEventListener("loadeddata", () => {
-            ScrollTrigger.refresh();
-            console.log("ScrollTrigger refreshed due to video load!");
-          });
-        }
-
-        // A final refresh after a short delay to catch any last-minute layout changes
-        setTimeout(() => {
-          ScrollTrigger.refresh();
-        }, 600);
       });
     },
-
-    // A media query for smaller screens (optional)
-    "(max-width: 767px)": function () {
-      // You can add different behavior for mobile here, or just leave it empty to disable the effect.
-    },
   });
+
+  // Refresh only once after media is ready
+  const refreshAfterMedia = () => {
+    requestAnimationFrame(() => {
+      ScrollTrigger.refresh();
+    });
+  };
+
+  // Refresh after images load
+  window.addEventListener("load", refreshAfterMedia);
+
+  // Refresh after videos load
+  document.querySelectorAll("video").forEach((video) => {
+    video.addEventListener("loadeddata", refreshAfterMedia);
+  });
+});
+
+// Clean up when component is destroyed
+onUnmounted(() => {
+  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });
 </script>
 <template>

@@ -58,7 +58,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none;
 }
+
+a:hover {
+  cursor: none;
+}
+
 html {
   font-size: 14px; /* 1rem = 16px on mobile */
 }

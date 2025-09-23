@@ -82,7 +82,7 @@ onMounted(() => {
     </div>
     <div class="project-banner col-span-2 mb-16">
       <img
-        src="/src/assets/images/gravity-drive/gravityDrive-Banner.png"
+        src="/src/assets/images/e-turn/banner.png"
         alt=""
         class="banner-im w-full object-cover aspect-[2/1]"
       />
@@ -271,87 +271,44 @@ onMounted(() => {
           habits. <br /><br />We also performed site visits to local recycling
           centers to understand the process firsthand.
         </p>
-        <div class="desc-img w-full aspect-[2/1]">
-          <img
-            src="/src/assets/images/gravity-drive/competitor-analysis.png"
-            alt=""
-          />
-        </div>
+        <div class="desc-img w-full aspect-[2/1] bg-gray-400"></div>
       </div>
     </div>
 
-    <div class="project-step-row px-[7vw] mb-10">
-      <div class="project-step-col-1 flex flex-col justify-between items-start">
-        <h3 class="detail-name title-2 font-bold mb-8">
-          o1.2 site visits and interviews
-        </h3>
-      </div>
-      <div class="project-step-col-2">
-        <p class="desc body mb-8">
-          We conducted 5 site visits covering various event venues and
-          co-working spaces, where we interviewed venue managers and owners to
-          gain firsthand knowledge of their workflows and challenges.
-        </p>
-      </div>
-    </div>
-    <div
-      class="project-step-row-gallery grid grid-cols-2 gap-1 site-visits px-[7vw] mb-20"
-    >
-      <div class="site-1 w-full mt-20">
-        <img
-          class="object-fit w-full"
-          src="/src/assets/images/gravity-drive/site-3.jpg"
-          alt=""
-        />
-      </div>
-      <div class="site-2 w-full">
-        <img
-          class="object-fit w-full"
-          src="/src/assets/images/gravity-drive/site-1.jpg"
-          alt=""
-        />
-      </div>
-      <div class="site-3 w-full col-start-2 -mt-20">
-        <img
-          class="object-fit w-full"
-          src="/src/assets/images/gravity-drive/site-2.jpg"
-          alt=""
-        />
-      </div>
-    </div>
     <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
       <div class="project-step-row">
         <div class="project-step-col-1">
-          <h3 class="detail-name title-1 font-bold mb-8">o1.3 key insights</h3>
+          <h3 class="detail-name title-1 font-bold mb-8">o1.2 key insights</h3>
         </div>
         <div class="project-step-col-2">
           <div class="point-breakdown mb-8">
             <p class="point-title title-3 font-bold mb-3">
-              1. decentralized management
+              1. knowledge deficit
             </p>
             <p class="point-desc font-light body">
-              4 out of 5 venues visited relied on a combination of different
-              programs, like Excel for booking records and email for
-              communication.
+              A significant portion of younger respondents (students) were
+              unaware of e-waste recycling options.<br /><br />
+              60% of participants lacked clarity on recycling (2 participants
+              didn't even know that they could recycle electronics)
             </p>
           </div>
           <div class="point-breakdown mb-8">
             <p class="point-title title-3 font-bold mb-3">
-              2. communication gaps
+              2. accessibility issues
             </p>
             <p class="point-desc font-light body">
-              Long, unwieldy email threads made it difficult for organizers to
-              communicate with clients and keep track of conversations.
+              68% of respondents cited a scarcity of nearby recycling centers
+              and 52% found the process inconvenient.
             </p>
           </div>
           <div class="point-breakdown">
             <p class="point-title title-3 font-bold mb-3">
-              3. inefficient processes
+              3. need for comprehensive information
             </p>
             <p class="point-desc font-light body">
-              Venue managers expressed a need for a more efficient way to manage
-              resources and client needs, with 80% showing interest in a system
-              that would reduce their workload.
+              There's a strong desire for readily available information and the
+              environmental impact of e-waste recycling. Also integration with
+              existing platforms like google maps.
             </p>
           </div>
         </div>
@@ -362,49 +319,84 @@ onMounted(() => {
   <div class="project-step mb-40">
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
-        <h3 class="detail-name title-1 font-bold mb-8">o2. analysis</h3>
+        <h3 class="detail-name title-1 font-bold mb-8">
+          o2. analysis and synthesis
+        </h3>
       </div>
       <div class="project-step-col-2">
         <p class="desc body mb-8">
-          Based on our research, we created personas for our target users: venue
-          owners and managers. <br />
-          <br />
-        </p>
-        <img src="/src/assets/images/gravity-drive/persona.png" alt="" />
-        <p class="desc body">
-          <br />
-          <br />Due to time constraints, we narrowed our initial list of
-          features to focus on three core design goals:
+          Now that we had all the data we moved forward with creating an
+          affinity map and a thematic network to group the data.
         </p>
       </div>
     </div>
 
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
-        <h3 class="detail-name title-2 font-bold mb-8">o2.1 design goals</h3>
+        <h3 class="detail-name title-2 font-bold mb-8">
+          o2.1 affinity mapping
+        </h3>
       </div>
       <div class="project-step-col-2">
-        <div class="point-breakdown mb-8">
-          <p class="point-title body font-bold mb-3">1. event planning</p>
-          <p class="point-desc font-normal body">
-            A feature for event planning and customization, including services
-            like food, music, and decor, with budget visualization.
-          </p>
+        <p class="desc body mb-8">
+          To make sense of the vast amount of data, we used an affinity diagram
+          to group our findings into key themes like "Awareness,"
+          "Accessibility," "Education," "Motivations" and things that are
+          keeping people from recycling.
+        </p>
+        <div class="process-row grid grid-cols-3 gap-8 gap-y-8">
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/affinity-1.png" alt="" />
+          </div>
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/affinity-2.png" alt="" />
+          </div>
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/affinity-3.png" alt="" />
+          </div>
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/affinity-4.png" alt="" />
+          </div>
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/affinity-5.png" alt="" />
+          </div>
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/affinity-6.png" alt="" />
+          </div>
         </div>
-        <div class="point-breakdown mb-8">
-          <p class="point-title body font-bold mb-3">2. task management</p>
-          <p class="point-desc font-normal body">
-            The ability to create event-related tasks and assign them to staff
-            based on priority.
-          </p>
-        </div>
-        <div class="point-breakdown">
-          <p class="point-title body font-bold mb-3">3. communication</p>
-          <p class="point-desc font-normal body">
-            A dedicated channel for each event with group and private chat, as
-            well as a repository for sharing files.
-          </p>
-        </div>
+      </div>
+    </div>
+    <div class="project-step-row px-[7vw] mb-20">
+      <div class="project-step-col-1">
+        <h3 class="detail-name title-2 font-bold mb-8">
+          o2.2 thematic network
+        </h3>
+      </div>
+      <div class="project-step-col-2">
+        <p class="desc body mb-8">
+          We then created a thematic network to transform these insights into
+          four core user pain points: limited access, lack of awareness,
+          inadequate programs, and confusion over proper handling.
+        </p>
+        <img src="/src/assets/images/e-turn/thematic-network.png" alt="" />
+      </div>
+    </div>
+    <div class="project-step-row px-[7vw] mb-20">
+      <div class="project-step-col-1">
+        <h3 class="detail-name title-2 font-bold mb-8">o2.3 personas</h3>
+      </div>
+      <div class="project-step-col-2">
+        <p class="desc body mb-8">
+          We then created a thematic network to transform these insights into
+          four core user pain points: limited access, lack of awareness,
+          inadequate programs, and confusion over proper handling.
+        </p>
+        <img
+          class="mb-8"
+          src="/src/assets/images/e-turn/persona-elizabeth.png"
+          alt=""
+        />
+        <img src="/src/assets/images/e-turn/persona-jacob.png" alt="" />
       </div>
     </div>
   </div>
@@ -417,63 +409,49 @@ onMounted(() => {
         </h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body">
-          Focusing on our 3 main design goals, for the next month and a half we
-          focused solely on the design and iteration part of the product and how
-          we will integrate different features.
-        </p>
-      </div>
-    </div>
-  </div>
-  <div
-    class="project-step-row-gallery grid grid-cols-2 md:grid-cols-4 gap-1 site-visits px-[7vw] mb-20"
-  >
-    <div class="site-1 w-full mt-20">
-      <img
-        class="object-fit w-full"
-        src="/src/assets/images/gravity-drive/idea-1.JPG"
-        alt=""
-      />
-    </div>
-    <div class="site-2 w-full">
-      <img
-        class="object-fit w-full"
-        src="/src/assets/images/gravity-drive/idea-2.png"
-        alt=""
-      />
-    </div>
-    <div class="site-3 w-full md:mt-20">
-      <img
-        class="object-fit w-full"
-        src="/src/assets/images/gravity-drive/idea-3.JPG"
-        alt=""
-      />
-    </div>
-    <div class="site-3 w-full -mt-20 md:mt-0">
-      <img
-        class="object-fit w-full"
-        src="/src/assets/images/gravity-drive/idea-4.png"
-        alt=""
-      />
-    </div>
-  </div>
-  <div class="project-step mb-40">
-    <div class="project-step-row px-[7vw]">
-      <div class="project-step-col-1">
-        <h3 class="detail-name title-2 font-bold mb-8">
-          o3.1 information architecture
-        </h3>
-      </div>
-      <div class="project-step-col-2">
         <p class="desc body mb-8">
-          The information architecture diagram visually represents the product's
-          structure and the relationships between its key pages. We used this to
-          organize our ideas and ensure the user flow was logical and intuitive.
+          Using the insights from our analysis, we conducted several ideation
+          sessions, including the Crazy 8s method, to generate solutions. We
+          ultimately focused on three core ideas to address key problems:
         </p>
-        <img
-          src="/src/assets/images/gravity-drive/information-arc.png"
-          alt=""
-        />
+        <div class="process-row grid grid-cols-3 gap-5 mb-16">
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/idea-1.png" alt="" />
+          </div>
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/idea-2.png" alt="" />
+          </div>
+          <div class="process-step">
+            <img src="/src/assets/images/e-turn/idea-3.png" alt="" />
+          </div>
+        </div>
+        <div class="point-breakdown mb-8">
+          <p class="point-title title-3 font-bold mb-3">
+            1. information section
+          </p>
+          <p class="point-desc body">
+            A feature to provide necessary information on how to start
+            recycling.
+          </p>
+        </div>
+        <div class="point-breakdown mb-8">
+          <p class="point-title title-3 font-bold mb-3">
+            2. community discussion platform
+          </p>
+          <p class="point-desc body">
+            A space to spark conversations about upcycling and extending the
+            lifespan of electronics.
+          </p>
+        </div>
+        <div class="point-breakdown mb-8">
+          <p class="point-title title-3 font-bold mb-3">
+            3. incentive and reward system
+          </p>
+          <p class="point-desc body">
+            A feature to motivate users by highlighting the environmental
+            benefits of their actions.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -482,40 +460,36 @@ onMounted(() => {
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">
-          o4. prototyping and testing
+          o4. design and prototyping
         </h3>
       </div>
       <div class="project-step-col-2">
         <p class="desc body">
-          We created a high-fidelity prototype and conducted five test sessions
-          with venue owners and managers using a task-based scenario.
+          We moved into the design phase by creating storyboards to visualize
+          how users would interact with our product in real-life scenarios.
+          <br /><br />This was followed by creating rough wireframes of all
+          major screens to outline the application's structure.
         </p>
       </div>
     </div>
 
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
-        <h3 class="detail-name title-2 font-bold mb-8">
-          o4.1 testing scenario
-        </h3>
+        <h3 class="detail-name title-2 font-bold mb-8">o4.1 live prototype</h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body mb-8">
-          "You are Sam Reynolds, an event manager for the Holiday Event Center.
-          Holiday Event Center has recently updated its venue management process
-          to use a new event management application. <br /><br />The hope is
-          that this system will improve the workflow of the event center and
-          make everyone’s jobs a little bit easier. The owner has added some
-          information to the new system and has asked you to test it out and
-          familiarize yourself with how it functions."
+        <p class="desc body mb-16">
+          Using XD to prototype our final design, we created a mvp, it contains
+          fewer screens and not all concepts that were highlighted in our
+          brainstorming. <br /><br />Other ideas like rewards and discussion
+          forums were reserved for future scope.
         </p>
-        <div class="video-container relative w-full aspect-[20/13]">
-          <video
-            class="w-full h-full object-cover video"
-            src="/src/assets/images/gravity-drive/prototype.mp4"
-            autoplay
-            loop
-          ></video>
+        <div class="video-container relative w-full">
+          <iframe
+            class="aspect-[16/9]"
+            width="100%"
+            src="https://xd.adobe.com/embed/e2b967bd-24c5-4546-a14d-054b240602cd-b7ea/?fullscreen"
+          ></iframe>
         </div>
       </div>
     </div>
@@ -524,12 +498,14 @@ onMounted(() => {
   <div class="project-step mb-20">
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
-        <h3 class="detail-name title-1 font-bold mb-8">o5. learnings</h3>
+        <h3 class="detail-name title-1 font-bold mb-8">
+          o5. usability testing
+        </h3>
       </div>
       <div class="project-step-col-2">
         <p class="desc body">
-          We created a high-fidelity prototype and conducted five test sessions
-          with venue owners and managers using a task-based scenario.
+          We conducted usability testing with 6 participants using think-aloud
+          sessions and cognitive walk-throughs to gather feedback on our design.
         </p>
       </div>
     </div>
@@ -540,65 +516,26 @@ onMounted(() => {
       </div>
       <div class="project-step-col-2">
         <div class="point-breakdown mb-8">
-          <p class="point-title body font-bold mb-3">1. navigation issues</p>
+          <p class="point-title body font-bold mb-3">
+            1. comprehensive and wider search
+          </p>
           <p class="point-desc font-normal body">
-            Users confused contacts with messaging features.
+            Users requested the ability to search by city name instead of just a
+            zip code and also a larger search radius.
           </p>
         </div>
         <div class="point-breakdown mb-8">
           <p class="point-title body font-bold mb-3">2. information overload</p>
           <p class="point-desc font-normal body">
-            The integrated messaging and files section felt overwhelming to some
-            users.
+            The final information page felt overwhelming, consider ways to
+            simplify the information presentation.
           </p>
         </div>
         <div class="point-breakdown mb-8">
-          <p class="point-title body font-bold mb-3">
-            3. need for universal search
-          </p>
+          <p class="point-title body font-bold mb-3">3. more filters needed</p>
           <p class="point-desc font-normal body">
-            Users found the application intuitive and easier to learn than
-            similar tools they've used before.
-          </p>
-        </div>
-        <div class="point-breakdown mb-8">
-          <p class="point-title body font-bold mb-3">4. event association</p>
-          <p class="point-desc font-normal body">
-            Users sometimes struggled to associate a person with a specific
-            event in contacts.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="project-step-row px-[7vw]">
-      <div class="project-step-col-1">
-        <h3 class="detail-name title-2 font-bold mb-8">
-          o5.2 what users liked
-        </h3>
-      </div>
-      <div class="project-step-col-2">
-        <div class="point-breakdown mb-8">
-          <p class="point-title body font-bold mb-3">
-            1. all-inclusive solution
-          </p>
-          <p class="point-desc font-normal body">
-            Users were enthusiastic about a single system for all their needs.
-          </p>
-        </div>
-        <div class="point-breakdown mb-8">
-          <p class="point-title body font-bold mb-3">2. ease of use</p>
-          <p class="point-desc font-normal body">
-            They found the application less complex and easier to learn than
-            similar tools they had used before.
-          </p>
-        </div>
-        <div class="point-breakdown mb-8">
-          <p class="point-title body font-bold mb-3">
-            3. customization options
-          </p>
-          <p class="point-desc font-normal body">
-            Users were impressed by the detailed customization options for food,
-            decor, and other event elements.
+            There was a desire for more filters to search for specific
+            electronics.
           </p>
         </div>
       </div>

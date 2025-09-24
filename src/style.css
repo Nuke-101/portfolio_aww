@@ -170,6 +170,14 @@ html {
   z-index: -10;
 }
 
+.navbar{
+  z-index: 8999;
+}
+
+.footer{
+  z-index: 8999;
+}
+
 .role-inverted {
   /* This is the magic for the reflected, outlined text */
   -webkit-text-stroke: 1px var(--rock);

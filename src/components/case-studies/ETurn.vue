@@ -1,6 +1,4 @@
 <script setup>
-import Navbar from "../Navbar.vue";
-import FooterSection from "../FooterSection.vue";
 import { onMounted, onUnmounted } from "vue";
 
 import { gsap } from "gsap";
@@ -18,7 +16,8 @@ onMounted(() => {
         ScrollTrigger.create({
           trigger: row,
           start: "top 80px",
-          end: "bottom 120px",
+          // unpin when this row finishes, not beyond
+          end: () => "+=" + row.offsetHeight,
           pin: row.querySelector(".project-step-col-1"),
           pinSpacing: false,
         });
@@ -48,7 +47,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  <Navbar></Navbar>
+  
   <!--
   figma spacing conversion
   10 -> mb-2
@@ -565,8 +564,8 @@ onUnmounted(() => {
     </div>
     <div class="h-[4px] bg-white w-full rounded-xl mb-20"></div>
     <div class="project-step-row">
-      <div class="project-step-col-1">
-        <h3 class="detail-name title-1 font-bold mb-8">upnext</h3>
+      <div class="project-step-col-1 pointer-events-none">
+        <h3 class="detail-name title-1 font-bold mb-8 ">upnext</h3>
       </div>
       <div class="project-step-col-2">
         <router-link
@@ -595,5 +594,5 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
-  <FooterSection></FooterSection>
+  
 </template>

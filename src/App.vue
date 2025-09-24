@@ -1,102 +1,21 @@
 <script setup>
-import { onMounted, onUnmounted } from "vue";
-import { gsap } from "gsap";
-import { router } from "./routes/routes";
+import { CustomCursor } from "./composables/customCursor";
+import { router } from "./router/routes"; // adjust your path
+import Navbar from "./components/Navbar.vue";
 
-const attachEventListeners = () => {
-  const cursorRing = document.getElementById("cursor-ring");
-  const cursorPointer = document.getElementById("cursor-pointer");
-  const cursorLabel = document.getElementById("cursor-label");
+import FooterSection from "./components/FooterSection.vue";
 
-  // Cursor follow
-  window.addEventListener("mousemove", (e) => {
-    gsap.to(cursorRing, {
-      x: e.clientX,
-      y: e.clientY,
-      duration: 0.6,
-      ease: "power2.out",
-    });
-    gsap.to(cursorPointer, {
-      x: e.clientX,
-      y: e.clientY,
-      duration: 0.3,
-      ease: "power2.out",
-    });
-  });
-
-  //Enlarge cursor on link hover
-  document.addEventListener("mouseover", (e) => {
-    if (e.target.closest(".cursor-enlarge")) {
-      gsap.to(cursorRing, { scale: 3 });
-      gsap.to(cursorPointer, { scale: 9 });
-    }
-  });
-  document.addEventListener("mouseout", (e) => {
-    if (e.target.closest(".cursor-enlarge")) {
-      gsap.to(cursorRing, { scale: 1 });
-      gsap.to(cursorPointer, { scale: 1 });
-    }
-  });
-
-  //Case-Study Cursor Animations
-  document.addEventListener("mouseover", (e) => {
-    if (e.target.closest(".project-tile")) {
-      gsap.to(cursorRing, { scale: 3 });
-      gsap.to(cursorPointer, { scale: 9 });
-      gsap.to(cursorPointer, {
-        mixBlendMode: "normal",
-        backgroundColor: "var(--rock)",
-      });
-      gsap.to(cursorLabel, { opacity: 1, duration: 0.2 });
-      cursorLabel.textContent = "View Project";
-    }
-  });
-  document.addEventListener("mouseout", (e) => {
-    if (e.target.closest(".project-tile")) {
-      gsap.to(cursorRing, { scale: 1 });
-      gsap.to(cursorPointer, { scale: 1 });
-      gsap.to(cursorPointer, {
-        mixBlendMode: "difference",
-        backgroundColor: "var(--pearl)",
-      });
-      gsap.to(cursorLabel, { opacity: 0, duration: 0.2 });
-      cursorLabel.textContent = "";
-    }
-  });
-};
-
-onMounted(() => {
-  attachEventListeners();
-
-  // Reset cursor on every route change
-  router.afterEach(() => {
-    const cursorRing = document.getElementById("cursor-ring");
-    const cursorPointer = document.getElementById("cursor-pointer");
-    const cursorLabel = document.getElementById("cursor-label");
-    gsap.to(cursorRing, { scale: 1 });
-    gsap.to(cursorPointer, {
-      scale: 1,
-    });
-    gsap.to(cursorPointer, {
-      mixBlendMode: "difference",
-      backgroundColor: "var(--pearl)",
-    });
-    gsap.to(cursorLabel, { opacity: 0, duration: 0.2 });
-    cursorLabel.textContent = "";
-  });
-});
-
-onUnmounted(() => {
-  // Clean up listeners to avoid duplicates
-  document.removeEventListener("mouseover", () => {});
-  document.removeEventListener("mouseout", () => {});
-});
+// attach cursor once globally
+CustomCursor(router);
 </script>
 
 <template>
   <div id="smooth-wrapper">
     <div id="smooth-content">
+      <Navbar></Navbar>
       <RouterView></RouterView>
+      <FooterSection></FooterSection>
+      
     </div>
   </div>
   <div id="cursor-ring"></div>

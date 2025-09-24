@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 
 import "./style.css";
-import { router } from "./routes/routes";
+import { router } from "./router/routes";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

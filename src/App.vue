@@ -61,6 +61,7 @@ CustomCursor(router);
   z-index: 9999;
   mix-blend-mode: difference;
 }
+
 .inverted {
   mix-blend-mode: difference;
 }

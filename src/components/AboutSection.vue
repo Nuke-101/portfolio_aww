@@ -20,7 +20,7 @@
       </h1>
     </div>
     <div class="about-text self-end">
-      <h3 class="font-saans title-1 font-light leading-none mt-10 md:mt-0">
+      <h3 class="font-saans title-1 font-light leading-none mt-10 md:mt-0 cursor-enlarge">
         NIKHIL SHINDE
       </h3>
       <p

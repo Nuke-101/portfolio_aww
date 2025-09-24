@@ -51,7 +51,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="loading-container fixed w-screen h-screen flex items-center justify-center top-0 left-0 z-1000 text-[var(--pearl)] bg-[var(--rock)]"
+    class="loading-container fixed w-screen h-screen flex items-center justify-center top-0 left-0 z-10000 text-[var(--pearl)] bg-[var(--rock)]"
   >
     <div class="main-cont">
       <div class="line absolute w-screen top-[50%] left-0 bg-[var(--pearl)]"></div>

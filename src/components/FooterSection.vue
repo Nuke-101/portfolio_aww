@@ -12,19 +12,19 @@
         want to say hello, feel free to reach out!
       </p>
     </div>
-    <p
+    <a
       href="mailto:nikhilshinde0408@gmail.com"
       class="inline-block mt-20 body font-satoshi font-[400] no-underline cursor-enlarge"
     >
       mailto: nikhilshinde0408@gmail.com
-    </p>
+  </a>
     <div class="email-input mt-6 flex space-x-5 justify-between">
       <input
         class="email-message bg-[var(--input-background)] w-[100%] h-15 rounded-full body px-5 outline-0"
         type="text"
         placeholder="Message me here..."
       /><button
-        class="send-btn px-10 bg-[var(--rock)] rounded-full text-[var(--pearl)] body font-saans font-[500]"
+        class="send-btn px-10 bg-[var(--rock)] rounded-full text-[var(--pearl)] body font-saans font-[500] cursor-enlarge"
         actions="submit"
       >
         SEND

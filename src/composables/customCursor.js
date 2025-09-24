@@ -43,7 +43,7 @@ export function CustomCursor(router) {
           backgroundColor: "var(--rock)",
         });
         gsap.to(cursorLabel, { opacity: 1, duration: 0.2 });
-        cursorLabel.textContent = "View Project";
+        cursorLabel.textContent = "View Project ↗";
       }
     };
 

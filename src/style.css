@@ -143,6 +143,8 @@ html {
 @theme {
   --pearl: #f7f7f5;
   --rock: #171717;
+  --rock-light: #262626;
+  --rock-xlight: #404040;
   --input-background: #dfdfdf;
 
   --font-satoshi: "Satoshi", sans-serif;

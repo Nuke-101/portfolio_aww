@@ -12,7 +12,7 @@
     </div>
     <a
       href="mailto:nikhilshinde0408@gmail.com"
-      class="inline-block mt-20 body font-satoshi font-[400] no-underline"
+      class="inline-block mt-20 body font-satoshi font-[400] no-underline cursor-enlarge"
       >mailto: nikhilshinde0408@gmail.com</a
     >
     <div class="email-input mt-6 flex space-x-5 justify-between">
@@ -30,14 +30,14 @@
     <div class="footer-links-container grid grid-cols-1 md:grid-cols-2 mt-20">
       <div class="nav-links">
         <p class="link-header title-1 font-bold font-saans mb-6">navigation</p>
-        <p class="footer-links title-3 mb-3">about</p>
-        <p class="footer-links title-3 mb-3">resume</p>
+        <p class="footer-links title-3 mb-3 cursor-enlarge">about</p>
+        <p class="footer-links title-3 mb-3 cursor-enlarge">resume</p>
       </div>
       <div class="social-links mt-10 md:mt-0">
         <p class="link-header title-1 font-bold font-saans mb-6">social</p>
-        <p class="footer-links title-3 mb-3">linkedin</p>
-        <p class="footer-links title-3 mb-3">github</p>
-        <p class="footer-links title-3 mb-3">behance</p>
+        <p class="footer-links title-3 mb-3 cursor-enlarge">linkedin</p>
+        <p class="footer-links title-3 mb-3 cursor-enlarge">github</p>
+        <p class="footer-links title-3 mb-3 cursor-enlarge">behance</p>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 <script setup></script>
 <template>
   <div
-    class="work relative px-[7vw] mt-[100px] pt-[100px] pb-[100px] md:mt-[10vw] bg-[var(--rock)] text-[var(--pearl)]"
+    class="work relative px-[7vw] mt-[100px] pt-[100px] pb-[100px] md:mt-[10vw] bg-[var(--rock)] text-[var(--pearl)] dark-background"
   >
     <h2 class="text-[12vw] md:text-[6vw] font-saans font-bold leading-none">
       FEATURED <br />WORK

@@ -2,6 +2,8 @@
 import { onMounted, onUnmounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Navbar from "../Navbar.vue";
+import FooterSection from "../FooterSection.vue";
 onMounted(() => {
   const projectRows = gsap.utils.toArray(".project-step-row");
 
@@ -56,6 +58,7 @@ onUnmounted(() => {
   100 -> mb-20
   150 -> mb-40
 -->
+  <Navbar></Navbar>
   <div class="project-intro mt-20 mb-40">
     <div
       class="project-overwiew grid grid-cols-1 md:grid-cols-2 px-[7vw] mb-16"
@@ -590,4 +593,5 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
+  <FooterSection></FooterSection>
 </template>

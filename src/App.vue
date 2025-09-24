@@ -1,9 +1,6 @@
 <script setup>
 import { CustomCursor } from "./composables/customCursor";
 import { router } from "./router/routes"; // adjust your path
-import Navbar from "./components/Navbar.vue";
-
-import FooterSection from "./components/FooterSection.vue";
 
 // attach cursor once globally
 CustomCursor(router);
@@ -12,9 +9,7 @@ CustomCursor(router);
 <template>
   <div id="smooth-wrapper">
     <div id="smooth-content">
-      <Navbar></Navbar>
       <RouterView></RouterView>
-      <FooterSection></FooterSection>
     </div>
   </div>
   <div id="cursor-ring"></div>

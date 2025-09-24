@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
-
+import Navbar from "../Navbar.vue";
+import FooterSection from "../FooterSection.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 onMounted(() => {
@@ -47,7 +48,6 @@ onUnmounted(() => {
 });
 </script>
 <template>
-  
   <!--
   figma spacing conversion
   10 -> mb-2
@@ -58,6 +58,8 @@ onUnmounted(() => {
   100 -> mb-20
   150 -> mb-40
 -->
+
+  <Navbar></Navbar>
   <div class="project-intro mt-20 mb-40">
     <div
       class="project-overwiew grid grid-cols-1 md:grid-cols-2 px-[7vw] mb-16"
@@ -565,7 +567,7 @@ onUnmounted(() => {
     <div class="h-[4px] bg-white w-full rounded-xl mb-20"></div>
     <div class="project-step-row">
       <div class="project-step-col-1 pointer-events-none">
-        <h3 class="detail-name title-1 font-bold mb-8 ">upnext</h3>
+        <h3 class="detail-name title-1 font-bold mb-8">upnext</h3>
       </div>
       <div class="project-step-col-2">
         <router-link
@@ -594,5 +596,5 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
-  
+  <FooterSection></FooterSection>
 </template>

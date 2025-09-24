@@ -275,7 +275,7 @@ onUnmounted(() => {
           habits. <br /><br />We also performed site visits to local recycling
           centers to understand the process firsthand.
         </p>
-        <div class="desc-img w-full aspect-[4/3] bg-gray-400"><Carousel></Carousel></div>
+        <div class="desc-img w-full aspect-[4/3] bg-gray-400"></div>
       </div>
     </div>
 

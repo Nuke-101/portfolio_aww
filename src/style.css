@@ -58,11 +58,26 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  cursor: none;
 }
 
-a:hover {
-  cursor: none;
+#cursor-ring,
+#cursor-pointer {
+  display: none;
+}
+
+/* On medium screens and up, display the custom cursor */
+@media (min-width: 768px) {
+  #cursor-ring,
+  #cursor-pointer {
+    display: block;
+  }
+
+  :root {
+    cursor: none;
+  }
+  a:hover {
+    cursor: none;
+  }
 }
 
 html {
@@ -170,11 +185,11 @@ html {
   z-index: -10;
 }
 
-.navbar{
+.navbar {
   z-index: 8999;
 }
 
-.footer{
+.footer {
   z-index: 8999;
 }
 

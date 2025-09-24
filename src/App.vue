@@ -15,7 +15,6 @@ CustomCursor(router);
       <Navbar></Navbar>
       <RouterView></RouterView>
       <FooterSection></FooterSection>
-      
     </div>
   </div>
   <div id="cursor-ring"></div>

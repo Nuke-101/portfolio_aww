@@ -1,6 +1,5 @@
 <script setup></script>
 
-
 <template>
   <div class="footer px-[7vw] pt-[100px] pb-[100px]">
     <h2 class="text-[12vw] md:text-[6vw] font-saans font-bold leading-none">
@@ -13,11 +12,12 @@
         want to say hello, feel free to reach out!
       </p>
     </div>
-    <router-link
+    <p
       href="mailto:nikhilshinde0408@gmail.com"
       class="inline-block mt-20 body font-satoshi font-[400] no-underline cursor-enlarge"
-      >mailto: nikhilshinde0408@gmail.com</router-link
     >
+      mailto: nikhilshinde0408@gmail.com
+    </p>
     <div class="email-input mt-6 flex space-x-5 justify-between">
       <input
         class="email-message bg-[var(--input-background)] w-[100%] h-15 rounded-full body px-5 outline-0"

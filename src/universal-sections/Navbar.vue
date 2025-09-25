@@ -5,15 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 onMounted(() => {
-
-  
-
   gsap.from(".navlink", {
     yPercent: 100,
     duration: 1,
     ease: "power4.out",
-  }); 
-
+  });
 });
 </script>
 

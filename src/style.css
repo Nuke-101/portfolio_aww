@@ -155,6 +155,12 @@ html {
   font-family: "Satoshi";
 }
 
+.cursor-text {
+  font-size: 0.11rem;
+  line-height: 150%;
+  font-family: "Satoshi";
+}
+
 .project-detail {
   font-size: 0.9rem;
   line-height: 150%;

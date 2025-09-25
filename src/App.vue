@@ -12,7 +12,9 @@ CustomCursor(router);
     </div>
   </div>
   <div id="cursor-ring"></div>
-  <div id="cursor-pointer"><span id="cursor-label"></span></div>
+  <div id="cursor-pointer">
+    <span class="cursor-text" id="cursor-label"></span>
+  </div>
 </template>
 
 <style scoped>
@@ -53,7 +55,6 @@ CustomCursor(router);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 0.1rem;
   width: 100%;
   text-align: center;
   opacity: 0;

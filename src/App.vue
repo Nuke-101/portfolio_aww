@@ -1,8 +1,7 @@
 <script setup>
 import { CustomCursor } from "./composables/customCursor";
-import { router } from "./router/routes"; // adjust your path
+import { router } from "./composables/routes";
 
-// attach cursor once globally
 CustomCursor(router);
 </script>
 
@@ -25,8 +24,8 @@ CustomCursor(router);
   height: 3vw;
   border: 1px solid var(--pearl);
   border-radius: 50%;
-  pointer-events: none; /* Crucial: allows clicks to pass through the cursor */
-  transform: translate(-50%, -50%); /* Centers the cursor div */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
   z-index: 9997;
   overflow: hidden;
   mix-blend-mode: difference;
@@ -41,7 +40,7 @@ CustomCursor(router);
   transform: translate(-50%, -50%);
   background-color: var(--pearl);
   border-radius: 50%;
-  pointer-events: none; /* Crucial: allows clicks to pass through the cursor */
+  pointer-events: none;
   z-index: 9998;
   overflow: hidden;
   mix-blend-mode: difference;

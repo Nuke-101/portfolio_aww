@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import App from "./App.vue";
 
 import "./style.css";
-import { router } from "./router/routes";
+import { router } from "./composables/routes";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -32,5 +32,4 @@ router.isReady().then(() => {
   }
 });
 
-// make it globally accessible if needed
 app.config.globalProperties.$smoother = () => ScrollSmoother.get();

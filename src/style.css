@@ -50,6 +50,21 @@
   src: url(./assets/fonts/Saans/Saans-Bold.woff2) format(woff2);
 }
 
+@theme {
+  --pearl: #f7f7f5;
+  --rock: #171717;
+  --rock-light: #262626;
+  --rock-xlight: #404040;
+  --input-background: #dfdfdf;
+  --rock-xxlight: #525252;
+  --feather: #737373;
+  --feather-light: #a3a3a3;
+  --feather-xlight: #d4d4d4;
+
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-saans: "Saans", sans-serif;
+}
+
 :root {
   font-family: "Satoshi", "Saans";
   background-color: var(--pearl);
@@ -153,23 +168,6 @@ html {
 
 .line-height-150 {
   line-height: 150%;
-}
-
-@theme {
-  --pearl: #f7f7f5;
-  --rock: #171717;
-  --rock-light: #262626;
-  --rock-xlight: #404040;
-  --input-background: #dfdfdf;
-  --rock-xxlight: #525252;
-  --feather: #737373;
-  --feather-light: #a3a3a3;
-  --feather-xlight: #d4d4d4;
-
-
-
-  --font-satoshi: "Satoshi", sans-serif;
-  --font-saans: "Saans", sans-serif;
 }
 
 .line {

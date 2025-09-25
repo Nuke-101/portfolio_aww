@@ -1,11 +1,11 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
-import Navbar from "../Navbar.vue";
-import FooterSection from "../FooterSection.vue";
+import Navbar from "../universal-sections/Navbar.vue";
+import FooterSection from "../universal-sections/FooterSection.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Carousel from "../Carousel.vue";
-import DragTip from "../DragTip.vue";
+import Carousel from "../components/Carousel.vue";
+import DragTip from "../components/DragTip.vue";
 
 onMounted(() => {
   const projectRows = gsap.utils.toArray(".project-step-row");
@@ -463,7 +463,8 @@ onUnmounted(() => {
     </div>
   </div>
 
-  <<div class="project-step mb-40">
+  <
+  <div class="project-step mb-40">
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">
@@ -497,7 +498,7 @@ onUnmounted(() => {
             DOUBT??
           </div>
           <div class="story-board">
-            <img src="../../assets/images/e-turn/story-board-1.png" alt="" />
+            <img src="../assets/images/e-turn/story-board-1.png" alt="" />
           </div>
         </div>
         <div
@@ -509,7 +510,7 @@ onUnmounted(() => {
             INFLUENCE!!
           </div>
           <div class="story-board">
-            <img src="../../assets/images/e-turn/story-board-2.png" alt="" />
+            <img src="../assets/images/e-turn/story-board-2.png" alt="" />
           </div>
         </div>
         <div
@@ -521,7 +522,7 @@ onUnmounted(() => {
             REWARDS!!
           </div>
           <div class="story-board">
-            <img src="../../assets/images/e-turn/story-board-3.png" alt="" />
+            <img src="../assets/images/e-turn/story-board-3.png" alt="" />
           </div>
         </div>
       </div>
@@ -537,12 +538,12 @@ onUnmounted(() => {
         </p>
         <img
           class="cursor-magnify"
-          src="../../assets/images/e-turn/wireframe-1.png"
+          src="../assets/images/e-turn/wireframe-1.png"
           alt=""
         />
         <img
           class="cursor-magnify"
-          src="../../assets/images/e-turn/wireframe-2.png"
+          src="../assets/images/e-turn/wireframe-2.png"
           alt=""
         />
       </div>
@@ -569,8 +570,6 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
-
-
 
   <div class="project-step mb-20">
     <div class="project-step-row px-[7vw] mb-20">

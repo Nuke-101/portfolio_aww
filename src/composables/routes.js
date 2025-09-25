@@ -1,9 +1,9 @@
 import { createRouter, createMemoryHistory } from "vue-router";
 
-import HomePage from "../components/HomePage.vue";
+import HomePage from "../pages/HomePage.vue";
 import LoadingPage from "../components/LoadingPage.vue";
-import GravityDrive from "../components/case-studies/GravityDrive.vue";
-import ETurn from "../components/case-studies/ETurn.vue";
+import GravityDrive from "../case-studies/GravityDrive.vue";
+import ETurn from "../case-studies/ETurn.vue";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

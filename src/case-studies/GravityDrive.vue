@@ -1,9 +1,9 @@
 <script setup>
 import { onMounted, onUnmounted } from "vue";
+import Navbar from "../universal-sections/Navbar.vue";
+import FooterSection from "../universal-sections/FooterSection.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Navbar from "../Navbar.vue";
-import FooterSection from "../FooterSection.vue";
 onMounted(() => {
   const projectRows = gsap.utils.toArray(".project-step-row");
 
@@ -568,7 +568,7 @@ onUnmounted(() => {
       </div>
       <div class="project-step-col-2">
         <router-link
-          to="/gravityDrive"
+          to="/eTurn"
           ref="project1"
           class="project-tile relative row-span-2 row-start-1"
         >

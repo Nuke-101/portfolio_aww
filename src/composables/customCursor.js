@@ -1,6 +1,6 @@
 import { onMounted, onUnmounted } from "vue";
 import { gsap } from "gsap";
-import { router } from "../router/routes";
+import { router } from "./routes";
 
 export function CustomCursor(router) {
   let mouseMoveHandler, mouseOverHandler, mouseOutHandler;

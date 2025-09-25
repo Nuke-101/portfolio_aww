@@ -1,16 +1,50 @@
-<script setup></script>
+<script setup>
+
+import { onMounted, ref } from "vue";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
+gsap.registerPlugin(SplitText);
+
+onMounted(() => {
+
+  const splitRole = new SplitText(".role", {
+    type: "lines",
+    linesClass: "line-child",
+  });
+  const splitRoleInverted = new SplitText(".role-inverted", {
+    type: "lines",
+    linesClass: "line-child",
+  });
+
+  gsap.from(splitRole.lines, {
+    yPercent: 100,
+    duration: 1.5,
+    ease: "power4.out",
+  }); 
+  gsap.fromTo(splitRoleInverted.lines,{yPercent: 100,}, {
+    yPercent: 10.5,
+    duration: 1.6,
+    ease: "power4.out",
+  });
+  gsap.from(".location",{ yPercent: 100,
+    duration: 1,
+    ease: "power4.out",});
+
+});
+</script>
 
 <template>
   <section
     class="hero-section w-screen flex-col justify-center items-center mt-[12vh]"
   >
-    <h1
+    <h1 data-speed="2"
       class="role design-engineer text-[15vw] md:text-[11.35vw] font-saans leading-none md:leading-[.80] px-[7vw] md:px-0 font-bold bg-[var(--pearl)] overflow-hidden"
     >
       DESIGN ENGINEER
     </h1>
-    <h1
-      class="role-inverted hidden md:block text-[11.35vw] font-saans font-bold leading-none -my-[1.23vw] overflow-hidden"
+    <h1 ddata-speed="1"
+      class="role-inverted hidden md:block text-[11.35vw] font-saans font-bold leading-none overflow-hidden"
     >
       DESIGN ENGINEER
     </h1>

@@ -40,7 +40,7 @@ export function CustomCursor(router) {
         gsap.to(cursorPointer, {
           scale: 9,
           mixBlendMode: "normal",
-          backgroundColor: "var(--rock)",
+          backgroundColor: "var(--rock-light)",
         });
         gsap.to(cursorLabel, { opacity: 1, duration: 0.2 });
         cursorLabel.textContent = "View Project ↗";

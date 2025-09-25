@@ -277,8 +277,8 @@ onUnmounted(() => {
           habits. <br /><br />We also performed site visits to local recycling
           centers to understand the process firsthand.
         </p>
-        <div class="desc-img w-full aspect-[4/3] bg-gray-400"><Carousel></Carousel></div>
         <DragTip></DragTip>
+        <div class="desc-img w-full aspect-[4/3]"><Carousel></Carousel></div>
       </div>
     </div>
 
@@ -463,7 +463,7 @@ onUnmounted(() => {
     </div>
   </div>
 
-  <div class="project-step mb-40">
+  <<div class="project-step mb-40">
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">
@@ -479,10 +479,78 @@ onUnmounted(() => {
         </p>
       </div>
     </div>
+    <div class="project-step-row px-[7vw] mb-20">
+      <div class="project-step-col-1">
+        <h3 class="detail-name title-2 font-bold mb-8">o4.1 storyboards</h3>
+      </div>
+      <div class="project-step-col-2">
+        <p class="desc body mb-16">
+          We created multiple storyboards to convey our ideas and get feedback
+          from peers, here are a few based on our 3 core ideas.
+        </p>
+        <div
+          class="story-container relative flex gap-1 w-full p-8 pt-10 border-2 border-[var(--feather-light)] mb-16"
+        >
+          <div
+            class="story-label absolute top-0 left-3 -translate-y-[50%] bg-[var(--pearl)] px-5 font-bold body"
+          >
+            DOUBT??
+          </div>
+          <div class="story-board">
+            <img src="../../assets/images/e-turn/story-board-1.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="story-container relative flex gap-1 w-full p-8 pt-10 border-2 border-[var(--feather-light)] mb-16"
+        >
+          <div
+            class="story-label absolute top-0 left-3 -translate-y-[50%] bg-[var(--pearl)] px-5 font-bold body"
+          >
+            INFLUENCE!!
+          </div>
+          <div class="story-board">
+            <img src="../../assets/images/e-turn/story-board-2.png" alt="" />
+          </div>
+        </div>
+        <div
+          class="story-container relative flex gap-1 w-full p-8 pt-10 border-2 border-[var(--feather-light)] mb-16"
+        >
+          <div
+            class="story-label absolute top-0 left-3 -translate-y-[50%] bg-[var(--pearl)] px-5 font-bold body"
+          >
+            REWARDS!!
+          </div>
+          <div class="story-board">
+            <img src="../../assets/images/e-turn/story-board-3.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project-step-row px-[7vw] mb-20">
+      <div class="project-step-col-1">
+        <h3 class="detail-name title-2 font-bold mb-8">o4.2 wireframes</h3>
+      </div>
+      <div class="project-step-col-2">
+        <p class="desc body mb-16">
+          A final wireframe before hopping into hi-fi designs to make sure
+          everything looks good.
+        </p>
+        <img
+          class="cursor-magnify"
+          src="../../assets/images/e-turn/wireframe-1.png"
+          alt=""
+        />
+        <img
+          class="cursor-magnify"
+          src="../../assets/images/e-turn/wireframe-2.png"
+          alt=""
+        />
+      </div>
+    </div>
 
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
-        <h3 class="detail-name title-2 font-bold mb-8">o4.1 live prototype</h3>
+        <h3 class="detail-name title-2 font-bold mb-8">o4.3 live prototype</h3>
       </div>
       <div class="project-step-col-2">
         <p class="desc body mb-16">
@@ -501,6 +569,8 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
+
+
 
   <div class="project-step mb-20">
     <div class="project-step-row px-[7vw] mb-20">

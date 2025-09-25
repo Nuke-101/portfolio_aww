@@ -5,6 +5,8 @@ import FooterSection from "../FooterSection.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Carousel from "../Carousel.vue";
+import DragTip from "../DragTip.vue";
+
 onMounted(() => {
   const projectRows = gsap.utils.toArray(".project-step-row");
 
@@ -275,7 +277,8 @@ onUnmounted(() => {
           habits. <br /><br />We also performed site visits to local recycling
           centers to understand the process firsthand.
         </p>
-        <div class="desc-img w-full aspect-[4/3] bg-gray-400"></div>
+        <div class="desc-img w-full aspect-[4/3] bg-gray-400"><Carousel></Carousel></div>
+        <DragTip></DragTip>
       </div>
     </div>
 

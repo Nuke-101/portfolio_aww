@@ -1,4 +1,4 @@
-import{g as k,o as q,u as DD,c as uD,a as FD,d as CD}from"./index-B77Fvm9J.js";import{S as G}from"./SplitText-Cpc1cBKW.js";/*!
+import{g as k,o as q,u as DD,c as uD,a as FD,d as CD}from"./index-BTXa0Ot5.js";import{S as G}from"./SplitText-Cpc1cBKW.js";/*!
  * strings: 3.13.0
  * https://gsap.com
  *

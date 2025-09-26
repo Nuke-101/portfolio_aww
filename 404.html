@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting…</title>
+    <script type="text/javascript">
+      // Redirect unknown routes to index.html
+      const redirectToIndex = () => {
+        const path = location.pathname;
+        const indexUrl = '/' + path.replace(/^\/+/,'');
+        location.replace(indexUrl);
+      };
+      redirectToIndex();
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -14,6 +14,7 @@ CustomCursor(router);
   <div id="cursor-ring"></div>
   <div id="cursor-pointer">
     <span class="cursor-text" id="cursor-label"></span>
+    <span class="cursor-link-text" id="cursor-link-label"></span>
   </div>
 </template>
 
@@ -51,6 +52,20 @@ CustomCursor(router);
 }
 
 #cursor-label {
+  color: var(--pearl);
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+#cursor-link-label {
   color: var(--pearl);
   pointer-events: none;
   position: absolute;

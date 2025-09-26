@@ -63,6 +63,7 @@
   --feather-xxlight: #e5e5e5;
   --paper-white: #f5f5f5;
   --paper-white-light: #fafafa;
+  --keyask-green: #92e847;
 
   --font-satoshi: "Satoshi", sans-serif;
   --font-saans: "Saans", sans-serif;
@@ -77,6 +78,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+
+
 .fade-in {
   opacity: 0;
 }
@@ -167,6 +171,12 @@ html {
 
 .cursor-text {
   font-size: 0.11rem;
+  line-height: 150%;
+  font-family: "Satoshi";
+}
+
+.cursor-link-text {
+  font-size: 0.3rem;
   line-height: 150%;
   font-family: "Satoshi";
 }

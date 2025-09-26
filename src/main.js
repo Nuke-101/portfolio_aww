@@ -14,7 +14,6 @@ const app = createApp(App);
 app.use(router);
 app.mount("#app");
 
-// Setup Lenis after router is ready
 router.isReady().then(() => {
   const lenis = new Lenis({
     duration: 1.2,
@@ -22,6 +21,13 @@ router.isReady().then(() => {
     smoothWheel: true,
     smoothTouch: false,
   });
+  // Kick Lenis a few times instantly
+for (let i = 0; i < 5; i++) {
+  lenis.raf(performance.now());
+}
+
+  // ✅ Force Lenis to start in sync
+  lenis.scrollTo(window.scrollY || 0, { immediate: true });
 
   function raf(time) {
     lenis.raf(time);
@@ -30,15 +36,21 @@ router.isReady().then(() => {
   }
   requestAnimationFrame(raf);
 
-  // Expose Lenis globally
   app.config.globalProperties.$lenis = () => lenis;
+  window.lenis = lenis;
 
   router.afterEach(() => {
-  lenis.scrollTo(0, {
+    lenis.scrollTo(0, {
       offset: 0,
       duration: 0,
       easing: (t) => t,
     });
-});
-});
+    ScrollTrigger.refresh();
+  });
 
+  // ✅ Sync again after all assets load
+  window.addEventListener("load", () => {
+    lenis.scrollTo(lenis.scroll, { immediate: true });
+    ScrollTrigger.refresh(true);
+  });
+});

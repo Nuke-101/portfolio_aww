@@ -1,12 +1,11 @@
-import { createRouter, createMemoryHistory } from "vue-router";
+import { createRouter, createMemoryHistory, createWebHistory } from "vue-router";
 
-import HomePage from "../pages/HomePage.vue";
-import LoadingPage from "../components/LoadingPage.vue";
-import GravityDrive from "../case-studies/GravityDrive.vue";
-import ETurn from "../case-studies/ETurn.vue";
-import KeyAsk from "../case-studies/KeyAsk.vue";
+const HomePage = () => import("../pages/HomePage.vue");
+const GravityDrive = () => import("../case-studies/GravityDrive.vue");
+const ETurn = () => import("../case-studies/ETurn.vue");
+const KeyAsk = () => import("../case-studies/KeyAsk.vue");
+const LoadingPage = () => import("../components/LoadingPage.vue");
 
-import Lenis from "lenis";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -22,9 +21,9 @@ const routes = [
 ];
 
 export const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory("portfolio_aww/"),
   routes,
   scrollBehavior() {
-    return false; // Let Lenis handle scrolling
+    return false; // Lenis handles scrolling
   },
 });

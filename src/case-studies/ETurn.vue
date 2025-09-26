@@ -115,19 +115,19 @@ onUnmounted(() => {
           collaborators
         </div>
         <div class="project-detail flex justify-start gap-2">
-          <img
-            class="w-12 h-12 rounded-[50%]"
+          <a href="https://www.linkedin.com/in/bhoyarm/" target="_blank"><img
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/e-turn/mandar-profile.jpg"
             alt=""
-          /><img
-            class="w-12 h-12 rounded-[50%]"
+          /></a><a href="https://www.linkedin.com/in/pranavmirkad/" target="_blank"><img
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/e-turn/pranav-profile.jpg"
             alt=""
-          /><img
-            class="w-12 h-12 rounded-[50%]"
+          /></a><a href="https://www.linkedin.com/in/gsaransh/" target="_blank"><img
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/e-turn/saransh-profile.jpg"
             alt=""
-          />
+          /></a>
         </div>
       </div>
     </div>
@@ -646,25 +646,25 @@ onUnmounted(() => {
       </div>
       <div class="project-step-col-2">
         <router-link
-          to="/gravityDrive"
+          to="/keyask"
           ref="project1"
           class="project-tile relative row-span-2 row-start-1"
         >
           <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
             <img
-              src="/src/assets/images/E-turn.png"
+              src="/src/assets/images/Zentra.png"
               alt=""
               class="cover-image"
             />
           </div>
           <div class="project-info">
-            <h3 class="project-company body font-light mt-7">IUPUI</h3>
+            <h3 class="project-company body font-light mt-7">ALLEGION</h3>
             <h2 class="project-title title-2 font-bold mt-1 tracking-wide">
-              E-TURN
+              KEYASK
             </h2>
             <p class="project-desc body mt-4">
-              A design prototype that simplifies e-waste recycling by helping
-              users find local drop-off points and learn about proper disposal.
+              A new product that expands the Zentra smart lock ecosystem,
+            increasing revenue and delivering value to customers.
             </p>
           </div>
         </router-link>

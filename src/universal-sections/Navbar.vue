@@ -47,10 +47,10 @@ onMounted(() => {
     </router-link>
 
     <div class="flex space-x-10 md:space-x-20 title-3">
-      <router-link
+      <p
         to="/about"
         class="navlink font-saans font-normal overflow-hidden cursor-enlarge"
-        >about</router-link
+        >about</p
       >
       <router-link
         to="/resume"

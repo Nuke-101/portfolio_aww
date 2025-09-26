@@ -52,12 +52,12 @@ onMounted(() => {
 
 <style scoped>
 .marquee-container {
-  background-color: var(--rock);
-  color: var(--pearl);
+  background-color: var(--keyask-green);
+  color: var(--rock);
   transform: rotate(15deg);
   position: relative;
   left: -10%;
-  border: 2px solid var(--pearl);
+  border: 4px solid var(--pearl);
 }
 
 .marquee-wrapper {

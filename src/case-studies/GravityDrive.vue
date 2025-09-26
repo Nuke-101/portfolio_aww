@@ -87,7 +87,7 @@ onUnmounted(() => {
     </div>
     <div class="project-banner col-span-2 mb-16">
       <img
-        src="/src/assets/images/gravity-drive/gravityDrive-Banner.png"
+        src="/src/assets/images/gravity-drive/banner.png"
         alt=""
         class="banner-im w-full object-cover aspect-[2/1]"
       />
@@ -112,19 +112,28 @@ onUnmounted(() => {
           collaborators
         </div>
         <div class="project-detail flex justify-start gap-2">
+         <a href="https://www.linkedin.com/in/accoon/" target="_blank">
           <img
-            class="w-12 h-12 rounded-[50%]"
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/gravity-drive/austin-profile.jpg"
             alt=""
-          /><img
-            class="w-12 h-12 rounded-[50%]"
+          />
+         </a>
+         <a href="https://www.linkedin.com/in/christopher-valdez-935106191/" target="_blank">
+          <img
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/gravity-drive/chris-profile.jpg"
             alt=""
-          /><img
-            class="w-12 h-12 rounded-[50%]"
+          />
+         </a>
+         <a href="https://www.linkedin.com/in/daivik-chauhan-41b320161/" target="_blank">
+          <img
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/gravity-drive/daivik-profile.jpg"
             alt=""
           />
+         </a>
+          
         </div>
       </div>
     </div>
@@ -419,7 +428,7 @@ onUnmounted(() => {
     </div>
   </div>
 
-  <div class="project-step mb-40">
+  <div class="project-step mb-20">
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
         <h3 class="detail-name title-1 font-bold mb-8">
@@ -460,24 +469,9 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="project-step mb-20">
     <div class="project-step-row px-[7vw] mb-20">
       <div class="project-step-col-1">
-        <h3 class="detail-name title-1 font-bold mb-8">o5. learnings</h3>
-      </div>
-      <div class="project-step-col-2">
-        <p class="desc body">
-          We created a high-fidelity prototype and conducted five test sessions
-          with venue owners and managers using a task-based scenario.
-        </p>
-      </div>
-    </div>
-
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
-        <h3 class="detail-name title-2 font-bold mb-8">o5.1 what we learned</h3>
+        <h3 class="detail-name title-2 font-bold mb-8">o4.2 what we learned</h3>
       </div>
       <div class="project-step-col-2">
         <div class="point-breakdown mb-8">
@@ -511,10 +505,10 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <div class="project-step-row px-[7vw]">
+     <div class="project-step-row px-[7vw]">
       <div class="project-step-col-1">
         <h3 class="detail-name title-2 font-bold mb-8">
-          o5.2 what users liked
+          o4.3 what users liked
         </h3>
       </div>
       <div class="project-step-col-2">

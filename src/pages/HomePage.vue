@@ -1,6 +1,8 @@
 <script setup>
 import Navbar from "../universal-sections/Navbar.vue";
 import FooterSection from "../universal-sections/FooterSection.vue";
+import Technologies from "../components/Technologies.vue";
+
 
 import { onMounted, onUnmounted, ref } from "vue";
 import { gsap } from "gsap";
@@ -144,8 +146,9 @@ onUnmounted(() => {
       </p>
     </div>
   </section>
+  <Technologies/>
   <section
-    class="work relative px-[7vw] mt-[100px] pt-[100px] pb-[100px] md:mt-[10vw] bg-[var(--rock)] text-[var(--pearl)] dark-background"
+    class="work relative px-[7vw] mt-[50px] pt-[100px] pb-[100px] md:mt-[5vw] bg-[var(--rock)] text-[var(--pearl)] dark-background"
   >
     <h2 class="text-[12vw] md:text-[6vw] font-saans font-bold leading-none">
       <div class="work-header overflow-hidden">
@@ -173,7 +176,7 @@ onUnmounted(() => {
         <div class="project-info">
           <h3 class="project-company body font-light mt-7">GRAVITY DRIVE</h3>
           <h2 class="project-title title-2 font-bold mt-1 tracking-wide">
-            EVENTFLOW (SAAS)
+            EVENTFLOW
           </h2>
           <p class="project-desc body mt-4">
             An integrated platform that streamlines event planning and execution

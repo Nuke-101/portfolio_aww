@@ -35,7 +35,7 @@ import ComingSoon from "../components/ComingSoon.vue";
     </div>
     <div class="project-banner col-span-2 mb-16">
       <img
-        src="/src/assets/images/e-turn/banner.png"
+        src="/src/assets/images/keyask/banner.png"
         alt=""
         class="banner-im w-full object-cover aspect-[2/1]"
       />
@@ -60,19 +60,24 @@ import ComingSoon from "../components/ComingSoon.vue";
           collaborators
         </div>
         <div class="project-detail flex justify-start gap-2">
-          <img
-            class="w-12 h-12 rounded-[50%] cursor-ring-enlarge"
+          <a href="https://www.linkedin.com/in/accoon/" target="_blank"><img
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/keyask/austin-profile.jpg"
             alt=""
-          /><img
-            class="w-12 h-12 rounded-[50%] cursor-ring-enlarge"
+          /></a>
+          <a href="https://www.linkedin.com/in/noyonika-saha/" target="_blank"><img
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/keyask/noyonika-profile.jpg"
             alt=""
-          /><img
-            class="w-12 h-12 rounded-[50%] cursor-ring-enlarge"
+          /></a>
+
+          <a href="https://www.linkedin.com/in/shmishkat/" target="_blank"><img
+            class="w-12 h-12 rounded-[50%] cursor-link"
             src="/src/assets/images/keyask/sarowar-profile.png"
             alt=""
-          /> 
+          /> </a>
+
+          
         </div>
       </div>
     </div>
@@ -88,7 +93,7 @@ import ComingSoon from "../components/ComingSoon.vue";
           This problem created a clear opportunity for a self-service solution.
           <br /><br />We defined our problem statement as: <br /> <br />
         </p>
-        <p class="title-3">"As a resident, when I lock myself out, I want an alternative access method so I can gain access to the building/my unit without needing assistance from property staff".</p>
+        <p class="body">"As a <span class="font-black">resident</span>, when I lock myself out, I want an alternative access method so I can gain access to the building/my unit without needing assistance from property staff".</p>
       </div>
     </div>
     <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
@@ -177,7 +182,7 @@ import ComingSoon from "../components/ComingSoon.vue";
     rgba(255, 255, 255, 0.6), /* The white shine */
     transparent
   );
-  animation: shine-animation 1.5s infinite .725s;
+  animation: shine-animation 1.5s infinite .55s;
 }
 
 @keyframes shine-animation {

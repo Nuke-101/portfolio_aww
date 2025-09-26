@@ -9,8 +9,10 @@ export function CustomCursor(router) {
     const cursorRing = document.getElementById("cursor-ring");
     const cursorPointer = document.getElementById("cursor-pointer");
     const cursorLabel = document.getElementById("cursor-label");
+    const cursorLinkLabel = document.getElementById("cursor-link-label");
 
-    if (!cursorRing || !cursorPointer || !cursorLabel) return;
+
+    if (!cursorRing || !cursorPointer || !cursorLabel || !cursorLinkLabel) return;
 
     // Cursor follow
     mouseMoveHandler = (e) => {
@@ -46,8 +48,15 @@ export function CustomCursor(router) {
         cursorLabel.textContent = "View Project ↗";
       }
 
-       if (e.target.closest(".cursor-ring-enlarge")) {
+       if (e.target.closest(".cursor-link")) {
         gsap.to(cursorRing, { scale: 2 });
+         gsap.to(cursorPointer, {
+          scale: 2,
+          mixBlendMode: "normal",
+          backgroundColor: "var(--rock-light)",
+        });
+        gsap.to(cursorLinkLabel, { opacity: 1, duration: 0.2 });
+        cursorLinkLabel.textContent = "↗";
       }
     };
 
@@ -69,8 +78,15 @@ export function CustomCursor(router) {
         cursorLabel.textContent = "";
       }
 
-      if (e.target.closest(".cursor-ring-enlarge")) {
+      if (e.target.closest(".cursor-link")) {
         gsap.to(cursorRing, { scale: 1 });
+        gsap.to(cursorPointer, {
+          scale: 1,
+          mixBlendMode: "difference",
+          backgroundColor: "var(--pearl)",
+        });
+        gsap.to(cursorLinkLabel, { opacity: 0, duration: 0.2 });
+        cursorLinkLabel.textContent = "";
       }
     };
 
@@ -83,6 +99,8 @@ export function CustomCursor(router) {
     const cursorRing = document.getElementById("cursor-ring");
     const cursorPointer = document.getElementById("cursor-pointer");
     const cursorLabel = document.getElementById("cursor-label");
+    const cursorLinkLabel = document.getElementById("cursor-link-label");
+
 
     if (!cursorRing || !cursorPointer || !cursorLabel) return;
 
@@ -93,7 +111,10 @@ export function CustomCursor(router) {
       backgroundColor: "var(--pearl)",
     });
     gsap.to(cursorLabel, { opacity: 0, duration: 0.2 });
+    gsap.to(cursorLinkLabel, { opacity: 0, duration: 0.2 });
     cursorLabel.textContent = "";
+    cursorLinkLabel.textContent = "";
+
   };
 
   onMounted(() => {

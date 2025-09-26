@@ -1,17 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
   <head>
-    <meta charset="utf-8">
-    <title>Redirecting…</title>
-    <script type="text/javascript">
-      // Redirect unknown routes to index.html
-      const redirectToIndex = () => {
-        const path = location.pathname;
-        const indexUrl = '/' + path.replace(/^\/+/,'');
-        location.replace(indexUrl);
-      };
-      redirectToIndex();
-    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nikhilshinde</title>
+     <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  </script>
   </head>
-  <body></body>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

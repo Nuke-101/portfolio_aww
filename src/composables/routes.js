@@ -21,7 +21,7 @@ const routes = [
 ];
 
 export const router = createRouter({
-  history: createWebHistory("portfolio_aww/"),
+  history: createWebHistory(),
   routes,
   scrollBehavior() {
     return false; // Lenis handles scrolling

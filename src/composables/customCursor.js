@@ -45,6 +45,10 @@ export function CustomCursor(router) {
         gsap.to(cursorLabel, { opacity: 1, duration: 0.2 });
         cursorLabel.textContent = "View Project ↗";
       }
+
+       if (e.target.closest(".cursor-ring-enlarge")) {
+        gsap.to(cursorRing, { scale: 2 });
+      }
     };
 
     // Hover out reset
@@ -63,6 +67,10 @@ export function CustomCursor(router) {
         });
         gsap.to(cursorLabel, { opacity: 0, duration: 0.2 });
         cursorLabel.textContent = "";
+      }
+
+      if (e.target.closest(".cursor-ring-enlarge")) {
+        gsap.to(cursorRing, { scale: 1 });
       }
     };
 

@@ -6,11 +6,11 @@ CustomCursor(router);
 </script>
 
 <template>
-  <div id="smooth-wrapper">
-    <div id="smooth-content">
-      <RouterView></RouterView>
-    </div>
+  <div id="app-scroll">
+    <RouterView />
   </div>
+
+  <!-- Custom cursors -->
   <div id="cursor-ring"></div>
   <div id="cursor-pointer">
     <span class="cursor-text" id="cursor-label"></span>
@@ -18,6 +18,10 @@ CustomCursor(router);
 </template>
 
 <style scoped>
+#app-scroll {
+  overflow: hidden; /* Optional: ensures Lenis controls scroll */
+}
+
 #cursor-ring {
   position: fixed;
   top: 0;
@@ -29,7 +33,6 @@ CustomCursor(router);
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9997;
-  overflow: hidden;
   mix-blend-mode: difference;
 }
 
@@ -44,7 +47,6 @@ CustomCursor(router);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
-  overflow: hidden;
   mix-blend-mode: difference;
 }
 

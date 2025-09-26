@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Carousel from "../components/Carousel.vue";
 import DragTip from "../components/DragTip.vue";
+import ScrollToTopButton from "../components/ScrollToTopButton.vue"
 
 onMounted(() => {
   const projectRows = gsap.utils.toArray(".project-step-row");
@@ -61,7 +62,9 @@ onUnmounted(() => {
   100 -> mb-20
   150 -> mb-40
 -->
+  <ScrollToTopButton></ScrollToTopButton>
   <Navbar></Navbar>
+  <div class="nav-spacer h-[130px]"></div>
   <div class="project-intro mt-20 mb-40">
     <div
       class="project-overwiew grid grid-cols-1 md:grid-cols-2 px-[7vw] mb-16"
@@ -71,7 +74,7 @@ onUnmounted(() => {
           IUPUI • <span class="font-thin">HCI Fall 22</span>
         </p>
         <h2 class="project-name h2 font-normal mb-4">E-TURN</h2>
-        <p class="company body">3.5 minutes read</p>
+        <p class="company body">3.5 minute read</p>
       </div>
       <div class="project-overview mt-10 md:mt-0">
         <h3 class="detail-name title-1 font-bold mb-8">overview</h3>

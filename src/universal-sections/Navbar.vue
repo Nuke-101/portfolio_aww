@@ -1,11 +1,31 @@
+
+
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, getCurrentInstance } from "vue";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
+
+const navbar = ref(null);
 
 onMounted(() => {
-  gsap.from(".navlink", {
+  const { appContext } = getCurrentInstance();
+  const lenis = appContext.config.globalProperties.$lenis?.();
+
+  if (!lenis) return;
+
+  let lastScroll = 0;
+
+  lenis.on("scroll", ({ scroll }) => {
+    if (scroll > lastScroll) {
+      // scrolling down → hide navbar
+      gsap.to(navbar.value, { y: -130, duration: 1, ease: "power4.out"});
+    } else {
+      // scrolling up → show navbar
+      gsap.to(navbar.value, { y: 0, duration: 1, ease: "power4.out" });
+    }
+    lastScroll = scroll;
+  });
+
+   gsap.from(".navlink", {
     yPercent: 100,
     duration: 1,
     ease: "power4.out",
@@ -15,7 +35,8 @@ onMounted(() => {
 
 <template>
   <nav
-    class="navbar w-full flex justify-between items-center px-[7vw] py-[60px]"
+    ref="navbar"
+    class="navbar fixed top-0 left-0 w-full flex justify-between items-center px-[7vw] py-[30px] bg-[var(--pearl)] z-50"
   >
     <router-link to="/home" class="logo overflow-hidden">
       <img
@@ -39,3 +60,6 @@ onMounted(() => {
     </div>
   </nav>
 </template>
+<style scoped> 
+
+</style>

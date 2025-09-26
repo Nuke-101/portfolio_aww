@@ -81,6 +81,7 @@ onUnmounted(() => {
 </script>
 <template>
   <Navbar></Navbar>
+  <div class="nav-spacer h-[130px]"></div>
   <section class="hero w-screen flex-col justify-center items-center mt-[12vh]">
     <h1
       class="role first-reveal md:whitespace-nowrap text-[15vw] md:text-[11.35vw] font-saans leading-none md:leading-[.80] px-[7vw] md:px-0 font-bold bg-[var(--pearl)] overflow-hidden"
@@ -208,7 +209,7 @@ onUnmounted(() => {
           <img src="../assets/images/Zentra.png" alt="" class="cover-image" />
         </div>
         <div class="project-info">
-          <h3 class="project-company body font-light mt-7">ZENTRA, ALLEGION</h3>
+          <h3 class="project-company body font-light mt-7">ALLEGION</h3>
           <h2 class="project-title title-2 font-bold mt-1 tracking-wide">
             KEYASK
           </h2>

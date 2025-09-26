@@ -2,6 +2,8 @@
 import { onMounted, onUnmounted } from "vue";
 import Navbar from "../universal-sections/Navbar.vue";
 import FooterSection from "../universal-sections/FooterSection.vue";
+
+import ScrollToTopButton from "../components/ScrollToTopButton.vue"
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 onMounted(() => {
@@ -58,7 +60,9 @@ onUnmounted(() => {
   100 -> mb-20
   150 -> mb-40
 -->
+  <ScrollToTopButton></ScrollToTopButton>
   <Navbar></Navbar>
+  <div class="nav-spacer h-[130px]"></div>
   <div class="project-intro mt-20 mb-40">
     <div
       class="project-overwiew grid grid-cols-1 md:grid-cols-2 px-[7vw] mb-16"
@@ -68,7 +72,7 @@ onUnmounted(() => {
           GRAVITY DRIVE • <span class="font-thin">B2B SAAS</span>
         </p>
         <h2 class="project-name h2 font-normal mb-4">EVENTFLOW</h2>
-        <p class="company body">3 minutes read</p>
+        <p class="company body">3 minute read</p>
       </div>
       <div class="project-overview mt-10 md:mt-0">
         <h3 class="detail-name title-1 font-bold mb-8">overview</h3>

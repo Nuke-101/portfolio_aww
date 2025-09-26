@@ -9,94 +9,30 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
-  const splitRole = new SplitText(".role", {
+  const homeTimeLine = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".hero", // your main wrapper / first section
+    start: "top 30%",
+    scrub: true, // timeline progress is linked to scroll
+    //markers: true, // set to true for debugging
+  }
+});
+
+gsap.utils.toArray(".split-reveal").forEach(el => {
+  const split = new SplitText(el, {
     type: "lines",
     linesClass: "line-child",
-  });
-  const splitRoleInverted = new SplitText(".role-inverted", {
-    type: "lines",
-    linesClass: "line-child",
+    mask:true,
   });
 
-  const splitLocation = new SplitText(".location", {
-    type: "lines",
-    linesClass: "line-child",
-  });
-
-  const splitDescription = new SplitText(".about-description", {
-    type: "lines",
-    linesClass: "line-child",
-  });
-
-  gsap.from(splitRole.lines, {
-    yPercent: 100,
-    duration: 1.5,
-    ease: "power4.out",
-  });
-  gsap.fromTo(
-    splitRoleInverted.lines,
-    { yPercent: 100 },
-    {
-      yPercent: 10.5,
-      duration: 1.6,
-      ease: "power4.out",
-    }
-  );
-  gsap.from(splitLocation.lines, {
-    yPercent: 100,
-    duration: 1,
-    ease: "power4.out",
-  });
-
-  gsap.from(".work-roles-inner", {
+  // Animate each element’s lines, in sequence, inside the master timeline
+  homeTimeLine.from(split.lines, {
     y: 100,
-    duration: 2,
+    duration: 1.2,
     ease: "power4.out",
-    scrollTrigger: {
-      trigger: ".work-roles-ul",
-      start: "center 100%",
-      scrub: true,
-    },
-    stagger: 0.3,
-  });
-
-  gsap.from(".about-text-inner", {
-    y: 150,
-    duration: 2,
-    ease: "power4.out",
-    scrollTrigger: {
-      trigger: ".about-text",
-      start: "top 100%", // This is the key part
-      scrub: true,
-    },
-    stagger: 0.3,
-  });
-
-  gsap.from(splitDescription.lines, {
-    y: 100,
-    opacity: 0,
-    duration: 1,
-    ease: "power4.out",
-    scrollTrigger: {
-      trigger: ".about-description-container",
-      start: "top 100%", // This is the key part
-      scrub: true,
-      end: "center 70%",
-    },
-    stagger: 0.5,
-  });
-
-  gsap.from(".work-header-text", {
-    y: 150,
-    duration: 2,
-    ease: "power4.out",
-    scrollTrigger: {
-      trigger: ".work-header-text",
-      start: "top 80%", // This is the key part
-      scrub: true,
-    },
-    stagger: 0.3,
-  });
+    stagger: 0.15,
+  }, ">0.3"); // ">0.3" means: start 0.3s after the previous animation ends
+});
 });
 
 onUnmounted(() => {
@@ -108,33 +44,33 @@ onUnmounted(() => {
   <Navbar></Navbar>
   <section class="hero w-screen flex-col justify-center items-center mt-[12vh]">
     <h1
-      class="role design-engineer text-[15vw] md:text-[11.35vw] font-saans leading-none md:leading-[.80] px-[7vw] md:px-0 font-bold bg-[var(--pearl)] overflow-hidden"
+      class="role md:whitespace-nowrap text-[15vw] md:text-[11.35vw] font-saans leading-none md:leading-[.80] px-[7vw] md:px-0 font-bold bg-[var(--pearl)] overflow-hidden"
     >
       DESIGN ENGINEER
     </h1>
     <h1
-      class="role-inverted hidden md:block text-[11.35vw] font-saans font-bold leading-none overflow-hidden"
+      class="role-inverted whitespace-nowrap hidden md:block text-[11.35vw] font-saans font-bold leading-none overflow-hidden"
     >
       DESIGN ENGINEER
     </h1>
     <div
-      class="location text-right title-2 mt-7 font-satoshi font-[400] px-[7vw] overflow-hidden"
+      class="location split-reveal text-right title-2 mt-7 font-satoshi font-[400] px-[7vw] overflow-hidden"
     >
       BASED IN PUNE, INDIA
     </div>
     <div class="technologies-list">
       <ul
-        class="work-roles-ul font-satoshi font-[500] title-2 space-y-2 md:space-y-2 flex-col w-screen px-[7vw] mt-[15vh] md:mt-[20vh] overflow-hidden"
+        class="work-roles-ul split-reveal font-satoshi font-[500] title-2 space-y-2 md:space-y-2 flex-col w-screen px-[7vw] mt-[15vh] md:mt-[20vh] overflow-hidden"
         ref="skillsList"
       >
         <li class="work-roles overflow-hidden">
-          <div class="work-roles-inner">UX RESEARCH</div>
+          UX RESEARCH
         </li>
         <li class="work-roles overflow-hidden">
-          <div class="work-roles-inner">UX DESIGN</div>
+          UX DESIGN
         </li>
         <li class="work-roles overflow-hidden">
-          <div class="work-roles-inner">WEB/APP DEVELOPMENT</div>
+         WEB/APP DEVELOPMENT
         </li>
       </ul>
     </div>
@@ -153,17 +89,9 @@ onUnmounted(() => {
         />
       </div>
       <h1
-        class="absolute text-[12vw] md:text-[6vw] left-0 top-[15%] font-saans font-bold leading-none overflow-hidden"
+        class="absolute split-reveal text-[12vw] md:text-[6vw] left-0 top-[15%] font-saans font-bold leading-none overflow-hidden"
       >
-        <div class="about-text overflow-hidden">
-          <div class="about-text-inner">ABO</div>
-        </div>
-        <div class="about-text overflow-hidden">
-          <div class="about-text-inner">UT</div>
-        </div>
-        <div class="about-text overflow-hidden">
-          <div class="about-text-inner">ME.</div>
-        </div>
+       ABO<br/>UT<br/>ME.
       </h1>
     </div>
     <div class="about-description-container self-end overflow-hidden">

@@ -74,11 +74,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.fade-in{
+  opacity: 0;
+}
+
+.no-js .fade-in {
+  opacity: 1;
+}
 
 #cursor-ring,
 #cursor-pointer {
   display: none;
 }
+
+
 
 /* On medium screens and up, display the custom cursor */
 @media (min-width: 768px) {

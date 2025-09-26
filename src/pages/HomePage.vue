@@ -9,30 +9,69 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
-  const homeTimeLine = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".hero", // your main wrapper / first section
-    start: "top 30%",
-    scrub: true, // timeline progress is linked to scroll
-    //markers: true, // set to true for debugging
-  }
-});
-
-gsap.utils.toArray(".split-reveal").forEach(el => {
-  const split = new SplitText(el, {
+  const roleInvertSplit = new SplitText(".role-inverted", {
     type: "lines",
     linesClass: "line-child",
-    mask:true,
   });
 
-  // Animate each element’s lines, in sequence, inside the master timeline
-  homeTimeLine.from(split.lines, {
-    y: 100,
-    duration: 1.2,
-    ease: "power4.out",
-    stagger: 0.15,
-  }, ">0.3"); // ">0.3" means: start 0.3s after the previous animation ends
-});
+  const firstRevealElements = gsap.utils.toArray(".first-reveal");
+
+  firstRevealElements.forEach((el) => {
+    const split = new SplitText(el, {
+      type: "lines",
+      linesClass: "line-child",
+    });
+
+    gsap.from(split.lines, {
+      y: 200,
+      duration: 1.2,
+      ease: "power4.out",
+      stagger: 0.15,
+    });
+  });
+
+  const homeTimeLine = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".about", // your main wrapper / first section
+      start: "top 100%",
+      end: "center 20%",
+      scrub: true, // timeline progress is linkelkb ,d to scroll
+      //markers: true, // set to true for debugging
+    },
+  });
+
+  gsap.fromTo(
+    roleInvertSplit.lines,
+    {
+      yPercent: 100,
+    },
+    {
+      yPercent: 10,
+      duration: 1.2,
+      ease: "power4.out",
+      stagger: 0.15,
+    }
+  );
+
+  gsap.utils.toArray(".split-reveal").forEach((el) => {
+    const split = new SplitText(el, {
+      type: "lines",
+      linesClass: "line-child",
+      mask: true,
+    });
+
+    // Animate each element’s lines, in sequence, inside the master timeline
+    homeTimeLine.from(
+      split.lines,
+      {
+        yPercent: 100,
+        duration: 1,
+        ease: "power4.out",
+        stagger: 0.1,
+      },
+      ">0.3"
+    ); // ">0.3" means: start 0.3s after the previous animation ends
+  });
 });
 
 onUnmounted(() => {
@@ -44,7 +83,7 @@ onUnmounted(() => {
   <Navbar></Navbar>
   <section class="hero w-screen flex-col justify-center items-center mt-[12vh]">
     <h1
-      class="role md:whitespace-nowrap text-[15vw] md:text-[11.35vw] font-saans leading-none md:leading-[.80] px-[7vw] md:px-0 font-bold bg-[var(--pearl)] overflow-hidden"
+      class="role first-reveal md:whitespace-nowrap text-[15vw] md:text-[11.35vw] font-saans leading-none md:leading-[.80] px-[7vw] md:px-0 font-bold bg-[var(--pearl)] overflow-hidden"
     >
       DESIGN ENGINEER
     </h1>
@@ -54,24 +93,18 @@ onUnmounted(() => {
       DESIGN ENGINEER
     </h1>
     <div
-      class="location split-reveal text-right title-2 mt-7 font-satoshi font-[400] px-[7vw] overflow-hidden"
+      class="location first-reveal text-right title-2 mt-7 font-satoshi font-[400] px-[7vw] overflow-hidden"
     >
       BASED IN PUNE, INDIA
     </div>
     <div class="technologies-list">
       <ul
-        class="work-roles-ul split-reveal font-satoshi font-[500] title-2 space-y-2 md:space-y-2 flex-col w-screen px-[7vw] mt-[15vh] md:mt-[20vh] overflow-hidden"
+        class="work-roles-ul first-reveal font-satoshi font-[500] title-2 space-y-2 md:space-y-2 flex-col w-screen px-[7vw] mt-[15vh] md:mt-[20vh] overflow-hidden"
         ref="skillsList"
       >
-        <li class="work-roles overflow-hidden">
-          UX RESEARCH
-        </li>
-        <li class="work-roles overflow-hidden">
-          UX DESIGN
-        </li>
-        <li class="work-roles overflow-hidden">
-         WEB/APP DEVELOPMENT
-        </li>
+        <li class="work-roles overflow-hidden">UX RESEARCH</li>
+        <li class="work-roles overflow-hidden">UX DESIGN</li>
+        <li class="work-roles overflow-hidden">WEB/APP DEVELOPMENT</li>
       </ul>
     </div>
   </section>
@@ -89,14 +122,14 @@ onUnmounted(() => {
         />
       </div>
       <h1
-        class="absolute split-reveal text-[12vw] md:text-[6vw] left-0 top-[15%] font-saans font-bold leading-none overflow-hidden"
+        class="absolute text-[12vw] md:text-[6vw] left-0 top-[15%] font-saans font-bold leading-none"
       >
-       ABO<br/>UT<br/>ME.
+        ABO<br />UT<br />ME.
       </h1>
     </div>
-    <div class="about-description-container self-end overflow-hidden">
+    <div class="about-description-container self-end">
       <h3
-        class="name font-saans title-1 font-light leading-none mt-10 md:mt-0 cursor-enlarge"
+        class="name split-reveal font-saans title-1 font-light leading-none mt-10 md:mt-0 cursor-enlarge"
       >
         NIKHIL SHINDE
       </h3>
@@ -166,7 +199,8 @@ onUnmounted(() => {
           </p>
         </div>
       </router-link>
-      <div
+      <router-link
+        to="/keyAsk"
         ref="project3"
         class="project-tile relative md:row-span-2 md:row-start-4"
       >
@@ -183,7 +217,7 @@ onUnmounted(() => {
             increasing revenue and delivering value to customers.
           </p>
         </div>
-      </div>
+      </router-link>
     </div>
   </section>
   <FooterSection></FooterSection>

@@ -74,7 +74,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.fade-in{
+.fade-in {
   opacity: 0;
 }
 
@@ -86,8 +86,6 @@
 #cursor-pointer {
   display: none;
 }
-
-
 
 /* On medium screens and up, display the custom cursor */
 @media (min-width: 768px) {
@@ -202,14 +200,6 @@ html {
 
 .role-inverted {
   z-index: -10;
-}
-
-.navbar {
-  z-index: 8999;
-}
-
-.footer {
-  z-index: 8999;
 }
 
 .role-inverted {

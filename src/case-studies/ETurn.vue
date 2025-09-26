@@ -61,7 +61,6 @@ onUnmounted(() => {
   100 -> mb-20
   150 -> mb-40
 -->
-
   <Navbar></Navbar>
   <div class="project-intro mt-20 mb-40">
     <div

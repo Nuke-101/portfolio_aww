@@ -4,11 +4,14 @@ import HomePage from "../pages/HomePage.vue";
 import LoadingPage from "../components/LoadingPage.vue";
 import GravityDrive from "../case-studies/GravityDrive.vue";
 import ETurn from "../case-studies/ETurn.vue";
+import KeyAsk from "../case-studies/KeyAsk.vue";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
 const routes = [
   { path: "/", component: LoadingPage },
   { path: "/home", component: HomePage },
@@ -19,6 +22,10 @@ const routes = [
   {
     path: "/eTurn",
     component: ETurn,
+  },
+  {
+    path: "/keyAsk",
+    component: KeyAsk,
   },
 ];
 

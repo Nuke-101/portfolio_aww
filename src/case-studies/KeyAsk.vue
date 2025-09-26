@@ -174,7 +174,7 @@ import ComingSoon from "../components/ComingSoon.vue";
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.4), /* The white shine */
+    rgba(255, 255, 255, 0.6), /* The white shine */
     transparent
   );
   animation: shine-animation 1.5s infinite .725s;

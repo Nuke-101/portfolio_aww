@@ -118,7 +118,7 @@ onMounted(() => {
       >
         <img
           class="w-[120%] h-full object-cover absolute"
-          src="/src/assets/images/e-turn/optimized/site-visit-5.webp"
+          src="/src/assets/images/e-turn/optimized/site-visit-7.webp"
           alt=""
         />
       </div>

@@ -1,7 +1,7 @@
 <script setup>
 import { CustomCursor } from "./composables/customCursor";
 import { router } from "./composables/routes";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/vue';
 
 CustomCursor(router);
 </script>

@@ -1,6 +1,7 @@
 <script setup>
 import { CustomCursor } from "./composables/customCursor";
 import { router } from "./composables/routes";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 CustomCursor(router);
 </script>
@@ -16,6 +17,8 @@ CustomCursor(router);
     <span class="cursor-text" id="cursor-label"></span>
     <span class="cursor-link-text" id="cursor-link-label"></span>
   </div>
+
+  <SpeedInsights />
 </template>
 
 <style scoped>

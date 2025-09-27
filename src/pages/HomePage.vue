@@ -55,25 +55,6 @@ onMounted(() => {
     }
   );
 
-  gsap.utils.toArray(".split-reveal").forEach((el) => {
-    const split = new SplitText(el, {
-      type: "lines",
-      linesClass: "line-child",
-      mask: true,
-    });
-
-    // Animate each element’s lines, in sequence, inside the master timeline
-    homeTimeLine.from(
-      split.lines,
-      {
-        yPercent: 100,
-        duration: 1,
-        ease: "power4.out",
-        stagger: 0.1,
-      },
-      ">0.3"
-    ); // ">0.3" means: start 0.3s after the previous animation ends
-  });
 });
 
 onUnmounted(() => {
@@ -132,7 +113,7 @@ onUnmounted(() => {
     </div>
     <div class="about-description-container self-end">
       <h3
-        class="name split-reveal font-saans title-1 font-light leading-none mt-10 md:mt-0 cursor-enlarge"
+        class="name font-saans title-1 font-light leading-none mt-10 md:mt-0 cursor-enlarge"
       >
         NIKHIL SHINDE
       </h3>

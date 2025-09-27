@@ -139,40 +139,12 @@ onUnmounted(() => {
         <h3 class="detail-name title-1 font-bold mb-8">challenge</h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body mb-15">
+        <p class="desc body">
           Electronic recycling is a major challenge, with 70% of obsolete
           electronics staying in storage. Many states lack proper legislation
           for e-waste disposal, and the rapid pace of technology development
           creates a growing problem.
         </p>
-        <div class="point-breakdown mb-8">
-          <p class="point-title title-3 font-bold mb-3">1. accessibility gap</p>
-          <p class="point-desc body">
-            68% of survey respondents cited a lack of nearby recycling centers,
-            and 52% found the process inconvenient.
-          </p>
-        </div>
-        <div class="point-breakdown mb-8">
-          <p class="point-title title-3 font-bold mb-3">2. knowledge deficit</p>
-          <p class="point-desc body">
-            60% of participants were unclear on how to recycle electronics, and
-            some were even unaware that it was an option.
-          </p>
-        </div>
-        <div class="point-breakdown mb-8">
-          <p class="point-title title-3 font-bold mb-3">3. inconvenience</p>
-          <p class="point-desc body">
-            Participants desired convenient local options, feeling that sending
-            electronics away was too much effort.
-          </p>
-        </div>
-        <div class="point-breakdown mb-8">
-          <p class="point-title title-3 font-bold mb-3">4. trust issues</p>
-          <p class="point-desc body">
-            Concerns about data security and the ethical practices of recycling
-            companies were also a factor.
-          </p>
-        </div>
       </div>
     </div>
     <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
@@ -181,7 +153,7 @@ onUnmounted(() => {
           <h3 class="detail-name title-1 font-bold mb-8">solution</h3>
         </div>
         <div class="project-step-col-2">
-          <p class="desc body mb-8">
+          <p class="desc body mb-16">
             We decided that a digital solution, specifically a website, would be
             the most effective way to address the key constraints of access and
             awareness.<br /><br />
@@ -189,7 +161,9 @@ onUnmounted(() => {
             centers and providing the necessary information to encourage them to
             recycle.
           </p>
-          <div class="video-container relative w-full aspect-[16/9]">
+        </div>
+      </div>
+      <div class="video-container relative w-full aspect-[16/9]">
             <video
               class="w-full h-full object-cover video"
               src="/src/assets/images/e-turn/prototype.mp4"
@@ -197,8 +171,6 @@ onUnmounted(() => {
               loop
             ></video>
           </div>
-        </div>
-      </div>
     </div>
   </div>
   <div class="process-row px-[7vw] mb-40 grid grid-cols-3 md:grid-cols-5 gap-3">
@@ -303,14 +275,15 @@ onUnmounted(() => {
           </div>
           <div class="point-breakdown mb-8">
             <p class="point-title title-3 font-bold mb-3">
-              2. accessibility issues
+              2. accessibility and inconvenience
             </p>
             <p class="point-desc font-light body">
               68% of respondents cited a scarcity of nearby recycling centers
-              and 52% found the process inconvenient.
+              and 52% found the process inconvenient.Participants desired convenient local options, 
+              feeling that sending electronics away was too much effort.
             </p>
           </div>
-          <div class="point-breakdown">
+          <div class="point-breakdown mb-8">
             <p class="point-title title-3 font-bold mb-3">
               3. need for comprehensive information
             </p>
@@ -320,6 +293,13 @@ onUnmounted(() => {
               existing platforms like google maps.
             </p>
           </div>
+          <div class="point-breakdown">
+          <p class="point-title title-3 font-bold mb-3">4. data and privacy concerns</p>
+          <p class="point-desc font-light body">
+            Concerns about data security and the ethical practices of recycling
+            companies were also a factor.
+          </p>
+        </div>
         </div>
       </div>
     </div>
@@ -551,26 +531,27 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <div class="project-step-row px-[7vw] mb-20">
+    <div class="project-step-row px-[7vw] mb-16">
       <div class="project-step-col-1">
         <h3 class="detail-name title-2 font-bold mb-8">o4.3 live prototype</h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body mb-16">
+        <p class="desc body ">
           Using XD to prototype our final design, we created a mvp, it contains
           fewer screens and not all concepts that were highlighted in our
           brainstorming. <br /><br />Other ideas like rewards and discussion
           forums were reserved for future scope.
         </p>
-        <div class="video-container relative w-full">
+        
+      </div>
+    </div>
+    <div class="video-container relative w-full px-[7vw] py-16 bg-[var(--rock)]">
           <iframe
             class="aspect-[16/9]"
             width="100%"
             src="https://xd.adobe.com/embed/e2b967bd-24c5-4546-a14d-054b240602cd-b7ea/?fullscreen"
           ></iframe>
         </div>
-      </div>
-    </div>
   </div>
 
   <div class="project-step mb-20">

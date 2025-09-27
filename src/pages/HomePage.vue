@@ -10,9 +10,8 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
-
-  document.fonts.ready.then(()=>{
-const roleInvertSplit = new SplitText(".role-inverted", {
+  
+  const roleInvertSplit = new SplitText(".role-inverted", {
     type: "lines",
     linesClass: "line-child",
   });
@@ -55,9 +54,6 @@ const roleInvertSplit = new SplitText(".role-inverted", {
       stagger: 0.15,
     }
   );
-
-  });
-  
 });
 
 onUnmounted(() => {

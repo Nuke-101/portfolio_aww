@@ -79,8 +79,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 .fade-in {
   opacity: 0;
 }
@@ -170,7 +168,7 @@ html {
 }
 
 .cursor-text {
-  font-size: 0.11rem;
+  font-size: 0.1rem;
   line-height: 150%;
   font-family: "Satoshi";
 }

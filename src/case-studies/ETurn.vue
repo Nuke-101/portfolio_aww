@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Carousel from "../components/Carousel.vue";
 import DragTip from "../components/DragTip.vue";
-import ScrollToTopButton from "../components/ScrollToTopButton.vue"
+import ScrollToTopButton from "../components/ScrollToTopButton.vue";
 
 onMounted(() => {
   const projectRows = gsap.utils.toArray(".project-step-row");
@@ -90,7 +90,7 @@ onUnmounted(() => {
     </div>
     <div class="project-banner col-span-2 mb-16">
       <img
-        src="/src/assets/images/e-turn/banner.png"
+        src="/src/assets/images/e-turn/optimized/banner.webp"
         alt=""
         class="banner-im w-full object-cover aspect-[2/1]"
       />
@@ -115,18 +115,21 @@ onUnmounted(() => {
           collaborators
         </div>
         <div class="project-detail flex justify-start gap-2">
-          <a href="https://www.linkedin.com/in/bhoyarm/" target="_blank"><img
-            class="w-12 h-12 rounded-[50%] cursor-link"
-            src="/src/assets/images/e-turn/mandar-profile.jpg"
-            alt=""
-          /></a><a href="https://www.linkedin.com/in/pranavmirkad/" target="_blank"><img
-            class="w-12 h-12 rounded-[50%] cursor-link"
-            src="/src/assets/images/e-turn/pranav-profile.jpg"
-            alt=""
-          /></a><a href="https://www.linkedin.com/in/gsaransh/" target="_blank"><img
-            class="w-12 h-12 rounded-[50%] cursor-link"
-            src="/src/assets/images/e-turn/saransh-profile.jpg"
-            alt=""
+          <a href="https://www.linkedin.com/in/bhoyarm/" target="_blank"
+            ><img
+              class="w-12 h-12 rounded-[50%] cursor-link"
+              src="/src/assets/images/e-turn/mandar-profile.jpg"
+              alt="" /></a
+          ><a href="https://www.linkedin.com/in/pranavmirkad/" target="_blank"
+            ><img
+              class="w-12 h-12 rounded-[50%] cursor-link"
+              src="/src/assets/images/e-turn/pranav-profile.jpg"
+              alt="" /></a
+          ><a href="https://www.linkedin.com/in/gsaransh/" target="_blank"
+            ><img
+              class="w-12 h-12 rounded-[50%] cursor-link"
+              src="/src/assets/images/e-turn/saransh-profile.jpg"
+              alt=""
           /></a>
         </div>
       </div>
@@ -164,13 +167,13 @@ onUnmounted(() => {
         </div>
       </div>
       <div class="video-container relative w-full aspect-[16/9]">
-            <video
-              class="w-full h-full object-cover video"
-              src="/src/assets/images/e-turn/prototype.mp4"
-              autoplay
-              loop
-            ></video>
-          </div>
+        <video
+          class="w-full h-full object-cover video"
+          src="/src/assets/images/e-turn/prototype.mp4"
+          autoplay
+          loop
+        ></video>
+      </div>
     </div>
   </div>
   <div class="process-row px-[7vw] mb-40 grid grid-cols-3 md:grid-cols-5 gap-3">
@@ -279,8 +282,9 @@ onUnmounted(() => {
             </p>
             <p class="point-desc font-light body">
               68% of respondents cited a scarcity of nearby recycling centers
-              and 52% found the process inconvenient.Participants desired convenient local options, 
-              feeling that sending electronics away was too much effort.
+              and 52% found the process inconvenient.Participants desired
+              convenient local options, feeling that sending electronics away
+              was too much effort.
             </p>
           </div>
           <div class="point-breakdown mb-8">
@@ -294,12 +298,14 @@ onUnmounted(() => {
             </p>
           </div>
           <div class="point-breakdown">
-          <p class="point-title title-3 font-bold mb-3">4. data and privacy concerns</p>
-          <p class="point-desc font-light body">
-            Concerns about data security and the ethical practices of recycling
-            companies were also a factor.
-          </p>
-        </div>
+            <p class="point-title title-3 font-bold mb-3">
+              4. data and privacy concerns
+            </p>
+            <p class="point-desc font-light body">
+              Concerns about data security and the ethical practices of
+              recycling companies were also a factor.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -367,7 +373,10 @@ onUnmounted(() => {
           four core user pain points: limited access, lack of awareness,
           inadequate programs, and confusion over proper handling.
         </p>
-        <img src="/src/assets/images/e-turn/thematic-network.png" alt="" />
+        <img
+          src="/src/assets/images/e-turn/optimized/thematic-network.webp"
+          alt=""
+        />
       </div>
     </div>
     <div class="project-step-row px-[7vw] mb-20">
@@ -536,22 +545,23 @@ onUnmounted(() => {
         <h3 class="detail-name title-2 font-bold mb-8">o4.3 live prototype</h3>
       </div>
       <div class="project-step-col-2">
-        <p class="desc body ">
+        <p class="desc body">
           Using XD to prototype our final design, we created a mvp, it contains
           fewer screens and not all concepts that were highlighted in our
           brainstorming. <br /><br />Other ideas like rewards and discussion
           forums were reserved for future scope.
         </p>
-        
       </div>
     </div>
-    <div class="video-container relative w-full px-[7vw] py-16 bg-[var(--rock)]">
-          <iframe
-            class="aspect-[16/9]"
-            width="100%"
-            src="https://xd.adobe.com/embed/e2b967bd-24c5-4546-a14d-054b240602cd-b7ea/?fullscreen"
-          ></iframe>
-        </div>
+    <div
+      class="video-container relative w-full px-[7vw] py-16 bg-[var(--rock)]"
+    >
+      <iframe
+        class="aspect-[16/9]"
+        width="100%"
+        src="https://xd.adobe.com/embed/e2b967bd-24c5-4546-a14d-054b240602cd-b7ea/?fullscreen"
+      ></iframe>
+    </div>
   </div>
 
   <div class="project-step mb-20">
@@ -633,7 +643,7 @@ onUnmounted(() => {
         >
           <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
             <img
-              src="/src/assets/images/Zentra.png"
+              src="/src/assets/images/keyask/optimized/project-tile.webp"
               alt=""
               class="cover-image"
             />
@@ -645,7 +655,7 @@ onUnmounted(() => {
             </h2>
             <p class="project-desc body mt-4">
               A new product that expands the Zentra smart lock ecosystem,
-            increasing revenue and delivering value to customers.
+              increasing revenue and delivering value to customers.
             </p>
           </div>
         </router-link>

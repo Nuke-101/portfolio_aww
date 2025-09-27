@@ -3,7 +3,7 @@ import { onMounted, onUnmounted } from "vue";
 import Navbar from "../universal-sections/Navbar.vue";
 import FooterSection from "../universal-sections/FooterSection.vue";
 
-import ScrollToTopButton from "../components/ScrollToTopButton.vue"
+import ScrollToTopButton from "../components/ScrollToTopButton.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 onMounted(() => {
@@ -87,7 +87,7 @@ onUnmounted(() => {
     </div>
     <div class="project-banner col-span-2 mb-16">
       <img
-        src="/src/assets/images/gravity-drive/banner.png"
+        src="/src/assets/images/gravity-drive/optimized/banner.webp"
         alt=""
         class="banner-im w-full object-cover aspect-[2/1]"
       />
@@ -112,28 +112,33 @@ onUnmounted(() => {
           collaborators
         </div>
         <div class="project-detail flex justify-start gap-2">
-         <a href="https://www.linkedin.com/in/accoon/" target="_blank">
-          <img
-            class="w-12 h-12 rounded-[50%] cursor-link"
-            src="/src/assets/images/gravity-drive/austin-profile.jpg"
-            alt=""
-          />
-         </a>
-         <a href="https://www.linkedin.com/in/christopher-valdez-935106191/" target="_blank">
-          <img
-            class="w-12 h-12 rounded-[50%] cursor-link"
-            src="/src/assets/images/gravity-drive/chris-profile.jpg"
-            alt=""
-          />
-         </a>
-         <a href="https://www.linkedin.com/in/daivik-chauhan-41b320161/" target="_blank">
-          <img
-            class="w-12 h-12 rounded-[50%] cursor-link"
-            src="/src/assets/images/gravity-drive/daivik-profile.jpg"
-            alt=""
-          />
-         </a>
-          
+          <a href="https://www.linkedin.com/in/accoon/" target="_blank">
+            <img
+              class="w-12 h-12 rounded-[50%] cursor-link"
+              src="/src/assets/images/gravity-drive/austin-profile.jpg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/christopher-valdez-935106191/"
+            target="_blank"
+          >
+            <img
+              class="w-12 h-12 rounded-[50%] cursor-link"
+              src="/src/assets/images/gravity-drive/chris-profile.jpg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/daivik-chauhan-41b320161/"
+            target="_blank"
+          >
+            <img
+              class="w-12 h-12 rounded-[50%] cursor-link"
+              src="/src/assets/images/gravity-drive/daivik-profile.jpg"
+              alt=""
+            />
+          </a>
         </div>
       </div>
     </div>
@@ -320,7 +325,10 @@ onUnmounted(() => {
           owners and managers. <br />
           <br />
         </p>
-        <img src="/src/assets/images/gravity-drive/persona.png" alt="" />
+        <img
+          src="/src/assets/images/gravity-drive/optimized/persona.webp"
+          alt=""
+        />
         <p class="desc body">
           <br />
           <br />Due to time constraints, we narrowed our initial list of
@@ -381,28 +389,28 @@ onUnmounted(() => {
     <div class="site-1 w-full mt-20">
       <img
         class="object-fit w-full"
-        src="/src/assets/images/gravity-drive/idea-1.JPG"
+        src="/src/assets/images/gravity-drive/optimized/idea-1.webp"
         alt=""
       />
     </div>
     <div class="site-2 w-full">
       <img
         class="object-fit w-full"
-        src="/src/assets/images/gravity-drive/idea-2.png"
+        src="/src/assets/images/gravity-drive/optimized/idea-2.webp"
         alt=""
       />
     </div>
     <div class="site-3 w-full md:mt-20">
       <img
         class="object-fit w-full"
-        src="/src/assets/images/gravity-drive/idea-3.JPG"
+        src="/src/assets/images/gravity-drive/optimized/idea-3.webp"
         alt=""
       />
     </div>
     <div class="site-3 w-full -mt-20 md:mt-0">
       <img
         class="object-fit w-full"
-        src="/src/assets/images/gravity-drive/idea-4.png"
+        src="/src/assets/images/gravity-drive/optimized/idea-4.webp"
         alt=""
       />
     </div>
@@ -505,7 +513,7 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-     <div class="project-step-row px-[7vw]">
+    <div class="project-step-row px-[7vw]">
       <div class="project-step-col-1">
         <h3 class="detail-name title-2 font-bold mb-8">
           o4.3 what users liked
@@ -572,7 +580,7 @@ onUnmounted(() => {
         >
           <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
             <img
-              src="/src/assets/images/E-turn.png"
+              src="/src/assets/images/e-turn/optimized/project-tile.webp"
               alt=""
               class="cover-image"
             />

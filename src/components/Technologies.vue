@@ -1,6 +1,7 @@
 <template>
-  <div class="marquee-container w-[120%] whitespace-nowrap py-4 z-1 mt-[100px]
-md:mt-[10vw]">
+  <div
+    class="marquee-container w-[120%] whitespace-nowrap py-4 z-1 mt-[100px] md:mt-[10vw]"
+  >
     <!-- Wrap two copies of the text -->
     <div ref="marqueeWrapper" class="marquee-wrapper inline-block">
       <div class="marquee-text font-saans font-bold text-4xl inline-block">
@@ -24,7 +25,6 @@ md:mt-[10vw]">
         <span class="mr-12">⁕</span>
         <span class="mr-12">GSAP</span>
         <span class="mr-12">⁕</span>
-       
       </div>
       <!-- Duplicate copy for seamless loop -->
       <div class="marquee-text font-saans font-bold text-4xl inline-block">
@@ -53,13 +53,9 @@ md:mt-[10vw]">
   </div>
 </template>
 
-
 <script setup>
 import { onMounted, ref } from "vue";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const marqueeWrapper = ref(null);
 
@@ -73,25 +69,7 @@ onMounted(() => {
     ease: "none",
     repeat: -1,
   });
-
-  // Create a ScrollTrigger that listens to the page scroll
-  ScrollTrigger.create({
-    trigger: document.body,
-    start: "top top",
-    end: "bottom bottom",
-    onUpdate: (self) => {
-      // The direction is 1 when scrolling down, -1 when scrolling up
-      const direction = self.direction;
-      const skew = direction === 1 ? -10 : 10; // Apply a subtle rotation
-      gsap.to(".marquee-text", {
-        skew:skew,
-        ease: "power2.out",
-        duration: 0.5,
-      });
-    },
-  });
 });
-
 </script>
 
 <style scoped>

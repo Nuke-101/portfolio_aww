@@ -3,7 +3,6 @@ import Navbar from "../universal-sections/Navbar.vue";
 import FooterSection from "../universal-sections/FooterSection.vue";
 import Technologies from "../components/Technologies.vue";
 
-
 import { onMounted, onUnmounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,7 +10,9 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
-  const roleInvertSplit = new SplitText(".role-inverted", {
+
+  document.fonts.ready.then(()=>{
+const roleInvertSplit = new SplitText(".role-inverted", {
     type: "lines",
     linesClass: "line-child",
   });
@@ -55,6 +56,8 @@ onMounted(() => {
     }
   );
 
+  });
+  
 });
 
 onUnmounted(() => {
@@ -127,7 +130,7 @@ onUnmounted(() => {
       </p>
     </div>
   </section>
-  <Technologies/>
+  <Technologies />
   <section
     class="work relative px-[7vw] mt-[50px] pt-[100px] pb-[100px] md:mt-[5vw] bg-[var(--rock)] text-[var(--pearl)] dark-background"
   >
@@ -149,7 +152,7 @@ onUnmounted(() => {
       >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
           <img
-            src="../assets/images/GravityDrive.png"
+            src="/src/assets/images/gravity-drive/optimized/project-tile.webp"
             alt=""
             class="cover-image"
           />
@@ -171,7 +174,11 @@ onUnmounted(() => {
         class="project-tile relative md:row-span-2 md:row-start-2"
       >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
-          <img src="../assets/images/E-turn.png" alt="" class="cover-image" />
+          <img
+            src="/src/assets/images/e-turn/optimized/project-tile.webp"
+            alt=""
+            class="cover-image"
+          />
         </div>
         <div class="project-info">
           <h3 class="project-company body font-light mt-7">IUPUI</h3>
@@ -190,7 +197,11 @@ onUnmounted(() => {
         class="project-tile relative md:row-span-2 md:row-start-4"
       >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
-          <img src="../assets/images/Zentra.png" alt="" class="cover-image" />
+          <img
+            src="/src/assets/images/keyask/optimized/project-tile.webp"
+            alt=""
+            class="cover-image"
+          />
         </div>
         <div class="project-info">
           <h3 class="project-company body font-light mt-7">ALLEGION</h3>

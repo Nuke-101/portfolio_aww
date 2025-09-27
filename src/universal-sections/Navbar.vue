@@ -52,10 +52,10 @@ onMounted(() => {
         class="navlink font-saans font-normal overflow-hidden cursor-enlarge"
         >about</p
       >
-      <router-link
-        to="/resume"
+      <a
+        href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing" target="_blank"
         class="navlink font-saans font-normal overflow-hidden cursor-enlarge"
-        >resume</router-link
+        >resume</a
       >
     </div>
   </nav>

@@ -1,16 +1,16 @@
 <script setup>
 import { CustomCursor } from "./composables/customCursor";
 import { router } from "./composables/routes";
-import { SpeedInsights } from '@vercel/speed-insights/vue';
+import { SpeedInsights } from "@vercel/speed-insights/vue";
 
 CustomCursor(router);
 </script>
 
 <template>
-  <RouterView />
-
-
-  <!-- Custom cursors -->
+  <div id="app-scroll">
+    <RouterView />
+  </div>
+  <!-- Custom cursor -->
   <div id="cursor-ring"></div>
   <div id="cursor-pointer">
     <span class="cursor-text" id="cursor-label"></span>
@@ -21,6 +21,9 @@ CustomCursor(router);
 </template>
 
 <style scoped>
+#app-scroll {
+  overflow: hidden;
+}
 #cursor-ring {
   position: fixed;
   top: 0;

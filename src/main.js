@@ -3,7 +3,6 @@ import { router } from "./composables/routes";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-
 import Lenis from "lenis";
 import App from "./App.vue";
 
@@ -47,10 +46,7 @@ router.isReady().then(() => {
   });
 
   window.addEventListener("load", () => {
-    requestIdleCallback(() => {
-      ScrollTrigger.refresh(true);
-    });
+    lenis.scrollTo(lenis.scroll, { immediate: true });
+    ScrollTrigger.refresh(true);
   });
 });
-
-

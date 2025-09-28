@@ -9,7 +9,6 @@ import DragTip from "../components/DragTip.vue";
 import ScrollToTopButton from "../components/ScrollToTopButton.vue";
 
 onMounted(() => {
-
   const projectRows = gsap.utils.toArray(".project-step-row");
 
   // Save original styles so GSAP can restore them cleanly
@@ -621,11 +620,13 @@ onUnmounted(() => {
       </div>
       <div class="project-step-col-2">
         <p class="desc body">
-          This project taught me the importance of in-depth research to understand the core 
-          problem before jumping into a solution. It also highlighted the value of research 
-          methodologies like thematic networks and usability testing.<br/><br/> As my first collaborative 
-          project, it underscored the need for flexibility and collaboration to make design 
-          compromises and prioritize features based on project constraints.
+          This project taught me the importance of in-depth research to
+          understand the core problem before jumping into a solution. It also
+          highlighted the value of research methodologies like thematic networks
+          and usability testing.<br /><br />
+          As my first collaborative project, it underscored the need for
+          flexibility and collaboration to make design compromises and
+          prioritize features based on project constraints.
         </p>
       </div>
     </div>

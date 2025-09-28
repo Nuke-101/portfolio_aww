@@ -10,7 +10,6 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
-  
   const roleInvertSplit = new SplitText(".role-inverted", {
     type: "lines",
     linesClass: "line-child",
@@ -54,11 +53,6 @@ onMounted(() => {
       stagger: 0.15,
     }
   );
-});
-
-onUnmounted(() => {
-  // Refresh ScrollTrigger after scroll finishes
-  ScrollTrigger.refresh();
 });
 </script>
 <template>

@@ -4,12 +4,10 @@ import FooterSection from "../universal-sections/FooterSection.vue";
 
 import ScrollToTopButton from "../components/ScrollToTopButton.vue";
 
-import { gsap } from "gsap";
 import { onMounted } from "vue";
 import ComingSoon from "../components/ComingSoon.vue";
 
-onMounted(()=>{
-});
+onMounted(() => {});
 </script>
 
 <template>

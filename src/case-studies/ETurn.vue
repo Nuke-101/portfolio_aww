@@ -9,6 +9,7 @@ import DragTip from "../components/DragTip.vue";
 import ScrollToTopButton from "../components/ScrollToTopButton.vue";
 
 onMounted(() => {
+
   const projectRows = gsap.utils.toArray(".project-step-row");
 
   // Save original styles so GSAP can restore them cleanly
@@ -620,13 +621,11 @@ onUnmounted(() => {
       </div>
       <div class="project-step-col-2">
         <p class="desc body">
-          This project underscored the importance of thorough research and
-          iteration. <br /><br />
-          We spent a significant amount of time in the research and ideation
-          phases, ensuring a solid foundation for our features. <br /><br />
-          By "getting in the shoes of the user" through field research, we were
-          able to pinpoint the root causes of the issues and build a solution
-          that genuinely addresses their needs.
+          This project taught me the importance of in-depth research to understand the core 
+          problem before jumping into a solution. It also highlighted the value of research 
+          methodologies like thematic networks and usability testing.<br/><br/> As my first collaborative 
+          project, it underscored the need for flexibility and collaboration to make design 
+          compromises and prioritize features based on project constraints.
         </p>
       </div>
     </div>

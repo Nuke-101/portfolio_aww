@@ -7,9 +7,8 @@ CustomCursor(router);
 </script>
 
 <template>
-  <div id="app-scroll">
-    <RouterView />
-  </div>
+  <RouterView />
+
 
   <!-- Custom cursors -->
   <div id="cursor-ring"></div>
@@ -22,10 +21,6 @@ CustomCursor(router);
 </template>
 
 <style scoped>
-#app-scroll {
-  overflow: hidden; /* Optional: ensures Lenis controls scroll */
-}
-
 #cursor-ring {
   position: fixed;
   top: 0;

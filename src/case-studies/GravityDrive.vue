@@ -7,6 +7,7 @@ import ScrollToTopButton from "../components/ScrollToTopButton.vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 onMounted(() => {
+
   const projectRows = gsap.utils.toArray(".project-step-row");
 
   // Save original styles so GSAP can restore them cleanly

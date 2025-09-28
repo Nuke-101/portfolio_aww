@@ -1,6 +1,6 @@
 <template>
   <div class="marquee-container w-[150%] overflow-hidden whitespace-nowrap py-4 z-1">
-    <!-- Wrap two copies of the text -->
+
     <div ref="marqueeWrapper" class="marquee-wrapper inline-block">
       <div class="marquee-text font-saans font-bold text-4xl inline-block">
         <span class="mr-12">COMING SOON</span>
@@ -14,7 +14,7 @@
         <span class="mr-12">COMING SOON</span>
         <span class="mr-12">⁕</span>
       </div>
-      <!-- Duplicate copy for seamless loop -->
+
       <div class="marquee-text font-saans font-bold text-4xl inline-block">
         <span class="mr-12">COMING SOON</span>
         <span class="mr-12">⁕</span>
@@ -39,11 +39,11 @@ const marqueeWrapper = ref(null);
 
 onMounted(() => {
   const wrapper = marqueeWrapper.value;
-  const textWidth = wrapper.offsetWidth / 2; // half, since we duplicated
+  const textWidth = wrapper.offsetWidth / 2;
 
   gsap.to(wrapper, {
-    x: `-${textWidth}px`, // shift by one copy’s width
-    duration: 10, // adjust speed
+    x: `-${textWidth}px`,
+    duration: 10,
     ease: "none",
     repeat: -1,
   });

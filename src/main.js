@@ -1,12 +1,13 @@
 import { createApp } from "vue";
+import { router } from "./composables/routes";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+import Lenis from "lenis";
 import App from "./App.vue";
 
 import "./style.css";
-import { router } from "./composables/routes";
-
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,12 +22,9 @@ router.isReady().then(() => {
     smoothWheel: true,
     smoothTouch: false,
   });
-  // Kick Lenis a few times instantly
-for (let i = 0; i < 5; i++) {
-  lenis.raf(performance.now());
-}
 
-  // ✅ Force Lenis to start in sync
+  lenis.raf(performance.now());
+
   lenis.scrollTo(window.scrollY || 0, { immediate: true });
 
   function raf(time) {
@@ -48,9 +46,11 @@ for (let i = 0; i < 5; i++) {
     ScrollTrigger.refresh();
   });
 
-  // ✅ Sync again after all assets load
   window.addEventListener("load", () => {
-    lenis.scrollTo(lenis.scroll, { immediate: true });
-    ScrollTrigger.refresh(true);
+    requestIdleCallback(() => {
+      ScrollTrigger.refresh(true);
+    });
   });
 });
+
+

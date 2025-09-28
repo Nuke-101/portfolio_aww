@@ -6,10 +6,6 @@ const ETurn = () => import("../case-studies/ETurn.vue");
 const KeyAsk = () => import("../case-studies/KeyAsk.vue");
 const LoadingPage = () => import("../components/LoadingPage.vue");
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
 const routes = [
   { path: "/", component: LoadingPage },
   { path: "/home", component: HomePage },
@@ -19,9 +15,9 @@ const routes = [
 ];
 
 export const router = createRouter({
-  history: createWebHistory(), // 👈 make sure it's this one
+  history: createWebHistory(),
   routes,
   scrollBehavior() {
-    return false; // Lenis handles scrolling
+    return false;
   },
 });

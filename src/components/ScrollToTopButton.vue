@@ -17,7 +17,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const scrollToTopBtn = ref(null);
 
-// Access Lenis instance from Vue's globalProperties
 const { appContext } = getCurrentInstance();
 const lenis = appContext.config.globalProperties.$lenis?.();
 
@@ -25,7 +24,7 @@ const scrollToTop = () => {
   if (lenis) {
     lenis.scrollTo(0, {
       duration: 1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // same easing as main.js
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
   }
 };
@@ -33,7 +32,7 @@ const scrollToTop = () => {
 onMounted(() => {
   ScrollTrigger.create({
     trigger: document.body,
-    start: "top -200px", // show button after scrolling 200px
+    start: "top -300px", 
     onEnter: () => {
       gsap.to(scrollToTopBtn.value, { yPercent:0, opacity: 1, pointerEvents: "auto" });
     },

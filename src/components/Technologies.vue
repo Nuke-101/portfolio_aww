@@ -2,7 +2,6 @@
   <div
     class="marquee-container w-[120%] whitespace-nowrap py-4 z-1 mt-[100px] md:mt-[10vw]"
   >
-    <!-- Wrap two copies of the text -->
     <div ref="marqueeWrapper" class="marquee-wrapper inline-block">
       <div class="marquee-text font-saans font-bold text-4xl inline-block">
         <span class="mr-12">UI/UX DESIGN</span>
@@ -26,7 +25,6 @@
         <span class="mr-12">GSAP</span>
         <span class="mr-12">⁕</span>
       </div>
-      <!-- Duplicate copy for seamless loop -->
       <div class="marquee-text font-saans font-bold text-4xl inline-block">
         <span class="mr-12">UI/UX DESIGN</span>
         <span class="mr-12">⁕</span>

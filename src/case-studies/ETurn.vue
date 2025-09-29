@@ -64,7 +64,7 @@ onUnmounted(() => {
 -->
   <ScrollToTopButton></ScrollToTopButton>
   <Navbar></Navbar>
-  <div class="nav-spacer h-[130px]"></div>
+  <!-- <div class="nav-spacer h-[130px]"></div> -->
   <div class="project-intro mt-20 mb-40">
     <div
       class="project-overwiew grid grid-cols-1 md:grid-cols-2 px-[7vw] mb-16"

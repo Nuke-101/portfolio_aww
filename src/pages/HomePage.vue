@@ -57,7 +57,7 @@ onMounted(() => {
 </script>
 <template>
   <Navbar></Navbar>
-  <div class="nav-spacer h-[130px]"></div>
+  <!-- <div class="nav-spacer h-[130px]"></div> -->
   <section class="hero w-screen flex-col justify-center items-center mt-[12vh]">
     <h1
       class="role first-reveal md:whitespace-nowrap text-[15vw] md:text-[11.35vw] font-saans leading-none md:leading-[.80] px-[7vw] md:px-0 font-bold bg-[var(--pearl)] overflow-hidden"

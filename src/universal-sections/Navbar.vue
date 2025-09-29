@@ -1,27 +1,12 @@
 
 
 <script setup>
-import { onMounted, ref, getCurrentInstance } from "vue";
+import { onMounted, ref, } from "vue";
 import { gsap } from "gsap";
 
 const navbar = ref(null);
 
 onMounted(() => {
-  const { appContext } = getCurrentInstance();
-  const lenis = appContext.config.globalProperties.$lenis?.();
-
-  if (!lenis) return;
-
-  let lastScroll = 0;
-
-  lenis.on("scroll", ({ scroll }) => {
-    if (scroll > lastScroll) {
-      gsap.to(navbar.value, { y: -140, duration: 1, ease: "power3.out"});
-    } else {
-      gsap.to(navbar.value, { y: 0, duration: 1, ease: "power3.out" });
-    }
-    lastScroll = scroll;
-  });
 
    gsap.from(".navlink", {
     yPercent: 100,
@@ -34,7 +19,7 @@ onMounted(() => {
 <template>
   <nav
     ref="navbar"
-    class="navbar fixed top-0 left-0 w-full flex justify-between items-center px-[7vw] py-[40px] bg-[var(--pearl)] z-50"
+    class="navbar w-full flex justify-between items-center px-[7vw] py-[40px] bg-[var(--pearl)] z-50"
   >
     <router-link to="/home" class="logo overflow-hidden">
       <img

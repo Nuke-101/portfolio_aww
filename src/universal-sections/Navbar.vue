@@ -1,14 +1,11 @@
-
-
 <script setup>
-import { onMounted, ref, } from "vue";
+import { onMounted, ref } from "vue";
 import { gsap } from "gsap";
 
 const navbar = ref(null);
 
 onMounted(() => {
-
-   gsap.from(".navlink", {
+  gsap.from(".navlink", {
     yPercent: 100,
     duration: 1,
     ease: "power4.out",
@@ -33,16 +30,16 @@ onMounted(() => {
       <p
         to="/about"
         class="navlink font-saans font-normal overflow-hidden cursor-enlarge"
-        >about</p
       >
+        about
+      </p>
       <a
-        href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing" target="_blank"
+        href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing"
+        target="_blank"
         class="navlink font-saans font-normal overflow-hidden cursor-enlarge"
         >resume</a
       >
     </div>
   </nav>
 </template>
-<style scoped> 
-
-</style>
+<style scoped></style>

@@ -1,12 +1,12 @@
 <script setup>
-import Navbar from "../universal-sections/Navbar.vue";
-import FooterSection from "../universal-sections/FooterSection.vue";
 import Technologies from "../components/Technologies.vue";
 
 import { onMounted, onUnmounted, ref } from "vue";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { SplitText } from "gsap/SplitText";
+
+import FooterSection from "../universal-sections/FooterSection.vue";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
@@ -56,7 +56,6 @@ onMounted(() => {
 });
 </script>
 <template>
-  <Navbar></Navbar>
   <!-- <div class="nav-spacer h-[130px]"></div> -->
   <section class="hero w-screen flex-col justify-center items-center mt-[12vh]">
     <h1

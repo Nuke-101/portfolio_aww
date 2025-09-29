@@ -12,7 +12,7 @@ onMounted(() => {});
 
 <template>
   <ScrollToTopButton></ScrollToTopButton>
-  <Navbar></Navbar>
+
   <!-- <div class="nav-spacer h-[130px]"></div> -->
   <div class="project-intro mt-20 mb-20">
     <div

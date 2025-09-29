@@ -3,11 +3,14 @@ import { CustomCursor } from "./composables/customCursor";
 import { router } from "./composables/routes";
 import { SpeedInsights } from "@vercel/speed-insights/vue";
 
+import Navbar from "./universal-sections/Navbar.vue";
+
 CustomCursor(router);
 </script>
 
 <template>
   <div id="app-scroll">
+    <Navbar></Navbar>
     <RouterView />
   </div>
   <!-- Custom cursor -->

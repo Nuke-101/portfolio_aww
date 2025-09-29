@@ -9,10 +9,10 @@ import DragTip from "../components/DragTip.vue";
 import ScrollToTopButton from "../components/ScrollToTopButton.vue";
 
 onMounted(() => {
-  const projectRows = gsap.utils.toArray(".project-step-row");
+  const projectRows = gsap.utils.toArray(".pinned-row");
 
   // Save original styles so GSAP can restore them cleanly
-  ScrollTrigger.saveStyles(".project-step-col-1");
+  ScrollTrigger.saveStyles(".pinned-col");
 
   // Create triggers for desktop only
   ScrollTrigger.matchMedia({
@@ -23,7 +23,7 @@ onMounted(() => {
           start: "top 80px",
           // unpin when this row finishes, not beyond
           end: () => "+=" + row.offsetHeight,
-          pin: row.querySelector(".project-step-col-1"),
+          pin: row.querySelector(".pinned-col"),
           pinSpacing: false,
         });
       });
@@ -63,7 +63,6 @@ onUnmounted(() => {
   150 -> mb-40
 -->
   <ScrollToTopButton></ScrollToTopButton>
-  <Navbar></Navbar>
   <!-- <div class="nav-spacer h-[130px]"></div> -->
   <div class="project-intro mt-20 mb-40">
     <div
@@ -137,8 +136,8 @@ onUnmounted(() => {
   </div>
 
   <div class="project-step mb-20">
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-1 font-bold mb-8">challenge</h3>
       </div>
       <div class="project-step-col-2">
@@ -151,8 +150,8 @@ onUnmounted(() => {
       </div>
     </div>
     <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
-      <div class="project-step-row">
-        <div class="project-step-col-1">
+      <div class="project-step-row pinned-row">
+        <div class="project-step-col-1 pinned-col">
           <h3 class="detail-name title-1 font-bold mb-8">solution</h3>
         </div>
         <div class="project-step-col-2">
@@ -195,8 +194,8 @@ onUnmounted(() => {
   </div>
 
   <div class="project-step mb-40">
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-1 font-bold mb-8">o1. data collection</h3>
       </div>
       <div class="project-step-col-2">
@@ -240,8 +239,8 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">
           o1.1 site visits, surveys and interviews
         </h3>
@@ -260,8 +259,8 @@ onUnmounted(() => {
     </div>
 
     <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
-      <div class="project-step-row">
-        <div class="project-step-col-1">
+      <div class="project-step-row pinned-row">
+        <div class="project-step-col-1 pinned-col">
           <h3 class="detail-name title-1 font-bold mb-8">o1.2 key insights</h3>
         </div>
         <div class="project-step-col-2">
@@ -312,8 +311,8 @@ onUnmounted(() => {
   </div>
 
   <div class="project-step mb-40">
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-1 font-bold mb-8">
           o2. analysis and synthesis
         </h3>
@@ -326,8 +325,8 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">
           o2.1 affinity mapping
         </h3>
@@ -361,8 +360,8 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">
           o2.2 thematic network
         </h3>
@@ -379,8 +378,8 @@ onUnmounted(() => {
         />
       </div>
     </div>
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">o2.3 personas</h3>
       </div>
       <div class="project-step-col-2">
@@ -400,8 +399,8 @@ onUnmounted(() => {
   </div>
 
   <div class="project-step mb-16">
-    <div class="project-step-row px-[7vw]">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw]">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-1 font-bold mb-8">
           o3. ideation and design
         </h3>
@@ -456,8 +455,8 @@ onUnmounted(() => {
 
   <
   <div class="project-step mb-40">
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-1 font-bold mb-8">
           o4. design and prototyping
         </h3>
@@ -471,8 +470,8 @@ onUnmounted(() => {
         </p>
       </div>
     </div>
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">o4.1 storyboards</h3>
       </div>
       <div class="project-step-col-2">
@@ -518,8 +517,8 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">o4.2 wireframes</h3>
       </div>
       <div class="project-step-col-2">
@@ -540,8 +539,8 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <div class="project-step-row px-[7vw] mb-16">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-16">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">o4.3 live prototype</h3>
       </div>
       <div class="project-step-col-2">
@@ -565,8 +564,8 @@ onUnmounted(() => {
   </div>
 
   <div class="project-step mb-20">
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-1 font-bold mb-8">
           o5. usability testing
         </h3>
@@ -579,8 +578,8 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <div class="project-step-row px-[7vw] mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row px-[7vw] mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">o5.1 what we learned</h3>
       </div>
       <div class="project-step-col-2">
@@ -614,8 +613,8 @@ onUnmounted(() => {
   <div
     class="case-footer black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20"
   >
-    <div class="project-step-row mb-20">
-      <div class="project-step-col-1">
+    <div class="project-step-row pinned-row mb-20">
+      <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-1 font-bold mb-8">learning outcomes</h3>
       </div>
       <div class="project-step-col-2">
@@ -631,8 +630,8 @@ onUnmounted(() => {
       </div>
     </div>
     <div class="h-[4px] bg-white w-full rounded-xl mb-20"></div>
-    <div class="project-step-row">
-      <div class="project-step-col-1 pointer-events-none">
+    <div class="project-step-row pinned-row">
+      <div class="project-step-col-1 pinned-col pointer-events-none">
         <h3 class="detail-name title-1 font-bold mb-8">upnext</h3>
       </div>
       <div class="project-step-col-2">

@@ -27,12 +27,12 @@ onMounted(() => {
     </router-link>
 
     <div class="flex space-x-10 md:space-x-20 title-3">
-      <p
+      <router-link
         to="/about"
         class="navlink font-saans font-normal overflow-hidden cursor-enlarge"
       >
         about
-      </p>
+      </router-link>
       <a
         href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing"
         target="_blank"

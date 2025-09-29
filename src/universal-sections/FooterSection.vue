@@ -56,9 +56,13 @@
     <div class="footer-links-container grid grid-cols-1 md:grid-cols-2 mt-20">
       <div class="nav-links">
         <p class="link-header title-1 font-bold font-saans mb-6">navigation</p>
-        <p class="footer-links title-3 mb-3 cursor-enlarge w-fit">about</p>
+        <router-link
+          to="/about"
+          class="footer-links block title-3 mb-3 cursor-enlarge w-fit"
+          >about</router-link
+        >
         <a
-          class="footer-links title-3 mb-3 cursor-enlarge w-fit"
+          class="footer-links block title-3 mb-3 cursor-enlarge w-fit"
           href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing"
           target="_blank"
           >resume</a

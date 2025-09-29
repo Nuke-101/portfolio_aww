@@ -5,6 +5,7 @@ const GravityDrive = () => import("../case-studies/GravityDrive.vue");
 const ETurn = () => import("../case-studies/ETurn.vue");
 const KeyAsk = () => import("../case-studies/KeyAsk.vue");
 const LoadingPage = () => import("../components/LoadingPage.vue");
+const AboutPage = () => import("../pages/AboutPage.vue");
 
 const routes = [
   { path: "/", component: LoadingPage },
@@ -12,6 +13,7 @@ const routes = [
   { path: "/gravityDrive", component: GravityDrive },
   { path: "/eTurn", component: ETurn },
   { path: "/keyAsk", component: KeyAsk },
+  { path: "/about", component: AboutPage },
 ];
 
 export const router = createRouter({

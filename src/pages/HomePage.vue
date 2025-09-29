@@ -105,7 +105,7 @@ onMounted(() => {
     </div>
     <div class="about-description-container self-end">
       <h3
-        class="name font-saans title-1 font-light leading-none mt-10 md:mt-0 cursor-enlarge"
+        class="name font-saans title-1 font-light leading-none mt-10 md:mt-0 cursor-enlarge w-fit"
       >
         NIKHIL SHINDE
       </h3>

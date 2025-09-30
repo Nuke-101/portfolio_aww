@@ -6,8 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const scrollToTopBtn = ref(null);
-const { appContext } = getCurrentInstance();
-const lenis = appContext.config.globalProperties.$lenis?.();
 
 const scrollToTop = () => {
   if (lenis) {
@@ -18,9 +16,13 @@ const scrollToTop = () => {
   }
 };
 
-let st; // We'll store the ScrollTrigger instance here
+let st;
 
 onMounted(() => {
+
+const { appContext } = getCurrentInstance();
+const lenis = appContext.config.globalProperties.$lenis;
+
   st = ScrollTrigger.create({
     trigger: document.body,
     start: "top -240px",

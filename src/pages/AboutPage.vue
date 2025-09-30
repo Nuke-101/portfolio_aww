@@ -3,6 +3,8 @@ import { onMounted, onUnmounted } from "vue";
 
 import FooterSection from "../universal-sections/FooterSection.vue";
 import ScrollToTopButton from "../components/ScrollToTopButton.vue";
+import Navbar from "../universal-sections/Navbar.vue";
+
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -53,6 +55,8 @@ onUnmounted(() => {
 
 <template>
   <ScrollToTopButton></ScrollToTopButton>
+  <Navbar></Navbar>
+  <div class="nav-spacer h-[130px]"></div>
   <section class="about-row px-[7vw] mt-20 mb-20 md:mb-40">
     <div class="profile-pic relative">
       <div

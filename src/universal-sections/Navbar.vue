@@ -1,22 +1,81 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, onUnmounted, ref, getCurrentInstance } from "vue";
 import { gsap } from "gsap";
 
 const navbar = ref(null);
 
+let scrollHandler;
+let ctx;
+let idleTimeout = null;
+
 onMounted(() => {
-  gsap.from(".navlink", {
-    yPercent: 100,
-    duration: 1,
-    ease: "power4.out",
-  });
+  const { appContext } = getCurrentInstance();
+  const lenis = appContext.config.globalProperties.$lenis;
+
+  if (!lenis) return;
+
+  const hideNavbar = () => {
+    gsap.to(navbar.value, {
+      yPercent: -100,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  };
+
+  const showNavbar = () => {
+    gsap.to(navbar.value, {
+      yPercent: 0,
+      duration: 0.8,
+      ease: "power3.out",
+    });
+  };
+
+  const resetIdleTimer = (scrollY) => {
+    if (idleTimeout) clearTimeout(idleTimeout);
+
+    idleTimeout = setTimeout(() => {
+      if (scrollY > 0) {
+        hideNavbar();
+      }
+    }, 2500);
+  };
+
+  scrollHandler = ({ scroll, direction }) => {
+    if (direction === 1) {
+      hideNavbar();
+    } else if (direction === -1) {
+      showNavbar();
+    }
+    resetIdleTimer(scroll);
+  };
+
+  lenis.on("scroll", scrollHandler);
+
+  ctx = gsap.context(() => {
+    gsap.from(".navlink", {
+      yPercent: 100,
+      duration: 1,
+      ease: "power4.out",
+    });
+  }, navbar.value);
+});
+
+onUnmounted(() => {
+  const { appContext } = getCurrentInstance();
+  const lenis = appContext.config.globalProperties.$lenis;
+
+  if (lenis && scrollHandler) {
+    lenis.off("scroll", scrollHandler);
+  }
+  if (ctx) ctx.revert();
+  if (idleTimeout) clearTimeout(idleTimeout);
 });
 </script>
 
 <template>
   <nav
     ref="navbar"
-    class="navbar w-full flex justify-between items-center px-[7vw] py-[40px] bg-[var(--pearl)] z-50"
+    class="navbar fixed top-0 left-0 w-full flex justify-between items-center px-[7vw] py-[40px] bg-[var(--pearl)] z-50"
   >
     <router-link to="/home" class="logo overflow-hidden">
       <img
@@ -37,9 +96,9 @@ onMounted(() => {
         href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing"
         target="_blank"
         class="navlink font-saans font-normal overflow-hidden cursor-enlarge"
-        >resume</a
       >
+        resume
+      </a>
     </div>
   </nav>
 </template>
-<style scoped></style>

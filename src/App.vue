@@ -9,8 +9,7 @@ CustomCursor(router);
 </script>
 
 <template>
-  <div id="app-scroll">
-    <Navbar></Navbar>
+  <div id="app-scroll" v-cloak>
     <RouterView />
   </div>
   <!-- Custom cursor -->

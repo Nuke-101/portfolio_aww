@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 
 import FooterSection from "../universal-sections/FooterSection.vue";
+import Navbar from "../universal-sections/Navbar.vue";
 gsap.registerPlugin(SplitText);
 
 onMounted(() => {
@@ -56,7 +57,8 @@ onMounted(() => {
 });
 </script>
 <template>
-  <!-- <div class="nav-spacer h-[130px]"></div> -->
+  <Navbar></Navbar>
+  <div class="nav-spacer h-[130px]"></div>
   <section class="hero w-screen flex-col justify-center items-center mt-[12vh]">
     <h1
       class="role first-reveal md:whitespace-nowrap text-[15vw] md:text-[11.35vw] font-saans leading-none md:leading-[.80] px-[7vw] md:px-0 font-bold bg-[var(--pearl)] overflow-hidden"

@@ -79,7 +79,7 @@ onUnmounted(() => {
   >
     <router-link to="/home" class="logo overflow-hidden">
       <img
-        src="../assets/logos/Nikhil Logo PNG.png"
+        src="/src/assets/icons/Nikhil Logo PNG.png"
         alt="Site Logo"
         class="logo-img navlink aspect-[1.1/1] h-[50px] md:h-[60px] overflow-hidden cursor-enlarge"
       />

@@ -4,31 +4,76 @@ import Navbar from "../universal-sections/Navbar.vue";
 
 import { onMounted } from "vue";
 import { gsap } from "gsap";
-import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
 
-gsap.registerPlugin(ScrambleTextPlugin);
+import { SplitText } from "gsap/SplitText";
 
 onMounted(() => {
-  const words = ["Hello,", "नमस्ते,", "नमस्कार,"];
+  const firstRevealElements = gsap.utils.toArray(".first-reveal");
+  const fadeElements = gsap.utils.toArray(".fade-in");
 
-  const tl = gsap.timeline({
-    repeat: -1, // Loop infinitely
-    defaults: {
-      duration: 1.5,
-      ease: "power2.inOut",
-    },
+  firstRevealElements.forEach((el) => {
+    const split = new SplitText(el, {
+      type: "lines",
+      linesClass: "line-child",
+    });
+
+    gsap.from(split.lines, {
+      y: 200,
+      duration: 1.2,
+      ease: "power4.out",
+      stagger: 0.15,
+    });
+  });
+  fadeElements.forEach((el) => {
+    gsap.to(el, {
+      y: -10,
+      opacity: 1,
+      duration: 2,
+      ease: "power4.out",
+      stagger: 0.15,
+    });
   });
 
-  words.forEach((word) => {
-    tl.to("#hello-text", {
-      scrambleText: word,
-    }).to(
-      {},
-      {
-        duration: 1,
+  const texts = ["Hello,", "नमस्ते,", "नमस्कार,"];
+  const typedText = document.getElementById("typed-text");
+  const cursor = document.getElementById("cursor-hello");
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let typing = true;
+
+  function typeEffect() {
+    const currentText = texts[textIndex];
+
+    if (typing) {
+      if (charIndex < currentText.length) {
+        typedText.textContent += currentText.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 150);
+      } else {
+        typing = false;
+        setTimeout(typeEffect, 2000);
       }
-    );
-  });
+    } else {
+      if (charIndex > 0) {
+        typedText.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(typeEffect, 80);
+      } else {
+        typing = true;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(typeEffect, 300);
+      }
+    }
+  }
+
+  // Blinking cursor
+  setInterval(() => {
+    cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
+  }, 500);
+
+  // Start typing animation
+  typeEffect();
 });
 </script>
 
@@ -38,9 +83,17 @@ onMounted(() => {
 
   <div class="about-intro grid grid-cols-1 md:grid-cols-2 px-[7vw] mt-20 mb-20">
     <div class="desc mb-40">
-      <p class="h2 font-bold mt-20 md:mb-0" id="hello-text">Hello,</p>
-      <p class="h2 font-normal mb-20">Nice to meet you!</p>
-      <p class="body mb-12">
+      <p
+        class="h2 font-bold mt-20 md:mb-0 first-reveal overflow-hidden"
+        id="hello-text"
+      >
+        <span id="typed-text"></span
+        ><span id="cursor-hello" class="font-light">|</span>
+      </p>
+      <p class="h2 font-normal mb-20 first-reveal overflow-hidden">
+        Nice to meet you!
+      </p>
+      <p class="body mb-12 fade-in opacity-0">
         I’m Nikhil, a UX professional from Pune. With a Master's degree in
         Human-Computer Interaction and a strong foundation in Computer Science
         my expertise spans the entire product lifecycle, from initial user
@@ -48,13 +101,16 @@ onMounted(() => {
         Outside my professional life, I enjoy putting on a gaming session with
         friends, and cooking some delicious food, also singing!!
       </p>
-      <a class="title-3 cursor-enlarge block" href=""
+      <a
+        class="title-3 cursor-enlarge block fade-in opacity-0"
+        href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing"
+        target="_blank"
         >Resume <span class="font-bold">&nbsp;↗</span></a
       >
     </div>
     <div class="img flex justify-end">
       <img
-        class="w-full md:w-[25vw] md:aspect-7/12 object-cover"
+        class="w-full md:w-[25vw] md:aspect-7/12 object-cover fade-in opacity-0"
         src="/src/assets/images/Profile-Photo.jpg"
         alt=""
       />
@@ -82,18 +138,20 @@ onMounted(() => {
   <div class="black-wrapper bg-[var(--rock)] text-white py-20">
     <div class="project-step-row pinned-row px-[7vw] mb-20">
       <div class="project-step-col-1 pinned-col">
-        <h3 class="detail-name h2 font-bold mb-8">EDUCATION</h3>
+        <h3 class="detail-name h2 font-bold mb-16">EDUCATION</h3>
       </div>
       <div class="project-step-col-2">
         <div class="education-container mb-16">
-          <p class="degree title-2 mb-2">
+          <p class="degree title-2 mb-2 font-bold">
             Master's in Human-Computer Interaction
           </p>
           <p class="degree body">Indiana University Indianapolis</p>
           <p class="degree body font-light">Aug 22 - May 24</p>
         </div>
         <div class="education-container">
-          <p class="degree title-2 mb-2">Bachelor's in Computer Engineering</p>
+          <p class="degree title-2 mb-2 font-bold">
+            Bachelor's in Computer Engineering
+          </p>
           <p class="degree body">Savitribai Phule Pune University</p>
           <p class="degree body font-light">Jul 18 - May 22</p>
         </div>
@@ -103,11 +161,13 @@ onMounted(() => {
   <div class="mt-20">
     <div class="project-step-row pinned-row px-[7vw] mb-20">
       <div class="project-step-col-1 pinned-col">
-        <h3 class="detail-name h2 font-bold mb-8">WORK</h3>
+        <h3 class="detail-name h2 font-bold mb-16">WORK</h3>
       </div>
       <div class="project-step-col-2">
         <div class="experience-container mb-16">
-          <p class="degree title-2 mb-2">UX Researcher and Designer</p>
+          <p class="degree title-2 mb-2 font-bold">
+            UX Researcher and Designer
+          </p>
           <p class="degree body">Gravity Drive, Indianapolis</p>
           <p class="degree body font-light mb-8">Aug 23 - Jun 25</p>
           <p class="desc">
@@ -121,7 +181,7 @@ onMounted(() => {
           </p>
         </div>
         <div class="experience-container mb-16">
-          <p class="degree title-2 mb-2">App Development Lead</p>
+          <p class="degree title-2 mb-2 font-bold">App Development Lead</p>
           <p class="degree body">Savitribai Phule Pune University</p>
           <p class="degree body font-light mb-8">Aug 22 - May 24</p>
           <p class="desc">
@@ -136,7 +196,9 @@ onMounted(() => {
           </p>
         </div>
         <div class="experience-container">
-          <p class="degree title-2 mb-2">UX Designer and Front-End Developer</p>
+          <p class="degree title-2 mb-2 font-bold">
+            UX Designer and Front-End Developer
+          </p>
           <p class="degree body">Greensat, Mumbai</p>
           <p class="degree body font-light mb-8">Oct 20 - Mar 21</p>
           <p class="desc">
@@ -152,3 +214,11 @@ onMounted(() => {
   </div>
   <FooterSection></FooterSection>
 </template>
+
+<style scoped>
+#cursor-hello {
+  display: inline-block;
+  margin-left: 2px;
+  color: black;
+}
+</style>

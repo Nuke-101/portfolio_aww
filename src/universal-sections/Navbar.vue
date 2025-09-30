@@ -89,6 +89,7 @@ onUnmounted(() => {
       <router-link
         to="/about"
         class="navlink font-saans font-normal overflow-hidden cursor-enlarge"
+        active-class="active-link"
       >
         about
       </router-link>
@@ -102,3 +103,11 @@ onUnmounted(() => {
     </div>
   </nav>
 </template>
+
+<style scoped>
+.active-link {
+  font-weight: bold;
+  color: var(--accent-color); /* replace with your highlight color */
+  transition: all 0.3s ease;
+}
+</style>

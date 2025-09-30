@@ -32,16 +32,6 @@ onMounted(() => {
     });
   });
 
-  const homeTimeLine = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".about", // your main wrapper / first section
-      start: "top 100%",
-      end: "center 20%",
-      scrub: true, // timeline progress is linkelkb ,d to scroll
-      //markers: true, // set to true for debugging
-    },
-  });
-
   gsap.fromTo(
     roleInvertSplit.lines,
     {

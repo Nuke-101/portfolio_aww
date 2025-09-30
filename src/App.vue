@@ -1,4 +1,5 @@
 <script setup>
+import { Analytics } from "@vercel/analytics/vue";
 import { CustomCursor } from "./composables/customCursor";
 import { router } from "./composables/routes";
 import { SpeedInsights } from "@vercel/speed-insights/vue";
@@ -20,6 +21,7 @@ CustomCursor(router);
  
 
   <SpeedInsights />
+  <Analytics/>
 </template>
 
 <style scoped>

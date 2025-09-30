@@ -37,7 +37,7 @@ onMounted(() => {
       if (scrollY > 0) {
         hideNavbar();
       }
-    }, 2500);
+    }, 2000);
   };
 
   scrollHandler = ({ scroll, direction }) => {

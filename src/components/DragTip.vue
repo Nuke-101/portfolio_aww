@@ -32,26 +32,26 @@ onMounted(() => {
     },
   });
 
-  tl.to(".bouncing-circle-3", { x: -30 }) // Moves the first circle 30px
+  tl.to(".bouncing-circle-3", { x: -30 })
     .to(
       ".bouncing-circle-2",
-      { x: -20, opacity: 0.5 }, // Moves the second circle 20px
-      "<" // Start at the same time as the previous animation
+      { x: -20, opacity: 0.5 },
+      "<" 
     )
     .to(
       ".bouncing-circle",
-      { x: -10, opacity: 0.3 }, // Moves the third circle 10px
-      "<" // Start at the same time as the previous animation
+      { x: -10, opacity: 0.3 },
+      "<" 
     )
     .to(
       ".indicator-text",
-      { x: -40 }, // Moves the text 40px and fades it out
-      "<" // Start at the same time as the previous animation
+      { x: -40 }, 
+      "<" 
     )
     .to(
       ".arrow",
-      { x: -50 }, // Moves the text 40px and fades it out
-      "<" // Start at the same time as the previous animation
+      { x: -50 },
+      "<" 
     );
 });
 </script>

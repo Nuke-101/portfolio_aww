@@ -42,9 +42,8 @@ onMounted(() => {
       let distanceFromCenter = wrapperCenter - containerCenter;
       let progress = distanceFromCenter / containerRect.width;
 
-      // Clamp progress for first and last slides to avoid gaps
-      if (i === 0) progress = Math.max(progress, 0); // first slide cannot move right
-      if (i === items.length - 1) progress = Math.min(progress, 0); // last slide cannot move left
+      if (i === 0) progress = Math.max(progress, 0); 
+      if (i === items.length - 1) progress = Math.min(progress, 0);
 
       progress = gsap.utils.clamp(-1, 1, progress);
 

@@ -3,7 +3,6 @@ import { CustomCursor } from "./composables/customCursor";
 import { router } from "./composables/routes";
 import { SpeedInsights } from "@vercel/speed-insights/vue";
 
-import Navbar from "./universal-sections/Navbar.vue";
 
 CustomCursor(router);
 </script>
@@ -11,13 +10,14 @@ CustomCursor(router);
 <template>
   <div id="app-scroll" v-cloak>
     <RouterView />
+    <!-- Custom cursor -->
+    <div id="cursor-ring"></div>
+    <div id="cursor-pointer">
+      <span class="cursor-text" id="cursor-label"></span>
+      <span class="cursor-link-text" id="cursor-link-label"></span>
+    </div>
   </div>
-  <!-- Custom cursor -->
-  <div id="cursor-ring"></div>
-  <div id="cursor-pointer">
-    <span class="cursor-text" id="cursor-label"></span>
-    <span class="cursor-link-text" id="cursor-link-label"></span>
-  </div>
+ 
 
   <SpeedInsights />
 </template>

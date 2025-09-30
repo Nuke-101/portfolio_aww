@@ -9,17 +9,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 onMounted(() => {
   const projectRows = gsap.utils.toArray(".pinned-row");
 
-  // Save original styles so GSAP can restore them cleanly
   ScrollTrigger.saveStyles(".pinned-col");
 
-  // Create triggers for desktop only
   ScrollTrigger.matchMedia({
     "(min-width: 768px)": () => {
       projectRows.forEach((row) => {
         ScrollTrigger.create({
           trigger: row,
           start: "top 80px",
-          // unpin when this row finishes, not beyond
           end: () => "+=" + row.offsetHeight,
           pin: row.querySelector(".pinned-col"),
           pinSpacing: false,
@@ -28,23 +25,19 @@ onMounted(() => {
     },
   });
 
-  // Refresh only once after media is ready
   const refreshAfterMedia = () => {
     requestAnimationFrame(() => {
       ScrollTrigger.refresh();
     });
   };
 
-  // Refresh after images load
   window.addEventListener("load", refreshAfterMedia);
 
-  // Refresh after videos load
   document.querySelectorAll("video").forEach((video) => {
     video.addEventListener("loadeddata", refreshAfterMedia);
   });
 });
 
-// Clean up when component is destroyed
 onUnmounted(() => {
   ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });

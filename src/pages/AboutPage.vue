@@ -2,9 +2,9 @@
 import FooterSection from "../universal-sections/FooterSection.vue";
 import Navbar from "../universal-sections/Navbar.vue";
 
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import { gsap } from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 
 onMounted(() => {
@@ -72,8 +72,31 @@ onMounted(() => {
     cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
   }, 500);
 
-  // Start typing animation
   typeEffect();
+
+
+  const projectRows = gsap.utils.toArray(".pinned-row");
+
+  ScrollTrigger.saveStyles(".pinned-col");
+
+  ScrollTrigger.matchMedia({
+    "(min-width: 768px)": () => {
+      projectRows.forEach((row) => {
+        ScrollTrigger.create({
+          trigger: row,
+          start: "top 80px",
+          end: () => "+=" + row.offsetHeight,
+          pin: row.querySelector(".pinned-col"),
+          pinSpacing: false,
+        });
+      });
+    },
+  });
+
+});
+
+onUnmounted(() => {
+  ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 });
 </script>
 
@@ -94,7 +117,7 @@ onMounted(() => {
         Nice to meet you!
       </p>
       <p class="body mb-12 fade-in opacity-0">
-        I’m Nikhil, a UX professional from Pune. With a Master's degree in
+        I'm Nikhil, a UX professional from Pune. With a Master's degree in
         Human-Computer Interaction and a strong foundation in Computer Science
         my expertise spans the entire product lifecycle, from initial user
         research and design to development and implementation.<br /><br />
@@ -117,26 +140,32 @@ onMounted(() => {
     </div>
   </div>
   <div class="social-icons px-[7vw] flex justify-end mb-20">
-    <div class="social-row flex flex-row w-24 justify-between">
-      <img
+    <div class="social-row flex flex-row w-40 justify-between">
+      <a class="" href="https://www.linkedin.com/in/nikhilshinde0408/" target="_blank">
+        <img
         src="/src/assets/icons/ri_linkedin-fill.svg"
         alt=""
-        class="social-icon aspect-square w-6 cursor-link"
+        class="social-icon aspect-square w-8 cursor-link"
       />
-      <img
-        src="/src/assets/icons/mingcute_github-fill.svg"
+      </a>
+      <a href="https://github.com/Nuke-101" target="_blank">
+        <img
+        src="/src/assets/icons//mingcute_github-fill.svg"
         alt=""
-        class="social-icon aspect-square w-6 cursor-link"
+        class="social-icon aspect-square w-8 cursor-link"
       />
-      <img
+      </a>
+      <a href="https://www.behance.net/nikhilshinde" target="_blank">
+        <img
         src="/src/assets/icons/simple-icons_behance.svg"
         alt=""
-        class="social-icon aspect-square w-6 cursor-link"
+        class="social-icon aspect-square w-8 cursor-link"
       />
+      </a>
     </div>
   </div>
   <div class="black-wrapper bg-[var(--rock)] text-white py-20">
-    <div class="project-step-row pinned-row px-[7vw] mb-20">
+    <div class="project-step-row pinned-row px-[7vw] mb-20 md:mb-0">
       <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name h2 font-bold mb-16">EDUCATION</h3>
       </div>

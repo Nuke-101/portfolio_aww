@@ -108,6 +108,6 @@ onUnmounted(() => {
 .active-link {
   font-weight: bold;
   color: var(--accent-color); /* replace with your highlight color */
-  transition: all 0.3s ease;
+  transition: all 0.2s ease-in-out;
 }
 </style>

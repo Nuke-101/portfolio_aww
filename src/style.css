@@ -172,13 +172,13 @@ html {
 }
 
 .cursor-text {
-  font-size: 0.1rem;
+  font-size: .8rem;
   line-height: 150%;
   font-family: "Satoshi";
 }
 
 .cursor-link-text {
-  font-size: 0.3rem;
+  font-size: 0.8rem;
   line-height: 150%;
   font-family: "Satoshi";
 }

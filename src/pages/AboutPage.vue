@@ -26,9 +26,9 @@ onMounted(() => {
   });
   fadeElements.forEach((el) => {
     gsap.to(el, {
-      y: -10,
+      y: -20,
       opacity: 1,
-      duration: 2,
+      duration: 1.2,
       ease: "power4.out",
       stagger: 0.15,
     });
@@ -107,8 +107,8 @@ onUnmounted(() => {
   <div class="about-intro grid grid-cols-1 md:grid-cols-2 px-[7vw] mt-20 mb-20">
     <div class="desc mb-40">
       <p
-        class="h2 font-bold mt-20 md:mb-0 first-reveal overflow-hidden"
-        id="hello-text"
+        class="h2 font-bold mt-20 md:mb-0 first-reveal overflow-hidden cursor-enlarge w-fit"
+        id="hello-text" 
       >
         <span id="typed-text"></span
         ><span id="cursor-hello" class="font-light">|</span>
@@ -164,10 +164,10 @@ onUnmounted(() => {
       </a>
     </div>
   </div>
-  <div class="black-wrapper bg-[var(--rock)] text-white py-20">
-    <div class="project-step-row pinned-row px-[7vw] mb-20 md:mb-0">
+  <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
+    <div class="project-step-row pinned-row mb-20 md:mb-0">
       <div class="project-step-col-1 pinned-col">
-        <h3 class="detail-name h2 font-bold mb-16">EDUCATION</h3>
+        <h3 class="detail-name title-1 font-bold mb-16">EDUCATION</h3>
       </div>
       <div class="project-step-col-2">
         <div class="education-container mb-16">
@@ -188,9 +188,9 @@ onUnmounted(() => {
     </div>
   </div>
   <div class="mt-20">
-    <div class="project-step-row pinned-row px-[7vw] mb-20">
-      <div class="project-step-col-1 pinned-col">
-        <h3 class="detail-name h2 font-bold mb-16">WORK</h3>
+    <div class="project-step-row pinned-row px-[7vw] mb-8">
+      <div class="project-step-col-1 pinned-col pointer-events-none">
+        <h3 class="detail-name title-1 font-bold mb-16">WORK</h3>
       </div>
       <div class="project-step-col-2">
         <div class="experience-container mb-16">

@@ -4,6 +4,11 @@ import { router } from "./routes";
 
 export function CustomCursor(router) {
   let mouseMoveHandler, mouseOverHandler, mouseOutHandler;
+  const duration = 0.3;
+  const textRevealDuration = .45;
+  const textHideDuration = .2;
+
+  
 
   const attachEventListeners = () => {
     const cursorRing = document.getElementById("cursor-ring");
@@ -33,29 +38,33 @@ export function CustomCursor(router) {
     // Hover enlarge
     mouseOverHandler = (e) => {
       if (e.target.closest(".cursor-enlarge")) {
-        gsap.to(cursorRing, { scale: 3 });
-        gsap.to(cursorPointer, { scale: 9 });
+        gsap.to(cursorRing, { width: "9vw", height: "9vw", duration: duration });
+        gsap.to(cursorPointer, { width: "9vw", height: "9vw", duration: duration });
       }
 
       if (e.target.closest(".project-tile")) {
-        gsap.to(cursorRing, { scale: 3 });
+        gsap.to(cursorRing, { width: "9vw", height: "9vw", duration: duration });
         gsap.to(cursorPointer, {
-          scale: 9,
+          width: "9vw", 
+          height: "9vw", 
+          duration: duration,
           mixBlendMode: "normal",
           backgroundColor: "var(--rock-light)",
         });
-        gsap.to(cursorLabel, { opacity: 1, duration: 0.2 });
+        gsap.to(cursorLabel, { opacity: 1, duration: textRevealDuration });
         cursorLabel.textContent = "View Project ↗";
       }
 
        if (e.target.closest(".cursor-link")) {
-        gsap.to(cursorRing, { scale: 2 });
+        gsap.to(cursorRing, { width: "6vw", height: "6vw", duration: duration });
          gsap.to(cursorPointer, {
-          scale: 2,
+          width: "2vw", 
+          height: "2vw", 
+          duration: duration,
           mixBlendMode: "normal",
           backgroundColor: "var(--rock-light)",
         });
-        gsap.to(cursorLinkLabel, { opacity: 1, duration: 0.2 });
+        gsap.to(cursorLinkLabel, { opacity: 1, duration: textRevealDuration });
         cursorLinkLabel.textContent = "↗";
       }
     };
@@ -63,29 +72,33 @@ export function CustomCursor(router) {
     // Hover out reset
     mouseOutHandler = (e) => {
       if (e.target.closest(".cursor-enlarge")) {
-        gsap.to(cursorRing, { scale: 1 });
-        gsap.to(cursorPointer, { scale: 1 });
+        gsap.to(cursorRing, { width: "3vw", height: "3vw", duration: duration });
+        gsap.to(cursorPointer, { width: "1vw", height: "1vw", duration:duration  });
       }
 
       if (e.target.closest(".project-tile")) {
-        gsap.to(cursorRing, { scale: 1 });
+        gsap.to(cursorRing, { width: "3vw", height: "3vw", duration: duration});
         gsap.to(cursorPointer, {
-          scale: 1,
+          width: "1vw", 
+          height: "1vw", 
+          duration: duration,
           mixBlendMode: "difference",
           backgroundColor: "var(--pearl)",
         });
-        gsap.to(cursorLabel, { opacity: 0, duration: 0.2 });
+        gsap.to(cursorLabel, { opacity: 0, duration: textHideDuration });
         cursorLabel.textContent = "";
       }
 
       if (e.target.closest(".cursor-link")) {
-        gsap.to(cursorRing, { scale: 1 });
+        gsap.to(cursorRing, { width: "3vw", height: "3vw", duration: duration });
         gsap.to(cursorPointer, {
-          scale: 1,
+          width: "1vw", 
+          height: "1vw", 
+          duration: duration,
           mixBlendMode: "difference",
           backgroundColor: "var(--pearl)",
         });
-        gsap.to(cursorLinkLabel, { opacity: 0, duration: 0.2 });
+        gsap.to(cursorLinkLabel, { opacity: 0, duration: textHideDuration });
         cursorLinkLabel.textContent = "";
       }
     };
@@ -104,14 +117,16 @@ export function CustomCursor(router) {
 
     if (!cursorRing || !cursorPointer || !cursorLabel) return;
 
-    gsap.to(cursorRing, { scale: 1 });
+    gsap.to(cursorRing, { width: "3vw", height: "3vw", duration: duration });
     gsap.to(cursorPointer, {
-      scale: 1,
+      width: "1vw", 
+      height: "1vw", 
+      duration: duration,
       mixBlendMode: "difference",
       backgroundColor: "var(--pearl)",
     });
-    gsap.to(cursorLabel, { opacity: 0, duration: 0.2 });
-    gsap.to(cursorLinkLabel, { opacity: 0, duration: 0.2 });
+    gsap.to(cursorLabel, { opacity: 0, duration: textHideDuration });
+    gsap.to(cursorLinkLabel, { opacity: 0, duration: textHideDuration });
     cursorLabel.textContent = "";
     cursorLinkLabel.textContent = "";
 

@@ -121,8 +121,8 @@ onUnmounted(() => {
         Human-Computer Interaction and a strong foundation in Computer Science
         my expertise spans the entire product lifecycle, from initial user
         research and design to development and implementation.<br /><br />
-        Outside my professional life, I enjoy putting on a gaming session with
-        friends, and cooking some delicious food, also singing!!
+        Outside my professional life, I enjoy gaming sessions with
+        friends, cooking some delicious food, and also singing!!
       </p>
       <a
         class="title-3 cursor-enlarge block fade-in opacity-0"

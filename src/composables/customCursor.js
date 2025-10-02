@@ -5,8 +5,10 @@ import { router } from "./routes";
 export function CustomCursor(router) {
   let mouseMoveHandler, mouseOverHandler, mouseOutHandler;
   const duration = 0.3;
-  const textRevealDuration = .45;
+  const textRevealDuration = .3;
   const textHideDuration = .2;
+  const maxFontSize = "0.8rem";
+  const minFontSize = "0rem";
 
   
 
@@ -51,7 +53,7 @@ export function CustomCursor(router) {
           mixBlendMode: "normal",
           backgroundColor: "var(--rock-light)",
         });
-        gsap.to(cursorLabel, { opacity: 1, duration: textRevealDuration });
+        gsap.to(cursorLabel, { opacity: 1, duration: textRevealDuration, fontSize: maxFontSize });
         cursorLabel.textContent = "View Project ↗";
       }
 
@@ -64,7 +66,7 @@ export function CustomCursor(router) {
           mixBlendMode: "normal",
           backgroundColor: "var(--rock-light)",
         });
-        gsap.to(cursorLinkLabel, { opacity: 1, duration: textRevealDuration });
+        gsap.to(cursorLinkLabel, { opacity: 1, duration: textRevealDuration, fontSize: maxFontSize, });
         cursorLinkLabel.textContent = "↗";
       }
     };
@@ -85,7 +87,7 @@ export function CustomCursor(router) {
           mixBlendMode: "difference",
           backgroundColor: "var(--pearl)",
         });
-        gsap.to(cursorLabel, { opacity: 0, duration: textHideDuration });
+        gsap.to(cursorLabel, { opacity: 0, duration: textHideDuration, fontSize: minFontSize, });
         cursorLabel.textContent = "";
       }
 
@@ -98,7 +100,7 @@ export function CustomCursor(router) {
           mixBlendMode: "difference",
           backgroundColor: "var(--pearl)",
         });
-        gsap.to(cursorLinkLabel, { opacity: 0, duration: textHideDuration });
+        gsap.to(cursorLinkLabel, { opacity: 0, duration: textHideDuration, fontSize: minFontSize, });
         cursorLinkLabel.textContent = "";
       }
     };
@@ -125,8 +127,8 @@ export function CustomCursor(router) {
       mixBlendMode: "difference",
       backgroundColor: "var(--pearl)",
     });
-    gsap.to(cursorLabel, { opacity: 0, duration: textHideDuration });
-    gsap.to(cursorLinkLabel, { opacity: 0, duration: textHideDuration });
+    gsap.to(cursorLabel, { opacity: 0, duration: textHideDuration, fontSize: minFontSize, });
+    gsap.to(cursorLinkLabel, { opacity: 0, duration: textHideDuration, fontSize: minFontSize, });
     cursorLabel.textContent = "";
     cursorLinkLabel.textContent = "";
 

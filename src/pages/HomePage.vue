@@ -44,6 +44,21 @@ onMounted(() => {
       stagger: 0.15,
     }
   );
+
+  const images = gsap.utils.toArray(".cover-image");
+
+  images.forEach((img) => {
+    gsap.to(img, {
+      yPercent: 15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: img.parentElement,
+        start: "top bottom", 
+        end: "bottom top", 
+        scrub: true,
+      },
+    });
+  });
 });
 </script>
 <template>
@@ -133,9 +148,9 @@ onMounted(() => {
       >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
           <img
-            src="/src/assets/images/gravity-drive/optimized/project-tile.webp"
+            src="/src/assets/images/gravity-drive/optimized/project-tile-120.webp"
             alt=""
-            class="cover-image"
+            class="cover-image will-change-transform scale-120"
           />
         </div>
         <div class="project-info">
@@ -156,9 +171,9 @@ onMounted(() => {
       >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
           <img
-            src="/src/assets/images/e-turn/optimized/project-tile.webp"
+            src="/src/assets/images/e-turn/optimized/project-tile-120.webp"
             alt=""
-            class="cover-image"
+            class="cover-image will-change-transform scale-120"
           />
         </div>
         <div class="project-info">
@@ -179,9 +194,9 @@ onMounted(() => {
       >
         <div class="image-wrapper relative overflow-hidden aspect-[56/67]">
           <img
-            src="/src/assets/images/keyask/optimized/project-tile.webp"
+            src="/src/assets/images/keyask/optimized/project-tile-120.webp"
             alt=""
-            class="cover-image"
+            class="cover-image will-change-transform scale-120"
           />
         </div>
         <div class="project-info">

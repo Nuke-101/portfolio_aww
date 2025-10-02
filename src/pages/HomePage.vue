@@ -49,7 +49,7 @@ onMounted(() => {
 
   images.forEach((img) => {
     gsap.to(img, {
-      yPercent: 15,
+      yPercent: 12,
       ease: "none",
       scrollTrigger: {
         trigger: img.parentElement,
@@ -150,7 +150,7 @@ onMounted(() => {
           <img
             src="/src/assets/images/gravity-drive/optimized/project-tile-120.webp"
             alt=""
-            class="cover-image will-change-transform scale-120"
+            class="cover-image will-change-transform scale-120 object-center"
           />
         </div>
         <div class="project-info">
@@ -173,7 +173,7 @@ onMounted(() => {
           <img
             src="/src/assets/images/e-turn/optimized/project-tile-120.webp"
             alt=""
-            class="cover-image will-change-transform scale-120"
+            class="cover-image will-change-transform scale-120 object-center"
           />
         </div>
         <div class="project-info">
@@ -196,7 +196,7 @@ onMounted(() => {
           <img
             src="/src/assets/images/keyask/optimized/project-tile-120.webp"
             alt=""
-            class="cover-image will-change-transform scale-120"
+            class="cover-image will-change-transform scale-120 object-center"
           />
         </div>
         <div class="project-info">

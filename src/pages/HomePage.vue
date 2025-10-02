@@ -49,7 +49,7 @@ onMounted(() => {
 
   images.forEach((img) => {
     gsap.to(img, {
-      yPercent: 12,
+      yPercent: 15,
       ease: "none",
       scrollTrigger: {
         trigger: img.parentElement,

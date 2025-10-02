@@ -90,5 +90,10 @@
         >
       </div>
     </div>
+    <div class="made-with mt-16">
+      <p class=" opacity-70 w-fit cursor-enlarge">
+        Built with <img class="inline-block h-5 opacity-70" src="/src/assets/icons/vue.svg"> and <img class="inline-block h-5 opacity-70" src="/src/assets/icons/gsap.svg">
+      </p>
+    </div>
   </div>
 </template>

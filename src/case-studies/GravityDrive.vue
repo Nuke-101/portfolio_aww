@@ -70,10 +70,9 @@ onUnmounted(() => {
       <div class="project-overview mt-10 md:mt-0">
         <h3 class="detail-name title-1 font-bold mb-8">overview</h3>
         <p class="desc body">
-          This project, a collaboration with the design consulting firm Gravity
-          Drive, addressed the fragmented landscape of event management.
+          This project addressed the fragmented landscape of event management space.
           <br /><br />The goal was to create a comprehensive, all-in-one
-          solution that streamlines the process for event organizers and
+          solution that streamlines the process of event management for event organizers and
           clients.
         </p>
       </div>

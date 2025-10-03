@@ -5,8 +5,8 @@ import { router } from "./routes";
 export function CustomCursor(router) {
   let mouseMoveHandler, mouseOverHandler, mouseOutHandler;
   const duration = 0.3;
-  const textRevealDuration = .3;
-  const textHideDuration = .2;
+  const textRevealDuration = 0.4;
+  const textHideDuration = 0.2;
   const maxFontSize = "0.8rem";
   const minFontSize = "0rem";
 
@@ -26,12 +26,16 @@ export function CustomCursor(router) {
       gsap.to(cursorRing, {
         x: e.clientX,
         y: e.clientY,
+        xPercent: -50,
+        yPercent: -50,
         duration: 0.6,
         ease: "power2.out",
       });
       gsap.to(cursorPointer, {
         x: e.clientX,
         y: e.clientY,
+        xPercent: -50,
+        yPercent: -50,
         duration: 0.3,
         ease: "power2.out",
       });

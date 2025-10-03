@@ -37,7 +37,6 @@ CustomCursor(router);
   border: 1px solid var(--pearl);
   border-radius: 50%;
   pointer-events: none;
-  transform: translate(-50%, -50%);
   z-index: 9997;
   mix-blend-mode: difference;
 }
@@ -48,7 +47,6 @@ CustomCursor(router);
   left: 0%;
   width: 1vw;
   height: 1vw;
-  transform: translate(-50%, -50%);
   background-color: var(--pearl);
   border-radius: 50%;
   pointer-events: none;

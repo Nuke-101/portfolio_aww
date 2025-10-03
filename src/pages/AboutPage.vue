@@ -200,13 +200,12 @@ onUnmounted(() => {
           <p class="degree body">Gravity Drive, Indianapolis</p>
           <p class="degree body font-light mb-8">Aug 23 - Jun 25</p>
           <p class="desc">
-            Translated critical user insights into a design strategy, evolving
+            Translated user insights into a design strategy, evolving
             an event management product from a concept to a functional solution.
             <br />
             <span class="block spacer h-3"></span>
-            Also volunteered at a local church in Indianapolis to redesign
-            signage, applying design principles to improve navigation and
-            clarity.
+            Redesigned the signage of a local church to improve navigation and
+            clarity using design principles.
           </p>
         </div>
         <div class="experience-container mb-16">
@@ -231,7 +230,7 @@ onUnmounted(() => {
           <p class="degree body">Greensat, Mumbai</p>
           <p class="degree body font-light mb-8">Oct 20 - Mar 21</p>
           <p class="desc">
-            I Led the front-end design and development of a farmer-centric
+            I led the front-end design and development of a farmer-centric
             Flutter application which has over 5000 downloads on the Play
             Store.<br /><span class="block spacer h-3"></span>
             Conducted extensive user research using a mixed-methods approach

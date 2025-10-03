@@ -28,9 +28,7 @@ onMounted(() => {});
       <div class="project-overview mt-10 md:mt-0">
         <h3 class="detail-name title-1 font-bold mb-8">overview</h3>
         <p class="desc body">
-          This project, a collaboration with Allegion's Zentra team, addresses a
-          common pain point for apartment residents and property managers: a
-          lack of after-hours service.
+          Here we addressed a common pain point of after-hours service for apartment residents and property managers.
           <br /><br />Our primary goal was to find a new revenue stream for
           Zentra's multi-family property management product that also provides
           value to customers.

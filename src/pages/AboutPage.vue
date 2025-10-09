@@ -74,7 +74,6 @@ onMounted(() => {
 
   typeEffect();
 
-
   const projectRows = gsap.utils.toArray(".pinned-row");
 
   ScrollTrigger.saveStyles(".pinned-col");
@@ -92,7 +91,6 @@ onMounted(() => {
       });
     },
   });
-
 });
 
 onUnmounted(() => {
@@ -107,8 +105,8 @@ onUnmounted(() => {
   <div class="about-intro grid grid-cols-1 md:grid-cols-2 px-[7vw] mt-20 mb-20">
     <div class="desc mb-40">
       <p
-        class="h2 font-bold mt-20 md:mb-0 first-reveal overflow-hidden cursor-enlarge w-fit"
-        id="hello-text" 
+        class="h2 font-bold mt-20 md:mb-0 first-reveal overflow-hidden cursor-enlarge w-fit pt-1"
+        id="hello-text"
       >
         <span id="typed-text"></span
         ><span id="cursor-hello" class="font-light">|</span>
@@ -121,14 +119,14 @@ onUnmounted(() => {
         Human-Computer Interaction and a strong foundation in Computer Science
         my expertise spans the entire product lifecycle, from initial user
         research and design to development and implementation.<br /><br />
-        Outside my professional life, I enjoy gaming sessions with
-        friends, cooking some delicious food, and also singing!!
+        Outside my professional life, I enjoy gaming sessions with friends,
+        cooking some delicious food, and also singing!!
       </p>
       <a
         class="title-3 cursor-enlarge block fade-in opacity-0 w-fit"
         href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing"
         target="_blank"
-        >Resume <span class="font-bold">&nbsp;↗</span></a
+        >Resume <span class="font-bold link-arrow">&nbsp;↗</span></a
       >
     </div>
     <div class="img flex justify-end">
@@ -141,26 +139,30 @@ onUnmounted(() => {
   </div>
   <div class="social-icons px-[7vw] flex justify-end mb-20">
     <div class="social-row flex flex-row w-40 justify-between">
-      <a class="" href="https://www.linkedin.com/in/nikhilshinde0408/" target="_blank">
+      <a
+        class=""
+        href="https://www.linkedin.com/in/nikhilshinde0408/"
+        target="_blank"
+      >
         <img
-        src="/src/assets/icons/ri_linkedin-fill.svg"
-        alt=""
-        class="social-icon aspect-square w-8 cursor-link"
-      />
+          src="/src/assets/icons/ri_linkedin-fill.svg"
+          alt=""
+          class="social-icon aspect-square w-8 cursor-link"
+        />
       </a>
       <a href="https://github.com/Nuke-101" target="_blank">
         <img
-        src="/src/assets/icons//mingcute_github-fill.svg"
-        alt=""
-        class="social-icon aspect-square w-8 cursor-link"
-      />
+          src="/src/assets/icons//mingcute_github-fill.svg"
+          alt=""
+          class="social-icon aspect-square w-8 cursor-link"
+        />
       </a>
       <a href="https://www.behance.net/nikhilshinde" target="_blank">
         <img
-        src="/src/assets/icons/simple-icons_behance.svg"
-        alt=""
-        class="social-icon aspect-square w-8 cursor-link"
-      />
+          src="/src/assets/icons/simple-icons_behance.svg"
+          alt=""
+          class="social-icon aspect-square w-8 cursor-link"
+        />
       </a>
     </div>
   </div>
@@ -174,14 +176,14 @@ onUnmounted(() => {
           <p class="degree title-2 mb-2 font-bold">
             Master's in Human-Computer Interaction
           </p>
-          <p class="degree body">Indiana University Indianapolis</p>
+          <p class="degree body">Indiana University Indianapolis, USA</p>
           <p class="degree body font-light">Aug 22 - May 24</p>
         </div>
         <div class="education-container">
           <p class="degree title-2 mb-2 font-bold">
             Bachelor's in Computer Engineering
           </p>
-          <p class="degree body">Savitribai Phule Pune University</p>
+          <p class="degree body">Savitribai Phule Pune University, India</p>
           <p class="degree body font-light">Jul 18 - May 22</p>
         </div>
       </div>
@@ -197,11 +199,11 @@ onUnmounted(() => {
           <p class="degree title-2 mb-2 font-bold">
             UX Researcher and Designer
           </p>
-          <p class="degree body">Gravity Drive, Indianapolis</p>
+          <p class="degree body">Gravity Drive, Indianapolis, USA</p>
           <p class="degree body font-light mb-8">Aug 23 - Jun 25</p>
           <p class="desc">
-            Translated user insights into a design strategy, evolving
-            an event management product from a concept to a functional solution.
+            Translated user insights into a design strategy, evolving an event
+            management product from a concept to a functional solution.
             <br />
             <span class="block spacer h-3"></span>
             Redesigned the signage of a local church to improve navigation and
@@ -210,7 +212,7 @@ onUnmounted(() => {
         </div>
         <div class="experience-container mb-16">
           <p class="degree title-2 mb-2 font-bold">App Development Lead</p>
-          <p class="degree body">Savitribai Phule Pune University</p>
+          <p class="degree body">Indiana University, Indianapolis, USA</p>
           <p class="degree body font-light mb-8">Aug 22 - May 24</p>
           <p class="desc">
             I led a cross-functional team of four, managing end-to-end
@@ -227,7 +229,7 @@ onUnmounted(() => {
           <p class="degree title-2 mb-2 font-bold">
             UX Designer and Front-End Developer
           </p>
-          <p class="degree body">Greensat, Mumbai</p>
+          <p class="degree body">Greensat, Mumbai, India</p>
           <p class="degree body font-light mb-8">Oct 20 - Mar 21</p>
           <p class="desc">
             I led the front-end design and development of a farmer-centric
@@ -236,6 +238,37 @@ onUnmounted(() => {
             Conducted extensive user research using a mixed-methods approach
             with over 50 participants to inform design decisions.
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
+    <div class="project-step-row pinned-row mb-20 md:mb-0">
+      <div class="project-step-col-1 pinned-col">
+        <h3 class="detail-name title-1 font-bold mb-16">SKILLS</h3>
+      </div>
+      <div class="project-step-col-2">
+        <div class="skills grid grid-cols-2">
+          <div class="skill-col-1">
+            <ul>
+              <li class="body mb-3">● HTML / CSS</li>
+              <li class="body mb-3">● JAVASCRIPT</li>
+              <li class="body mb-3">● REACT</li>
+              <li class="body mb-3">● VUE</li>
+              <li class="body mb-3">● VERCEL</li>
+              <li class="body mb-3">● FLUTTER</li>
+            </ul>
+          </div>
+          <div class="skill-col-1">
+            <ul>
+              <li class="body mb-3">● USER INTERVIEWS</li>
+              <li class="body mb-3">● USABILITY TESTING</li>
+              <li class="body mb-3">● MIXED METHODS RESEARCH</li>
+              <li class="body mb-3">● STORY TELLING</li>
+              <li class="body mb-3">● FIGMA</li>
+              <li class="body mb-3">● ADOBE CREATIVE SUITE</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

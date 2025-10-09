@@ -63,7 +63,7 @@
         >
         <a
           class="footer-links block title-3 mb-3 cursor-enlarge w-fit"
-          href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing"
+          href="https://nikhil-shinde-resume.tiiny.site/"
           target="_blank"
           >resume</a
         >
@@ -89,11 +89,6 @@
           >behance</a
         >
       </div>
-    </div>
-    <div class="made-with mt-16">
-      <p class=" opacity-70 w-fit cursor-enlarge">
-        Built with <img class="inline-block h-5 opacity-70" src="/src/assets/icons/vue.svg"> and <img class="inline-block h-5 opacity-70" src="/src/assets/icons/gsap.svg">
-      </p>
     </div>
   </div>
 </template>

@@ -9,8 +9,12 @@ export function CustomCursor(router) {
   const textHideDuration = 0.2;
   const maxFontSize = "0.8rem";
   const minFontSize = "0rem";
-
-  
+  const cursorRingHoverSize = "180px";
+  const cursorRingLinkSize = "120px";
+  const cursorRingSize = "60px";
+  const cursorPointerHoverSize = "180px";
+  const cursorPointerLinkSize = "40px";
+  const cursorPointerSize = "20px";
 
   const attachEventListeners = () => {
     const cursorRing = document.getElementById("cursor-ring");
@@ -18,8 +22,8 @@ export function CustomCursor(router) {
     const cursorLabel = document.getElementById("cursor-label");
     const cursorLinkLabel = document.getElementById("cursor-link-label");
 
-
-    if (!cursorRing || !cursorPointer || !cursorLabel || !cursorLinkLabel) return;
+    if (!cursorRing || !cursorPointer || !cursorLabel || !cursorLinkLabel)
+      return;
 
     // Cursor follow
     mouseMoveHandler = (e) => {
@@ -44,33 +48,57 @@ export function CustomCursor(router) {
     // Hover enlarge
     mouseOverHandler = (e) => {
       if (e.target.closest(".cursor-enlarge")) {
-        gsap.to(cursorRing, { width: "9vw", height: "9vw", duration: duration });
-        gsap.to(cursorPointer, { width: "9vw", height: "9vw", duration: duration });
+        gsap.to(cursorRing, {
+          width: cursorRingHoverSize,
+          height: cursorRingHoverSize,
+          duration: duration,
+        });
+        gsap.to(cursorPointer, {
+          width: cursorPointerHoverSize,
+          height: cursorPointerHoverSize,
+          duration: duration,
+        });
       }
 
       if (e.target.closest(".project-tile")) {
-        gsap.to(cursorRing, { width: "9vw", height: "9vw", duration: duration });
+        gsap.to(cursorRing, {
+          width: cursorRingHoverSize,
+          height: cursorRingHoverSize,
+          duration: duration,
+        });
         gsap.to(cursorPointer, {
-          width: "9vw", 
-          height: "9vw", 
+          width: cursorPointerHoverSize,
+          height: cursorPointerHoverSize,
           duration: duration,
           mixBlendMode: "normal",
           backgroundColor: "var(--rock-light)",
         });
-        gsap.to(cursorLabel, { opacity: 1, duration: textRevealDuration, fontSize: maxFontSize });
+        gsap.to(cursorLabel, {
+          opacity: 1,
+          duration: textRevealDuration,
+          fontSize: maxFontSize,
+        });
         cursorLabel.textContent = "View Project ↗";
       }
 
-       if (e.target.closest(".cursor-link")) {
-        gsap.to(cursorRing, { width: "6vw", height: "6vw", duration: duration });
-         gsap.to(cursorPointer, {
-          width: "2vw", 
-          height: "2vw", 
+      if (e.target.closest(".cursor-link")) {
+        gsap.to(cursorRing, {
+          width: cursorRingLinkSize,
+          height: cursorRingLinkSize,
+          duration: duration,
+        });
+        gsap.to(cursorPointer, {
+          width: cursorPointerLinkSize,
+          height: cursorPointerLinkSize,
           duration: duration,
           mixBlendMode: "normal",
           backgroundColor: "var(--rock-light)",
         });
-        gsap.to(cursorLinkLabel, { opacity: 1, duration: textRevealDuration, fontSize: maxFontSize, });
+        gsap.to(cursorLinkLabel, {
+          opacity: 1,
+          duration: textRevealDuration,
+          fontSize: maxFontSize,
+        });
         cursorLinkLabel.textContent = "↗";
       }
     };
@@ -78,33 +106,57 @@ export function CustomCursor(router) {
     // Hover out reset
     mouseOutHandler = (e) => {
       if (e.target.closest(".cursor-enlarge")) {
-        gsap.to(cursorRing, { width: "3vw", height: "3vw", duration: duration });
-        gsap.to(cursorPointer, { width: "1vw", height: "1vw", duration:duration  });
+        gsap.to(cursorRing, {
+          width: cursorRingSize,
+          height: cursorRingSize,
+          duration: duration,
+        });
+        gsap.to(cursorPointer, {
+          width: cursorPointerSize,
+          height: cursorPointerSize,
+          duration: duration,
+        });
       }
 
       if (e.target.closest(".project-tile")) {
-        gsap.to(cursorRing, { width: "3vw", height: "3vw", duration: duration});
+        gsap.to(cursorRing, {
+          width: cursorRingSize,
+          height: cursorRingSize,
+          duration: duration,
+        });
         gsap.to(cursorPointer, {
-          width: "1vw", 
-          height: "1vw", 
+          width: cursorPointerSize,
+          height: cursorPointerSize,
           duration: duration,
           mixBlendMode: "difference",
           backgroundColor: "var(--pearl)",
         });
-        gsap.to(cursorLabel, { opacity: 0, duration: textHideDuration, fontSize: minFontSize, });
+        gsap.to(cursorLabel, {
+          opacity: 0,
+          duration: textHideDuration,
+          fontSize: minFontSize,
+        });
         cursorLabel.textContent = "";
       }
 
       if (e.target.closest(".cursor-link")) {
-        gsap.to(cursorRing, { width: "3vw", height: "3vw", duration: duration });
+        gsap.to(cursorRing, {
+          width: cursorRingSize,
+          height: cursorRingSize,
+          duration: duration,
+        });
         gsap.to(cursorPointer, {
-          width: "1vw", 
-          height: "1vw", 
+          width: cursorPointerSize,
+          height: cursorPointerSize,
           duration: duration,
           mixBlendMode: "difference",
           backgroundColor: "var(--pearl)",
         });
-        gsap.to(cursorLinkLabel, { opacity: 0, duration: textHideDuration, fontSize: minFontSize, });
+        gsap.to(cursorLinkLabel, {
+          opacity: 0,
+          duration: textHideDuration,
+          fontSize: minFontSize,
+        });
         cursorLinkLabel.textContent = "";
       }
     };
@@ -120,22 +172,32 @@ export function CustomCursor(router) {
     const cursorLabel = document.getElementById("cursor-label");
     const cursorLinkLabel = document.getElementById("cursor-link-label");
 
-
     if (!cursorRing || !cursorPointer || !cursorLabel) return;
 
-    gsap.to(cursorRing, { width: "3vw", height: "3vw", duration: duration });
+    gsap.to(cursorRing, {
+      width: cursorRingSize,
+      height: cursorRingSize,
+      duration: duration,
+    });
     gsap.to(cursorPointer, {
-      width: "1vw", 
-      height: "1vw", 
+      width: cursorPointerSize,
+      height: cursorPointerSize,
       duration: duration,
       mixBlendMode: "difference",
       backgroundColor: "var(--pearl)",
     });
-    gsap.to(cursorLabel, { opacity: 0, duration: textHideDuration, fontSize: minFontSize, });
-    gsap.to(cursorLinkLabel, { opacity: 0, duration: textHideDuration, fontSize: minFontSize, });
+    gsap.to(cursorLabel, {
+      opacity: 0,
+      duration: textHideDuration,
+      fontSize: minFontSize,
+    });
+    gsap.to(cursorLinkLabel, {
+      opacity: 0,
+      duration: textHideDuration,
+      fontSize: minFontSize,
+    });
     cursorLabel.textContent = "";
     cursorLinkLabel.textContent = "";
-
   };
 
   onMounted(() => {

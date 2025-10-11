@@ -189,8 +189,8 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
-  <div class="mt-20">
-    <div class="project-step-row pinned-row px-[7vw] mb-8">
+  <div class="py-20">
+    <div class="project-step-row pinned-row px-[7vw]">
       <div class="project-step-col-1 pinned-col pointer-events-none">
         <h3 class="detail-name title-1 font-bold mb-16">WORK</h3>
       </div>

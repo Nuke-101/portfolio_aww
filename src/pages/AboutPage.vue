@@ -124,7 +124,7 @@ onUnmounted(() => {
       </p>
       <a
         class="title-3 cursor-enlarge block fade-in opacity-0 w-fit"
-        href="https://drive.google.com/file/d/177ZAAZ7WyaYhZ3LH0UuLMr3kepv8J3-E/view?usp=sharing"
+        href="https://nikhil-shinde-resume.tiiny.site"
         target="_blank"
         >Resume <span class="font-bold link-arrow">&nbsp;↗</span></a
       >

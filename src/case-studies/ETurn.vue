@@ -447,7 +447,6 @@ onUnmounted(() => {
     </div>
   </div>
 
-  <
   <div class="project-step mb-40">
     <div class="project-step-row pinned-row px-[7vw] mb-20">
       <div class="project-step-col-1 pinned-col">

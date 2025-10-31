@@ -70,10 +70,11 @@ onUnmounted(() => {
       <div class="project-overview mt-10 md:mt-0">
         <h3 class="detail-name title-1 font-bold mb-8">overview</h3>
         <p class="desc body">
-          This project addressed the fragmented landscape of event management space.
+          This project addressed the fragmented landscape of event management
+          space.
           <br /><br />The goal was to create a comprehensive, all-in-one
-          solution that streamlines the process of event management for event organizers and
-          clients.
+          solution that streamlines the process of event management for event
+          organizers and clients.
         </p>
       </div>
     </div>
@@ -190,7 +191,7 @@ onUnmounted(() => {
     </div>
   </div>
 
-  <div class="project-step mb-40">
+  <div class="project-step mb-20">
     <div class="project-step-row pinned-row px-[7vw] mb-20">
       <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-1 font-bold mb-8">o1. research</h3>

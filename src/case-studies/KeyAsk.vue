@@ -27,13 +27,21 @@ onMounted(() => {
     },
   });
 
-  const refreshAfterMedia = () => {
-    requestAnimationFrame(() => {
-      ScrollTrigger.refresh();
-    });
+  const refreshAfterImages = () => {
+    requestAnimationFrame(() => ScrollTrigger.refresh());
   };
 
-  window.addEventListener("load", refreshAfterMedia);
+  if (document.readyState === "complete") {
+    refreshAfterImages();
+  } else {
+    window.addEventListener("load", refreshAfterImages, { once: true });
+  }
+
+  document.querySelectorAll("img").forEach((img) => {
+    img.addEventListener("load", refreshAfterImages);
+  });
+
+  window.addEventListener("resize", refreshAfterImages);
 });
 
 onUnmounted(() => {
@@ -225,6 +233,7 @@ onUnmounted(() => {
         <img src="/src/assets/images/keyask/market-graph.png" alt="" />
       </div>
     </div>
+
     <div class="project-step-row pinned-row px-[7vw] mb-20">
       <div class="project-step-col-1 pinned-col">
         <h3 class="detail-name title-2 font-bold mb-8">
@@ -255,6 +264,7 @@ onUnmounted(() => {
         </p>
       </div>
     </div>
+
     <div class="black-wrapper bg-[var(--rock)] text-white px-[7vw] py-20">
       <div class="project-step-row pinned-row">
         <div class="project-step-col-1 pinned-col">
@@ -293,6 +303,7 @@ onUnmounted(() => {
       </div>
     </div>
   </div>
+
   <div class="project-step mb-20">
     <div class="project-step-row pinned-row px-[7vw] mb-20">
       <div class="project-step-col-1 pinned-col">

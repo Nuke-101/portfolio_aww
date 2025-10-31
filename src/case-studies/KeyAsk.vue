@@ -34,10 +34,6 @@ onMounted(() => {
   };
 
   window.addEventListener("load", refreshAfterMedia);
-
-  document.querySelectorAll("video").forEach((video) => {
-    video.addEventListener("loadeddata", refreshAfterMedia);
-  });
 });
 
 onUnmounted(() => {

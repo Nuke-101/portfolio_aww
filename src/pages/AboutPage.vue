@@ -200,7 +200,7 @@ onUnmounted(() => {
             UX Researcher and Designer
           </p>
           <p class="degree body">Gravity Drive, Indianapolis, USA</p>
-          <p class="degree body font-light mb-8">Aug 23 - Jun 25</p>
+          <p class="degree body font-light mb-8">May 24 - Jun 25</p>
           <p class="desc">
             Translated user insights into a design strategy, evolving an event
             management product from a concept to a functional solution.
